@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_OrderList" targetNamespace="http://tempuri.org/DS_OrderList.xsd" xmlns:mstns="http://tempuri.org/DS_OrderList.xsd" xmlns="http://tempuri.org/DS_OrderList.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_OrderList" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DS_OrderList" msprop:Generator_DataSetName="DS_OrderList">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="OrderTbl" msprop:Generator_UserTableName="OrderTbl" msprop:Generator_RowDeletedName="OrderTblRowDeleted" msprop:Generator_RowChangedName="OrderTblRowChanged" msprop:Generator_RowClassName="OrderTblRow" msprop:Generator_RowChangingName="OrderTblRowChanging" msprop:Generator_RowEvArgName="OrderTblRowChangeEvent" msprop:Generator_RowEvHandlerName="OrderTblRowChangeEventHandler" msprop:Generator_TableClassName="OrderTblDataTable" msprop:Generator_TableVarName="tableOrderTbl" msprop:Generator_RowDeletingName="OrderTblRowDeleting" msprop:Generator_TablePropName="OrderTbl">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="orderId" msprop:Generator_UserColumnName="orderId" msprop:Generator_ColumnVarNameInTable="columnorderId" msprop:Generator_ColumnPropNameInRow="orderId" msprop:Generator_ColumnPropNameInTable="orderIdColumn" type="xs:int" />
+              <xs:element name="tourName" msprop:Generator_UserColumnName="tourName" msprop:Generator_ColumnVarNameInTable="columntourName" msprop:Generator_ColumnPropNameInRow="tourName" msprop:Generator_ColumnPropNameInTable="tourNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="startDate" msprop:Generator_UserColumnName="startDate" msprop:Generator_ColumnVarNameInTable="columnstartDate" msprop:Generator_ColumnPropNameInRow="startDate" msprop:Generator_ColumnPropNameInTable="startDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="customerName" msprop:Generator_UserColumnName="customerName" msprop:Generator_ColumnVarNameInTable="columncustomerName" msprop:Generator_ColumnPropNameInRow="customerName" msprop:Generator_ColumnPropNameInTable="customerNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="num" msprop:Generator_UserColumnName="num" msprop:Generator_ColumnVarNameInTable="columnnum" msprop:Generator_ColumnPropNameInRow="num" msprop:Generator_ColumnPropNameInTable="numColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="contactPhone" msprop:Generator_UserColumnName="contactPhone" msprop:Generator_ColumnVarNameInTable="columncontactPhone" msprop:Generator_ColumnPropNameInRow="contactPhone" msprop:Generator_ColumnPropNameInTable="contactPhoneColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="status" msprop:Generator_UserColumnName="status" msprop:Generator_ColumnVarNameInTable="columnstatus" msprop:Generator_ColumnPropNameInRow="status" msprop:Generator_ColumnPropNameInTable="statusColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:OrderTbl" />
+      <xs:field xpath="mstns:orderId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

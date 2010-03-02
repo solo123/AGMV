@@ -1,0 +1,102 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{09373B5D-8EC3-4751-9939-3F18FC327030}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>com.Omei.BLL.Admin</RootNamespace>
+    <AssemblyName>AdminBll</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActionAuthorization.cs" />
+    <Compile Include="AdminBll.cs" />
+    <Compile Include="AdminBusBiz.cs" />
+    <Compile Include="AdminCompanyBiz.cs" />
+    <Compile Include="AdminDestinationBiz.cs" />
+    <Compile Include="AdminMenuBiz.cs" />
+    <Compile Include="AdminNotesBiz.cs" />
+    <Compile Include="AdminOrderBiz.cs" />
+    <Compile Include="AdminPaymentBiz.cs" />
+    <Compile Include="AdminStatusBiz.cs" />
+    <Compile Include="AdminTourBiz.cs" />
+    <Compile Include="AdminTourScheduleBiz.cs" />
+    <Compile Include="AdminUserBiz.cs" />
+    <Compile Include="AgentBiz.cs" />
+    <Compile Include="AgentOrderBiz.cs" />
+    <Compile Include="AgentReceivableEditBiz.cs" />
+    <Compile Include="AgentTransforBiz.cs" />
+    <Compile Include="AirlineBiz.cs" />
+    <Compile Include="AirportBiz.cs" />
+    <Compile Include="Authenticate\OmeiRole.cs" />
+    <Compile Include="Authenticate\RandomPassword.cs" />
+    <Compile Include="Authenticate\UserBiz.cs" />
+    <Compile Include="Authenticate\UserLoginBiz.cs" />
+    <Compile Include="CommissionBiz.cs" />
+    <Compile Include="DataEntity\DT_InvoiceMatch.cs" />
+    <Compile Include="IMMatchBiz.cs" />
+    <Compile Include="misc\BookmarkBiz.cs" />
+    <Compile Include="PaymentReportBiz.cs" />
+    <Compile Include="CreditCardBiz.cs" />
+    <Compile Include="DayBalanceBiz.cs" />
+    <Compile Include="EmployeeBiz.cs" />
+    <Compile Include="EventLog.cs" />
+    <Compile Include="FlightBiz.cs" />
+    <Compile Include="HotelBiz.cs" />
+    <Compile Include="JimmySqlBiz.cs" />
+    <Compile Include="OmeiRole.cs" />
+    <Compile Include="OmeiStatus.cs" />
+    <Compile Include="OpLogBiz.cs" />
+    <Compile Include="PhotoBiz.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SalesReportBiz.cs" />
+    <Compile Include="ScheduleBiz.cs" />
+    <Compile Include="TicketBiz.cs" />
+    <Compile Include="TypeRefBiz.cs" />
+    <Compile Include="VoucherBiz.cs" />
+    <Compile Include="WebContentBiz.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OmeiAdminData\OmeiAdminData.csproj">
+      <Project>{C2ECFF56-D8B9-477B-93D9-AC353B810F67}</Project>
+      <Name>OmeiAdminData</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

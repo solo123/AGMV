@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_Roles" targetNamespace="http://tempuri.org/DS_Roles.xsd" xmlns:mstns="http://tempuri.org/DS_Roles.xsd" xmlns="http://tempuri.org/DS_Roles.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_Roles" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DS_Roles" msprop:Generator_DataSetName="DS_Roles">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="RoleTbl" msprop:Generator_UserTableName="RoleTbl" msprop:Generator_RowDeletedName="RoleTblRowDeleted" msprop:Generator_RowChangedName="RoleTblRowChanged" msprop:Generator_RowClassName="RoleTblRow" msprop:Generator_RowChangingName="RoleTblRowChanging" msprop:Generator_RowEvArgName="RoleTblRowChangeEvent" msprop:Generator_RowEvHandlerName="RoleTblRowChangeEventHandler" msprop:Generator_TableClassName="RoleTblDataTable" msprop:Generator_TableVarName="tableRoleTbl" msprop:Generator_RowDeletingName="RoleTblRowDeleting" msprop:Generator_TablePropName="RoleTbl">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="roleId" msprop:Generator_UserColumnName="roleId" msprop:Generator_ColumnPropNameInRow="roleId" msprop:Generator_ColumnVarNameInTable="columnroleId" msprop:Generator_ColumnPropNameInTable="roleIdColumn" type="xs:int" />
+              <xs:element name="roleName" msprop:Generator_UserColumnName="roleName" msprop:Generator_ColumnPropNameInRow="roleName" msprop:Generator_ColumnVarNameInTable="columnroleName" msprop:Generator_ColumnPropNameInTable="roleNameColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:RoleTbl" />
+      <xs:field xpath="mstns:roleId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

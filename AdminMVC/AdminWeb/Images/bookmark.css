@@ -1,0 +1,6 @@
+﻿.myBookmark{padding: 8px;background-color: #c8e0c0;border:solid 1px #4c773e;}
+.myBookmark a{ float:left; width:200px; display:block; padding-left:6px; background:url(arrow01_red.gif) no-repeat 0% 50%; margin-top: 4px;}
+.myBookmark a:hover {text-decoration:underline; color:Red;}
+
+.news_block { width: 300px; padding: 4px; border:solid 1px #e0e0e0; float:left; margin:8px;}
+.news_block:hover {border:solid 1px red;}

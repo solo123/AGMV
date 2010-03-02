@@ -1,0 +1,232 @@
+﻿BODY {
+	FONT-SIZE:small; 
+	FONT-FAMILY: Arial, Helvetica, sans-serif; 
+	text-align: left;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+H1 
+{
+	border: dotted 1px #9ccf00;
+	padding: 3px 5px 3px 5px;
+	BACKGROUND: #eef5fe; 
+	COLOR: #20375f; 
+	FONT: 14px Verdana;
+	font-weight: bold;	
+	COLOR: #ba0001; 
+	TEXT-ALIGN: left;
+}
+H2 
+{
+	PADDING-RIGHT: 3px; PADDING-LEFT: 5px; FONT-WEIGHT: bold; FONT-SIZE: 13px; PADDING-BOTTOM: 3px; MARGIN: 0px; COLOR: #ba0001; PADDING-TOP: 3px; BORDER-BOTTOM: silver 1px solid; TEXT-ALIGN: left
+}
+
+P {
+	MARGIN: 5px 5px 15px
+}
+HR {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+
+table.DataTable { 
+	table-layout: fixed;
+	word-wrap: break-word;
+}
+
+.head01
+{
+	font-family:Arial;
+	font-size:13pt;
+	font-weight:bold;
+}
+.head02
+{
+	font-family:Arial;
+	font-size:10pt;
+	font-weight:bold;
+}
+
+.page 
+{
+	clear: both;
+	border: none;
+	width:630px;
+	MARGIN: 0px; 
+	padding: 0px;
+	text-align:left;
+}
+
+.header 
+{
+	CLEAR: both; 
+	POSITION: relative; 
+	min-width: 720px;
+	WIDTH: 100%; 
+}
+
+.footer {
+	CLEAR: both;
+	BACKGROUND: #4c773e;
+	WIDTH: 100%;
+	PADDING-TOP: 5px;
+	POSITION: relative;
+	HEIGHT: 18px;
+	TEXT-ALIGN: center;
+	min-width: 720px;
+	color: white;
+	font-size: 80%;
+}
+.footer a
+{
+	color: white;
+}
+
+.NavBar 
+{
+	border-top: solid 4px #4c773e;
+	padding-top: 4px;
+	clear: both;
+	BACKGROUND: #c8e0c0; 
+	min-width: 720px;
+	WIDTH: 100%; 
+	text-align:left;
+	FONT: bold 12px Verdana;
+	height: 22px;
+}
+.NavBar A, .NavBar A:visited 
+{
+	padding: 2px 5px 2px 5px;
+	COLOR: #2961bd; 
+	FONT-FAMILY: Verdana; 
+	TEXT-DECORATION: underline
+}
+.NavBar A:hover {
+	COLOR: red
+}
+
+
+.ContentBody
+{
+}
+
+.SideBar {
+	FLOAT: left;
+	width: 150px;
+	text-align: left;
+	padding: 10px 10px 10px 10px;
+}
+.SidebarHighlight 
+{
+	border: solid 1px #6699cc;
+	MARGIN: 10px 0px; 
+}
+.SideBar H2.Hightlight {
+	BACKGROUND-COLOR: #eef5fe;
+	font-size: 100%;
+	font-weight: bold;
+	color: #284e98;
+	text-align: left;
+}
+
+.SubMenu {
+	width: 100%;
+}
+.SubMenu UL {
+	border: solid 1px #6699cc;
+	padding: 0px;
+	margin: 0px;
+	FONT-WEIGHT: bold; 
+	BACKGROUND: #f9f9f9; 
+	WIDTH: 100%;
+	TEXT-ALIGN: left;
+	
+	FONT-SIZE: 100%; 
+	COLOR: #000099; 
+	FONT-FAMILY: Arial	
+
+}
+.SubMenu A, .SubMenu A:visited {
+	DISPLAY: block; 
+	width: 140px;
+	PADDING-LEFT: 10px; 
+	COLOR: #2961bd; 
+	BORDER-BOTTOM: #c6d8d8 1px solid; 
+	TEXT-ALIGN: left; 
+	TEXT-DECORATION: none;
+}
+.SubMenu A:hover {
+	BACKGROUND: #f1f5f5; 
+	COLOR: red;
+}
+.SubMenu A.selected {
+	
+}
+.SubMenu LI {
+	LINE-HEIGHT: 22px; 
+}
+
+.SidebarCustomerHighlight {
+	BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; MARGIN: 10px 0px; BORDER-LEFT: black 1px solid; BORDER-BOTTOM: black 1px solid
+}
+
+
+.Basepage 
+{
+	MARGIN-LEFT: 160px; OVERFLOW: visible; TEXT-ALIGN: left;
+}
+.ContentDiv 
+{
+	BORDER-LEFT: #cccccc 1px dotted;
+	padding-left: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	TEXT-ALIGN: left;
+	min-width: 500px;
+	width: 95%;
+}
+
+.SearchDiv 
+{
+	margin-bottom: 4px;
+	padding: 4px 4px 4px 4px;
+	background: #F1F5F5;
+	border:1px solid #C6D8D8;
+	text-align: left;
+}
+
+.FormDiv 
+{
+	margin-bottom: 4px;
+	padding: 4px 4px 4px 4px;
+	background: lightYellow;
+	border:1px solid #FFCC99;
+	text-align: left;
+}
+.FormDiv h2{
+	font-size: 26px;
+	color:black;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	border: none;
+	text-align: center;
+}
+.FormDiv h3{
+	font-size: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #BA0001;
+	font-style: italic;
+}
+
+.GenericContent
+{
+	margin-bottom: 8px;
+}
+
+.InfoBox
+{
+	border: solid 1px black;
+}
+
+
+
+

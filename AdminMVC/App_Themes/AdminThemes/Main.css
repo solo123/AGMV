@@ -1,0 +1,73 @@
+﻿
+.head01
+{
+	FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: #003300; FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.content
+{
+	font-size:12px;
+}
+
+
+.contentbox
+{
+	border-bottom:#c0d7df 1px solid;
+	border-left:#c0d7df 1px solid;
+	background-color:white;
+	padding: 0px 0px 0px 0px;
+	font-size: 8pt;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.OmeiButton
+{
+	padding: 2px 6px 2px 6px;
+	
+}
+
+.indicator
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight:bold;
+	color: White;
+	background-color:Red;
+}
+
+.notes
+{
+	border:solid 1px darkGreen;
+}
+.notes_deleted
+{
+	border:solid 1px darkGreen;
+	text-decoration: line-through;
+}
+
+div.inputBlock 
+{
+	width:300px;
+	padding: 6px 6px 6px 6px;
+	float:left;
+	
+}
+
+#PhotoList
+{
+	border: solid 1px darkGreen;
+	padding: 6px 6px 6px 6px;
+
+}
+
+#PhotoList .normal
+{
+	padding: 2px 2px 2px 2px;
+}
+
+#PhotoList .selected
+{
+	padding: 2px 2px 2px 2px;
+	background-color: Yellow;
+}
+
+

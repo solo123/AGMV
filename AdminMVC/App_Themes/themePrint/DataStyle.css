@@ -1,0 +1,54 @@
+﻿/* -- DataTable -- */
+.DataTable
+{
+	font-size: 12px;
+	line-height: 1.3;
+	border: solid 1px black;
+}
+
+.list_head
+{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	line-height: 16px;
+	border: solid 1px black;
+}
+
+.list_item
+{
+	border-bottom: solid 1px solid;
+}
+
+/* -- DetailData -- */
+
+.detail_view {
+	FONT-SIZE: 12px;
+}
+.detail_view .prompt{}
+
+.detail_view .prompt1 {
+	font-weight:bold;
+}
+.detail_view .content {
+}
+
+.detail_view a
+{
+	color: blue;
+	text-decoration: underline;
+	cursor: hand;
+}
+
+
+.edit_en
+{
+	font-size:8pt;
+	background-color:#f1f1f1;
+}
+
+.edit_cn
+{
+	font-size:8pt;
+	background-color:#d0cadc;
+}
+

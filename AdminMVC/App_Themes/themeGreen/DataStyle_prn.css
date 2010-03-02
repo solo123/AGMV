@@ -1,0 +1,86 @@
+﻿@media print {
+
+.DataList
+{
+	font-size: 80%;
+	line-height: 1.3;
+}
+
+.list_title
+{
+	background-image:url(mainPics/line01.gif); 
+	height:25px;
+	font-family:Tahoma;
+}
+
+.list_head
+{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	line-height: 16px;
+}
+.list_head A
+{
+	text-decoration:underline;
+}
+.list_head A:visited
+{
+	text-decoration:underline;
+}
+
+.list_item_forsele
+{
+	font-family:verdana,arial,helvetica;
+	cursor:hand;
+}
+.list_item
+{
+	font-family:verdana,arial,helvetica;
+}
+.list_item_alt_forsele
+{
+	font-family:verdana,arial,helvetica;
+	cursor:hand;
+}
+.list_item_alt
+{
+	font-family:verdana,arial,helvetica;
+}
+.list_item_select
+{
+	font-family:verdana,arial,helvetica;
+	cursor:hand;
+}
+
+.detail_view {
+	FONT-SIZE: 12px;
+}
+.detail_view .prompt .prompt1{
+	FONT-FAMILY: "Times New Roman", Times, serif;
+	color: Black;
+}
+.detail_view .content {
+	FONT-FAMILY: "Courier New", Courier, monospace;
+	font-style: normal;
+	font-size: 13px;
+	color: Black;
+}
+.detail_view a
+{
+	color: blue;
+	text-decoration: underline;
+	cursor: hand;
+}
+
+
+.edit_en
+{
+	font-size:8pt;
+}
+
+.edit_cn
+{
+	font-size:8pt;
+}
+
+}

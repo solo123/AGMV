@@ -1,0 +1,654 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="OmeiWebModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+        <EntityContainer Name="OmeiWebModelStoreContainer">
+          <EntitySet Name="airlineCode" EntityType="OmeiWebModel.Store.airlineCode" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="airportCode" EntityType="OmeiWebModel.Store.airportCode" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="BusSchedule" EntityType="OmeiWebModel.Store.BusSchedule" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Destination" EntityType="OmeiWebModel.Store.Destination" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Flights" EntityType="OmeiWebModel.Store.Flights" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tourDestinations" EntityType="OmeiWebModel.Store.tourDestinations" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tours" EntityType="OmeiWebModel.Store.tours" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TypeRef" EntityType="OmeiWebModel.Store.TypeRef" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="userInfo" EntityType="OmeiWebModel.Store.userInfo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="v_schedules" EntityType="OmeiWebModel.Store.v_schedules" store:Type="Views" store:Schema="dbo" store:Name="v_schedules">
+            <DefiningQuery>SELECT 
+      [v_schedules].[scheduleId] AS [scheduleId], 
+      [v_schedules].[tourId] AS [tourId], 
+      [v_schedules].[TourName] AS [TourName], 
+      [v_schedules].[subTitle] AS [subTitle], 
+      [v_schedules].[TourDay] AS [TourDay], 
+      [v_schedules].[startDate] AS [startDate], 
+      [v_schedules].[priceAdult] AS [priceAdult], 
+      [v_schedules].[priceChild] AS [priceChild], 
+      [v_schedules].[maxSeats] AS [maxSeats], 
+      [v_schedules].[bookCustomers] AS [bookCustomers], 
+      [v_schedules].[actualCustomers] AS [actualCustomers], 
+      [v_schedules].[TourType] AS [TourType]
+      FROM [dbo].[v_schedules] AS [v_schedules]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="v_tourDestinations" EntityType="OmeiWebModel.Store.v_tourDestinations" store:Type="Views" store:Schema="dbo" store:Name="v_tourDestinations">
+            <DefiningQuery>SELECT 
+      [v_tourDestinations].[tourDestid] AS [tourDestid], 
+      [v_tourDestinations].[tourId] AS [tourId], 
+      [v_tourDestinations].[visitDate] AS [visitDate], 
+      [v_tourDestinations].[visitOrder] AS [visitOrder], 
+      [v_tourDestinations].[description] AS [description], 
+      [v_tourDestinations].[description_cn] AS [description_cn], 
+      [v_tourDestinations].[titlePic] AS [titlePic], 
+      [v_tourDestinations].[DestinationName] AS [DestinationName], 
+      [v_tourDestinations].[DestinationName_cn] AS [DestinationName_cn]
+      FROM [dbo].[v_tourDestinations] AS [v_tourDestinations]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+        <EntityType Name="airlineCode">
+          <Key>
+            <PropertyRef Name="airlineID" />
+          </Key>
+          <Property Name="airlineID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="airlineCode" Type="varchar" MaxLength="50" />
+          <Property Name="name" Type="varchar" MaxLength="500" />
+          <Property Name="name_cn" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="airportCode">
+          <Key>
+            <PropertyRef Name="airportID" />
+          </Key>
+          <Property Name="airportID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="airportCode" Type="varchar" MaxLength="50" />
+          <Property Name="name" Type="varchar" MaxLength="200" />
+          <Property Name="name_cn" Type="nvarchar" MaxLength="200" />
+          <Property Name="country" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="BusSchedule">
+          <Key>
+            <PropertyRef Name="scheduleId" />
+          </Key>
+          <Property Name="scheduleId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="subTitle" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="tourId" Type="int" Nullable="false" />
+          <Property Name="startDate" Type="datetime" Nullable="false" />
+          <Property Name="endDate" Type="datetime" Nullable="false" />
+          <Property Name="vehicleId" Type="int" Nullable="false" />
+          <Property Name="maxSeats" Type="int" Nullable="false" />
+          <Property Name="driverId" Type="int" Nullable="false" />
+          <Property Name="driverAssistanceId" Type="int" Nullable="false" />
+          <Property Name="tourGuideId" Type="int" Nullable="false" />
+          <Property Name="tourGuideAssistanceId" Type="int" Nullable="false" />
+          <Property Name="bookCustomers" Type="int" Nullable="false" />
+          <Property Name="actualCustomers" Type="int" Nullable="false" />
+          <Property Name="actualRooms" Type="decimal" Nullable="false" Scale="1" />
+          <Property Name="priceAdult" Type="decimal" Nullable="false" Scale="2" />
+          <Property Name="priceChild" Type="decimal" Nullable="false" Scale="2" />
+          <Property Name="salesAmount" Type="decimal" Scale="2" />
+          <Property Name="status" Type="tinyint" Nullable="false" />
+          <Property Name="createMode" Type="tinyint" Nullable="false" />
+          <Property Name="hotel" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="maxWebSeats" Type="int" Nullable="false" />
+          <Property Name="hasSeatTable" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Destination">
+          <Key>
+            <PropertyRef Name="DestinationID" />
+          </Key>
+          <Property Name="DestinationID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="titlePic" Type="int" Nullable="false" />
+          <Property Name="DestinationName" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="DestinationName_cn" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="Brief" Type="varchar" MaxLength="200" />
+          <Property Name="Brief_cn" Type="nvarchar" MaxLength="200" />
+          <Property Name="city" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="state" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="country" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Description" Type="text" Nullable="false" />
+          <Property Name="Description_cn" Type="text" Nullable="false" />
+          <Property Name="Status" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Flights">
+          <Key>
+            <PropertyRef Name="flightId" />
+          </Key>
+          <Property Name="flightId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="airportFrom" Type="char" MaxLength="3" />
+          <Property Name="airportTo" Type="char" MaxLength="3" />
+          <Property Name="airline" Type="varchar" MaxLength="100" />
+          <Property Name="flight" Type="varchar" MaxLength="100" />
+          <Property Name="roundTrip" Type="bit" />
+          <Property Name="nonStop" Type="bit" />
+          <Property Name="priceAdult" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="priceChild" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="notes" Type="nvarchar" MaxLength="500" />
+          <Property Name="status" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="tourDestinations">
+          <Key>
+            <PropertyRef Name="tourDestid" />
+          </Key>
+          <Property Name="tourDestid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="tourId" Type="int" Nullable="false" />
+          <Property Name="destinationId" Type="int" Nullable="false" />
+          <Property Name="visitDate" Type="int" Nullable="false" />
+          <Property Name="visitOrder" Type="int" Nullable="false" />
+          <Property Name="description" Type="varchar" Nullable="false" MaxLength="4000" />
+          <Property Name="description_cn" Type="nvarchar" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tours">
+          <Key>
+            <PropertyRef Name="TourID" />
+          </Key>
+          <Property Name="TourID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TourName" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="TourName_cn" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="tourOrder" Type="int" Nullable="false" />
+          <Property Name="TourDay" Type="tinyint" Nullable="false" />
+          <Property Name="TourNight" Type="tinyint" Nullable="false" />
+          <Property Name="Description" Type="varchar" Nullable="false" MaxLength="1000" />
+          <Property Name="Description_cn" Type="nvarchar" Nullable="false" MaxLength="1000" />
+          <Property Name="TourType" Type="tinyint" Nullable="false" />
+          <Property Name="autoGenSchedule" Type="tinyint" Nullable="false" />
+          <Property Name="weekly" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="priceAdult" Type="decimal" Nullable="false" Scale="2" />
+          <Property Name="priceChild" Type="decimal" Nullable="false" Scale="2" />
+          <Property Name="hasSeatTable" Type="bit" Nullable="false" />
+          <Property Name="isFloatPrice" Type="bit" Nullable="false" />
+          <Property Name="status" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TypeRef">
+          <Key>
+            <PropertyRef Name="tid" />
+          </Key>
+          <Property Name="tid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="listClass" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="listTitle" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="listTitle_cn" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="listValue" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="listStyle" Type="varchar" MaxLength="200" />
+          <Property Name="status" Type="tinyint" Nullable="false" />
+          <Property Name="listBack" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="userInfo">
+          <Key>
+            <PropertyRef Name="userId" />
+          </Key>
+          <Property Name="userId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="firstName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="middleName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="lastName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="address" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="city" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="state" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="zip" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="country" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="homePhone" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="cellPhone" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="walkyPhone" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="email" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="mailList" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="userType" Type="tinyint" Nullable="false" />
+          <Property Name="addDate" Type="datetime" Nullable="false" />
+          <Property Name="updateDate" Type="datetime" Nullable="false" />
+          <Property Name="status" Type="tinyint" Nullable="false" />
+          <Property Name="pin" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'OmeiTravel.dbo.v_schedules' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="v_schedules">
+          <Key>
+            <PropertyRef Name="scheduleId" />
+            <PropertyRef Name="tourId" />
+            <PropertyRef Name="subTitle" />
+            <PropertyRef Name="startDate" />
+            <PropertyRef Name="priceAdult" />
+            <PropertyRef Name="priceChild" />
+            <PropertyRef Name="maxSeats" />
+            <PropertyRef Name="bookCustomers" />
+            <PropertyRef Name="actualCustomers" />
+          </Key>
+          <Property Name="scheduleId" Type="int" Nullable="false" />
+          <Property Name="tourId" Type="int" Nullable="false" />
+          <Property Name="TourName" Type="varchar" MaxLength="200" />
+          <Property Name="subTitle" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="TourDay" Type="tinyint" />
+          <Property Name="startDate" Type="datetime" Nullable="false" />
+          <Property Name="priceAdult" Type="decimal" Nullable="false" Scale="2" />
+          <Property Name="priceChild" Type="decimal" Nullable="false" Scale="2" />
+          <Property Name="maxSeats" Type="int" Nullable="false" />
+          <Property Name="bookCustomers" Type="int" Nullable="false" />
+          <Property Name="actualCustomers" Type="int" Nullable="false" />
+          <Property Name="TourType" Type="tinyint" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'OmeiTravel.dbo.v_tourDestinations' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="v_tourDestinations">
+          <Key>
+            <PropertyRef Name="tourDestid" />
+            <PropertyRef Name="tourId" />
+            <PropertyRef Name="visitDate" />
+            <PropertyRef Name="visitOrder" />
+            <PropertyRef Name="description" />
+            <PropertyRef Name="description_cn" />
+          </Key>
+          <Property Name="tourDestid" Type="int" Nullable="false" />
+          <Property Name="tourId" Type="int" Nullable="false" />
+          <Property Name="visitDate" Type="int" Nullable="false" />
+          <Property Name="visitOrder" Type="int" Nullable="false" />
+          <Property Name="description" Type="varchar" Nullable="false" MaxLength="4000" />
+          <Property Name="description_cn" Type="nvarchar" Nullable="false" />
+          <Property Name="titlePic" Type="int" />
+          <Property Name="DestinationName" Type="varchar" MaxLength="100" />
+          <Property Name="DestinationName_cn" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <Association Name="FK_BusSchedule_tours">
+          <End Role="tours" Type="OmeiWebModel.Store.tours" Multiplicity="1" />
+          <End Role="BusSchedule" Type="OmeiWebModel.Store.BusSchedule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tours">
+              <PropertyRef Name="TourID" />
+            </Principal>
+            <Dependent Role="BusSchedule">
+              <PropertyRef Name="tourId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="OmeiWebModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+        <EntityContainer Name="OmeiTravelEntities">
+          <EntitySet Name="TypeRefSet" EntityType="OmeiWebModel.TypeRef" />
+          <EntitySet Name="DestinationSet" EntityType="OmeiWebModel.Destination" />
+          <EntitySet Name="TourDestinationSet" EntityType="OmeiWebModel.TourDestinations" />
+          <EntitySet Name="ScheduleSet" EntityType="OmeiWebModel.Schedule" />
+          <EntitySet Name="airlineCodeSet" EntityType="OmeiWebModel.airlineCode" />
+          <EntitySet Name="airportCodeSet" EntityType="OmeiWebModel.airportCode" />
+          <EntitySet Name="FlightSet" EntityType="OmeiWebModel.Flight" />
+          <EntitySet Name="V_scheduleSet" EntityType="OmeiWebModel.V_schedule" />
+          <EntitySet Name="v_tourDestinationSet" EntityType="OmeiWebModel.v_tourDestination" />
+          <EntitySet Name="TourSet" EntityType="OmeiWebModel.Tour" />
+          <EntitySet Name="UserInfoSet" EntityType="OmeiWebModel.UserInfo" />
+          </EntityContainer>
+        <EntityType Name="TypeRef">
+          <Key>
+            <PropertyRef Name="tid" />
+          </Key>
+          <Property Name="tid" Type="Int32" Nullable="false" />
+          <Property Name="listClass" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="listTitle" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="listTitle_cn" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="listValue" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="listStyle" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="status" Type="Byte" Nullable="false" />
+          <Property Name="listBack" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Destination">
+          <Key>
+            <PropertyRef Name="DestinationID" /></Key>
+          <Property Name="DestinationID" Type="Int32" Nullable="false" />
+          <Property Name="titlePic" Type="Int32" Nullable="false" />
+          <Property Name="DestinationName" Type="String" Nullable="false" />
+          <Property Name="DestinationName_cn" Type="String" Nullable="false" />
+          <Property Name="Brief" Type="String" Nullable="true" />
+          <Property Name="Brief_cn" Type="String" Nullable="true" />
+          <Property Name="city" Type="String" Nullable="false" />
+          <Property Name="state" Type="String" Nullable="false" />
+          <Property Name="country" Type="String" Nullable="false" />
+          <Property Name="Description" Type="String" Nullable="false" />
+          <Property Name="Description_cn" Type="String" Nullable="false" />
+          <Property Name="Status" Type="Byte" Nullable="false" />
+          </EntityType>
+
+        <EntityType Name="TourDestinations">
+          <Key>
+            <PropertyRef Name="tourDestid" /></Key>
+          <Property Name="tourDestid" Type="Int32" Nullable="false" />
+          <Property Name="tourId" Type="Int32" Nullable="false" />
+          <Property Name="destinationId" Type="Int32" Nullable="false" />
+          <Property Name="visitDate" Type="Int32" Nullable="false" />
+          <Property Name="visitOrder" Type="Int32" Nullable="false" />
+          <Property Name="description" Type="String" Nullable="false" />
+          <Property Name="description_cn" Type="String" Nullable="false" />
+          </EntityType>
+        <EntityType Name="Schedule">
+          <Key>
+            <PropertyRef Name="scheduleId" /></Key>
+          <Property Name="scheduleId" Type="Int32" Nullable="false" />
+          <Property Name="subTitle" Type="String" Nullable="false" />
+          <Property Name="tourId" Type="Int32" Nullable="false" />
+          <Property Name="startDate" Type="DateTime" Nullable="false" />
+          <Property Name="endDate" Type="DateTime" Nullable="false" />
+          <Property Name="vehicleId" Type="Int32" Nullable="false" />
+          <Property Name="maxSeats" Type="Int32" Nullable="false" />
+          <Property Name="driverId" Type="Int32" Nullable="false" />
+          <Property Name="driverAssistanceId" Type="Int32" Nullable="false" />
+          <Property Name="tourGuideId" Type="Int32" Nullable="false" />
+          <Property Name="tourGuideAssistanceId" Type="Int32" Nullable="false" />
+          <Property Name="bookCustomers" Type="Int32" Nullable="false" />
+          <Property Name="actualCustomers" Type="Int32" Nullable="false" />
+          <Property Name="actualRooms" Type="Decimal" Nullable="false" />
+          <Property Name="priceAdult" Type="Decimal" Nullable="false" />
+          <Property Name="priceChild" Type="Decimal" Nullable="false" />
+          <Property Name="salesAmount" Type="Decimal" Nullable="true" />
+          <Property Name="status" Type="Byte" Nullable="false" />
+          <Property Name="createMode" Type="Byte" Nullable="false" />
+          <Property Name="hotel" Type="String" Nullable="false" />
+          <Property Name="maxWebSeats" Type="Int32" Nullable="false" />
+          <Property Name="hasSeatTable" Type="Boolean" Nullable="false" />
+          </EntityType>
+        <EntityType Name="airlineCode">
+          <Key>
+            <PropertyRef Name="airlineID" /></Key>
+          <Property Name="airlineID" Type="Int32" Nullable="false" />
+          <Property Name="airlineCode1" Type="String" Nullable="true" />
+          <Property Name="name" Type="String" Nullable="true" />
+          <Property Name="name_cn" Type="String" Nullable="true" /></EntityType>
+        <EntityType Name="airportCode">
+          <Key>
+            <PropertyRef Name="airportID" /></Key>
+          <Property Name="airportID" Type="Int32" Nullable="false" />
+          <Property Name="airportCode1" Type="String" Nullable="true" />
+          <Property Name="name" Type="String" Nullable="true" />
+          <Property Name="name_cn" Type="String" Nullable="true" />
+          <Property Name="country" Type="String" Nullable="true" /></EntityType>
+        <EntityType Name="Flight">
+          <Key>
+            <PropertyRef Name="flightId" /></Key>
+          <Property Name="flightId" Type="Int32" Nullable="false" />
+          <Property Name="airportFrom" Type="String" Nullable="true" />
+          <Property Name="airportTo" Type="String" Nullable="true" />
+          <Property Name="airline" Type="String" Nullable="true" />
+          <Property Name="flight" Type="String" Nullable="true" />
+          <Property Name="roundTrip" Type="Boolean" Nullable="true" />
+          <Property Name="nonStop" Type="Boolean" Nullable="true" />
+          <Property Name="priceAdult" Type="Decimal" Nullable="true" />
+          <Property Name="priceChild" Type="Decimal" Nullable="true" />
+          <Property Name="notes" Type="String" Nullable="true" />
+          <Property Name="status" Type="Byte" Nullable="true" /></EntityType>
+        <EntityType Name="V_schedule">
+          <Key>
+            <PropertyRef Name="scheduleId" />
+            <PropertyRef Name="tourId" />
+            <PropertyRef Name="subTitle" />
+            <PropertyRef Name="startDate" />
+            <PropertyRef Name="priceAdult" />
+            <PropertyRef Name="priceChild" />
+            <PropertyRef Name="maxSeats" />
+            <PropertyRef Name="bookCustomers" />
+            <PropertyRef Name="actualCustomers" /></Key>
+          <Property Name="scheduleId" Type="Int32" Nullable="false" />
+          <Property Name="tourId" Type="Int32" Nullable="false" />
+          <Property Name="TourName" Type="String" Nullable="true" />
+          <Property Name="subTitle" Type="String" Nullable="false" />
+          <Property Name="TourDay" Type="Byte" Nullable="true" />
+          <Property Name="startDate" Type="DateTime" Nullable="false" />
+          <Property Name="priceAdult" Type="Decimal" Nullable="false" />
+          <Property Name="priceChild" Type="Decimal" Nullable="false" />
+          <Property Name="maxSeats" Type="Int32" Nullable="false" />
+          <Property Name="bookCustomers" Type="Int32" Nullable="false" />
+          <Property Name="actualCustomers" Type="Int32" Nullable="false" />
+          <Property Name="TourType" Type="Byte" Nullable="true" /></EntityType>
+        <EntityType Name="v_tourDestination">
+          <Key>
+            <PropertyRef Name="tourDestid" />
+            <PropertyRef Name="tourId" />
+            <PropertyRef Name="visitDate" />
+            <PropertyRef Name="visitOrder" />
+            <PropertyRef Name="description" />
+            <PropertyRef Name="description_cn" /></Key>
+          <Property Name="tourDestid" Type="Int32" Nullable="false" />
+          <Property Name="tourId" Type="Int32" Nullable="false" />
+          <Property Name="visitDate" Type="Int32" Nullable="false" />
+          <Property Name="visitOrder" Type="Int32" Nullable="false" />
+          <Property Name="description" Type="String" Nullable="false" />
+          <Property Name="description_cn" Type="String" Nullable="false" />
+          <Property Name="titlePic" Type="Int32" Nullable="true" />
+          <Property Name="DestinationName" Type="String" Nullable="true" />
+          <Property Name="DestinationName_cn" Type="String" Nullable="true" /></EntityType>
+        <EntityType Name="Tour">
+          <Key>
+            <PropertyRef Name="TourID" /></Key>
+          <Property Name="TourID" Type="Int32" Nullable="false" />
+          <Property Name="TourName" Type="String" Nullable="false" />
+          <Property Name="TourName_cn" Type="String" Nullable="false" />
+          <Property Name="tourOrder" Type="Int32" Nullable="false" />
+          <Property Name="TourDay" Type="Byte" Nullable="false" />
+          <Property Name="TourNight" Type="Byte" Nullable="false" />
+          <Property Name="Description" Type="String" Nullable="false" />
+          <Property Name="Description_cn" Type="String" Nullable="false" />
+          <Property Name="TourType" Type="Byte" Nullable="false" />
+          <Property Name="autoGenSchedule" Type="Byte" Nullable="false" />
+          <Property Name="weekly" Type="String" Nullable="false" />
+          <Property Name="priceAdult" Type="Decimal" Nullable="false" />
+          <Property Name="priceChild" Type="Decimal" Nullable="false" />
+          <Property Name="hasSeatTable" Type="Boolean" Nullable="false" />
+          <Property Name="isFloatPrice" Type="Boolean" Nullable="false" />
+          <Property Name="status" Type="Byte" Nullable="false" />
+          </EntityType>
+        <EntityType Name="UserInfo">
+          <Key>
+            <PropertyRef Name="userId" /></Key>
+          <Property Name="userId" Type="Int32" Nullable="false" />
+          <Property Name="firstName" Type="String" Nullable="false" />
+          <Property Name="middleName" Type="String" Nullable="false" />
+          <Property Name="lastName" Type="String" Nullable="false" />
+          <Property Name="address" Type="String" Nullable="false" />
+          <Property Name="city" Type="String" Nullable="false" />
+          <Property Name="state" Type="String" Nullable="false" />
+          <Property Name="zip" Type="String" Nullable="false" />
+          <Property Name="country" Type="String" Nullable="false" />
+          <Property Name="homePhone" Type="String" Nullable="false" />
+          <Property Name="cellPhone" Type="String" Nullable="false" />
+          <Property Name="walkyPhone" Type="String" Nullable="false" />
+          <Property Name="email" Type="String" Nullable="false" />
+          <Property Name="mailList" Type="String" Nullable="false" />
+          <Property Name="userType" Type="Byte" Nullable="false" />
+          <Property Name="addDate" Type="DateTime" Nullable="false" />
+          <Property Name="updateDate" Type="DateTime" Nullable="false" />
+          <Property Name="status" Type="Byte" Nullable="false" />
+          <Property Name="pin" Type="String" Nullable="true" /></EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+        <EntityContainerMapping StorageEntityContainer="OmeiWebModelStoreContainer" CdmEntityContainer="OmeiTravelEntities">
+          <EntitySetMapping Name="TypeRefSet">
+            <EntityTypeMapping TypeName="IsTypeOf(OmeiWebModel.TypeRef)">
+              <MappingFragment StoreEntitySet="TypeRef">
+                <ScalarProperty Name="tid" ColumnName="tid" />
+                <ScalarProperty Name="listClass" ColumnName="listClass" />
+                <ScalarProperty Name="listTitle" ColumnName="listTitle" />
+                <ScalarProperty Name="listTitle_cn" ColumnName="listTitle_cn" />
+                <ScalarProperty Name="listValue" ColumnName="listValue" />
+                <ScalarProperty Name="listStyle" ColumnName="listStyle" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="listBack" ColumnName="listBack" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DestinationSet">
+            <EntityTypeMapping TypeName="IsTypeOf(OmeiWebModel.Destination)">
+              <MappingFragment StoreEntitySet="Destination">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Description_cn" ColumnName="Description_cn" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="country" ColumnName="country" />
+                <ScalarProperty Name="state" ColumnName="state" />
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="Brief_cn" ColumnName="Brief_cn" />
+                <ScalarProperty Name="Brief" ColumnName="Brief" />
+                <ScalarProperty Name="DestinationName_cn" ColumnName="DestinationName_cn" />
+                <ScalarProperty Name="DestinationName" ColumnName="DestinationName" />
+                <ScalarProperty Name="titlePic" ColumnName="titlePic" />
+                <ScalarProperty Name="DestinationID" ColumnName="DestinationID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="TourDestinationSet">
+            <EntityTypeMapping TypeName="IsTypeOf(OmeiWebModel.TourDestinations)">
+              <MappingFragment StoreEntitySet="tourDestinations">
+                <ScalarProperty Name="description_cn" ColumnName="description_cn" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="visitOrder" ColumnName="visitOrder" />
+                <ScalarProperty Name="visitDate" ColumnName="visitDate" />
+                <ScalarProperty Name="destinationId" ColumnName="destinationId" />
+                <ScalarProperty Name="tourId" ColumnName="tourId" />
+                <ScalarProperty Name="tourDestid" ColumnName="tourDestid" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ScheduleSet">
+            <EntityTypeMapping TypeName="IsTypeOf(OmeiWebModel.Schedule)">
+              <MappingFragment StoreEntitySet="BusSchedule">
+                <ScalarProperty Name="hasSeatTable" ColumnName="hasSeatTable" />
+                <ScalarProperty Name="maxWebSeats" ColumnName="maxWebSeats" />
+                <ScalarProperty Name="hotel" ColumnName="hotel" />
+                <ScalarProperty Name="createMode" ColumnName="createMode" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="salesAmount" ColumnName="salesAmount" />
+                <ScalarProperty Name="priceChild" ColumnName="priceChild" />
+                <ScalarProperty Name="priceAdult" ColumnName="priceAdult" />
+                <ScalarProperty Name="actualRooms" ColumnName="actualRooms" />
+                <ScalarProperty Name="actualCustomers" ColumnName="actualCustomers" />
+                <ScalarProperty Name="bookCustomers" ColumnName="bookCustomers" />
+                <ScalarProperty Name="tourGuideAssistanceId" ColumnName="tourGuideAssistanceId" />
+                <ScalarProperty Name="tourGuideId" ColumnName="tourGuideId" />
+                <ScalarProperty Name="driverAssistanceId" ColumnName="driverAssistanceId" />
+                <ScalarProperty Name="driverId" ColumnName="driverId" />
+                <ScalarProperty Name="maxSeats" ColumnName="maxSeats" />
+                <ScalarProperty Name="vehicleId" ColumnName="vehicleId" />
+                <ScalarProperty Name="endDate" ColumnName="endDate" />
+                <ScalarProperty Name="startDate" ColumnName="startDate" />
+                <ScalarProperty Name="tourId" ColumnName="tourId" />
+                <ScalarProperty Name="subTitle" ColumnName="subTitle" />
+                <ScalarProperty Name="scheduleId" ColumnName="scheduleId" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="airlineCodeSet">
+            <EntityTypeMapping TypeName="IsTypeOf(OmeiWebModel.airlineCode)">
+              <MappingFragment StoreEntitySet="airlineCode">
+                <ScalarProperty Name="name_cn" ColumnName="name_cn" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="airlineCode1" ColumnName="airlineCode" />
+                <ScalarProperty Name="airlineID" ColumnName="airlineID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="airportCodeSet">
+            <EntityTypeMapping TypeName="IsTypeOf(OmeiWebModel.airportCode)">
+              <MappingFragment StoreEntitySet="airportCode">
+                <ScalarProperty Name="country" ColumnName="country" />
+                <ScalarProperty Name="name_cn" ColumnName="name_cn" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="airportCode1" ColumnName="airportCode" />
+                <ScalarProperty Name="airportID" ColumnName="airportID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="FlightSet">
+            <EntityTypeMapping TypeName="IsTypeOf(OmeiWebModel.Flight)">
+              <MappingFragment StoreEntitySet="Flights">
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="notes" ColumnName="notes" />
+                <ScalarProperty Name="priceChild" ColumnName="priceChild" />
+                <ScalarProperty Name="priceAdult" ColumnName="priceAdult" />
+                <ScalarProperty Name="nonStop" ColumnName="nonStop" />
+                <ScalarProperty Name="roundTrip" ColumnName="roundTrip" />
+                <ScalarProperty Name="flight" ColumnName="flight" />
+                <ScalarProperty Name="airline" ColumnName="airline" />
+                <ScalarProperty Name="airportTo" ColumnName="airportTo" />
+                <ScalarProperty Name="airportFrom" ColumnName="airportFrom" />
+                <ScalarProperty Name="flightId" ColumnName="flightId" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="V_scheduleSet">
+            <EntityTypeMapping TypeName="IsTypeOf(OmeiWebModel.V_schedule)">
+              <MappingFragment StoreEntitySet="v_schedules">
+                <ScalarProperty Name="TourType" ColumnName="TourType" />
+                <ScalarProperty Name="actualCustomers" ColumnName="actualCustomers" />
+                <ScalarProperty Name="bookCustomers" ColumnName="bookCustomers" />
+                <ScalarProperty Name="maxSeats" ColumnName="maxSeats" />
+                <ScalarProperty Name="priceChild" ColumnName="priceChild" />
+                <ScalarProperty Name="priceAdult" ColumnName="priceAdult" />
+                <ScalarProperty Name="startDate" ColumnName="startDate" />
+                <ScalarProperty Name="TourDay" ColumnName="TourDay" />
+                <ScalarProperty Name="subTitle" ColumnName="subTitle" />
+                <ScalarProperty Name="TourName" ColumnName="TourName" />
+                <ScalarProperty Name="tourId" ColumnName="tourId" />
+                <ScalarProperty Name="scheduleId" ColumnName="scheduleId" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="v_tourDestinationSet">
+            <EntityTypeMapping TypeName="IsTypeOf(OmeiWebModel.v_tourDestination)">
+              <MappingFragment StoreEntitySet="v_tourDestinations">
+                <ScalarProperty Name="DestinationName_cn" ColumnName="DestinationName_cn" />
+                <ScalarProperty Name="DestinationName" ColumnName="DestinationName" />
+                <ScalarProperty Name="titlePic" ColumnName="titlePic" />
+                <ScalarProperty Name="description_cn" ColumnName="description_cn" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="visitOrder" ColumnName="visitOrder" />
+                <ScalarProperty Name="visitDate" ColumnName="visitDate" />
+                <ScalarProperty Name="tourId" ColumnName="tourId" />
+                <ScalarProperty Name="tourDestid" ColumnName="tourDestid" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="TourSet">
+            <EntityTypeMapping TypeName="IsTypeOf(OmeiWebModel.Tour)">
+              <MappingFragment StoreEntitySet="tours">
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="isFloatPrice" ColumnName="isFloatPrice" />
+                <ScalarProperty Name="hasSeatTable" ColumnName="hasSeatTable" />
+                <ScalarProperty Name="priceChild" ColumnName="priceChild" />
+                <ScalarProperty Name="priceAdult" ColumnName="priceAdult" />
+                <ScalarProperty Name="weekly" ColumnName="weekly" />
+                <ScalarProperty Name="autoGenSchedule" ColumnName="autoGenSchedule" />
+                <ScalarProperty Name="TourType" ColumnName="TourType" />
+                <ScalarProperty Name="Description_cn" ColumnName="Description_cn" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="TourNight" ColumnName="TourNight" />
+                <ScalarProperty Name="TourDay" ColumnName="TourDay" />
+                <ScalarProperty Name="tourOrder" ColumnName="tourOrder" />
+                <ScalarProperty Name="TourName_cn" ColumnName="TourName_cn" />
+                <ScalarProperty Name="TourName" ColumnName="TourName" />
+                <ScalarProperty Name="TourID" ColumnName="TourID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="UserInfoSet">
+            <EntityTypeMapping TypeName="IsTypeOf(OmeiWebModel.UserInfo)">
+              <MappingFragment StoreEntitySet="userInfo">
+                <ScalarProperty Name="pin" ColumnName="pin" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+                <ScalarProperty Name="addDate" ColumnName="addDate" />
+                <ScalarProperty Name="userType" ColumnName="userType" />
+                <ScalarProperty Name="mailList" ColumnName="mailList" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="walkyPhone" ColumnName="walkyPhone" />
+                <ScalarProperty Name="cellPhone" ColumnName="cellPhone" />
+                <ScalarProperty Name="homePhone" ColumnName="homePhone" />
+                <ScalarProperty Name="country" ColumnName="country" />
+                <ScalarProperty Name="zip" ColumnName="zip" />
+                <ScalarProperty Name="state" ColumnName="state" />
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="lastName" ColumnName="lastName" />
+                <ScalarProperty Name="middleName" ColumnName="middleName" />
+                <ScalarProperty Name="firstName" ColumnName="firstName" />
+                <ScalarProperty Name="userId" ColumnName="userId" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram Name="OmeiWebModel" ZoomLevel="100">
+        <EntityTypeShape EntityType="OmeiWebModel.TypeRef" Width="1.5" PointX="4.25" PointY="0.5" Height="2.2966927083333331" IsExpanded="true" />
+        <EntityTypeShape EntityType="OmeiWebModel.Destination" Width="1.5" PointX="0.5" PointY="0.5" Height="2.9711718749999996" />
+        <EntityTypeShape EntityType="OmeiTravelModel.Tour" Width="1.5" PointX="2.25" PointY="0.5" Height="3.6456510416666656" />
+        <EntityTypeShape EntityType="OmeiWebModel.TourDestinations" Width="1.5" PointX="1.25" PointY="4.75" Height="2.2966927083333335" />
+        <EntityTypeShape EntityType="OmeiWebModel.Schedule" Width="1.5" PointX="4.375" PointY="3.75" Height="4.6573697916666656" />
+        <EntityTypeShape EntityType="OmeiWebModel.airlineCode" Width="1.5" PointX="3.375" PointY="11.375" Height="1.6222135416666672" />
+        <EntityTypeShape EntityType="OmeiWebModel.airportCode" Width="1.5" PointX="3.375" PointY="9.375" Height="1.7908333333333335" />
+        <EntityTypeShape EntityType="OmeiWebModel.Flight" Width="1.5" PointX="1" PointY="9.5" Height="2.8025520833333326" />
+        <EntityTypeShape EntityType="OmeiWebModel.V_schedule" Width="1.5" PointX="6.375" PointY="0.75" Height="2.8025520833333335" />
+        <EntityTypeShape EntityType="OmeiWebModel.v_tourDestination" Width="1.5" PointX="6.375" PointY="4.75" Height="2.4653124999999996" />
+        <EntityTypeShape EntityType="OmeiWebModel.Tour" Width="1.5" PointX="2.5" PointY="0.5" Height="3.8142708333333317" />
+        <EntityTypeShape EntityType="OmeiWebModel.UserInfo" Width="1.5" PointX="5.5" PointY="9.25" Height="4.1515104166666656" />
+        </Diagram></edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

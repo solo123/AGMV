@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Test JSON webservice data</title>
+    <script type="text/javascript" src="Images/jquery.js"></script> 
+    <script type="text/javascript">
+function LoadWebServiceString(serviceUrl, callback) {
+    $.ajax({
+        type: "POST",
+        url: serviceUrl,
+        data: "{}",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: function(msg) { callback(msg); },
+        error: function(xml, status) {
+            if (status == 'error') {
+                try {
+                    var json = eval('(' + xml.responseText + ')');
+                    alert("ERROR: " + json.Message + '\n' + json.StackTrace);
+                } catch (e) { 
+                    alert("Error: " +e + "<hr />" + xml.responseText); }
+            } else {
+                alert("error: " + status);
+            }
+        }
+    });
+}
+
+    function btnLoad(){  
+        $('#result').html("Loading...");
+        LoadWebServiceString( $('#txtUrl').val(), function(msg){$('#result').html(msg.d);});
+    }
+    
+    function showmsg(msg){
+        $('#result').html(msg.d);
+    }
+    
+    function btnJsonEval(){
+        try{
+            var o = eval($('#result').text());
+            alert(o);
+        } catch(e) {  alert("Parse json error: " + e); }
+    }
+    </script>
+</head>
+<body>
+
+    <h2>Test JSON</h2>
+    <p> URL: <input type="text" size="100" id="txtUrl" /> <input type="button" onclick="btnLoad();" value="Load" />
+    </p>
+    
+    <div id="result" style="border:solid 1px red;"></div>
+
+    <p><input type="button" onclick="btnJsonEval()" value="Json Eval" /></p>
+
+</body>
+</html>

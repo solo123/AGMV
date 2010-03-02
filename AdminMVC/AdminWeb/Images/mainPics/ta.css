@@ -1,0 +1,147 @@
+A {
+	FONT-WEIGHT: normal; FONT-SIZE: 12pt; COLOR: blue; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+A:hover {
+	FONT-WEIGHT: normal; FONT-SIZE: 12pt; COLOR: red; FONT-FAMILY: Arial; TEXT-DECORATION: underline
+}
+BODY {
+	MARGIN: 0px; FONT-FAMILY: Tahoma, Arial, sans-serif; BACKGROUND-COLOR: #ffffff
+}
+BODY.mall {
+	MARGIN: 0px; FONT-FAMILY: Tahoma, Arial, sans-serif; BACKGROUND-COLOR: #ffffcc
+}
+.BoxLinks {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: black; FONT-FAMILY: Tahoma
+}
+.BoxLinks:hover {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: red; FONT-FAMILY: Tahoma
+}
+.FooterText {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: white; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+}
+.FooterText:hover {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: white; FONT-FAMILY: Tahoma; TEXT-DECORATION: underline
+}
+.FooterTextYellow {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: yellow; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+}
+.FooterTextHidden {
+	FONT-WEIGHT: normal; FONT-SIZE: 1pt; COLOR: #333366; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+}
+.RedLinks {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; COLOR: red; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+}
+.HotLinks {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; COLOR: blue; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+}
+.HotLinks:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; COLOR: blue; FONT-FAMILY: Tahoma; TEXT-DECORATION: underline
+}
+.HotRedLinks {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; COLOR: red; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+}
+.HotRedLinks:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; COLOR: red; FONT-FAMILY: Tahoma; TEXT-DECORATION: underline
+}
+.Logo {
+	FONT-WEIGHT: normal; FONT-SIZE: 22pt; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+}
+.MenuLink {
+	FONT-WEIGHT: bold; FONT-SIZE: 8pt; COLOR: white; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+}
+.MenuLink:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 8pt; COLOR: yellow; FONT-FAMILY: Tahoma; TEXT-DECORATION: underline
+}
+.MenuLinkBlue {
+	FONT-WEIGHT: bold; FONT-SIZE: 8pt; COLOR: blue; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+}
+.MenuLinkBlue:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 8pt; COLOR: blue; FONT-FAMILY: Tahoma; TEXT-DECORATION: underline
+}
+.MenuLinkYellow {
+	FONT-WEIGHT: bold; FONT-SIZE: 8pt; COLOR: yellow; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+}
+.MenuLinkYellow:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 8pt; COLOR: white; FONT-FAMILY: Tahoma; TEXT-DECORATION: underline
+}
+.MoreLinks {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: blue; FONT-FAMILY: Tahoma
+}
+.MoreLinks:hover {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: #ff6600; FONT-FAMILY: Tahoma
+}
+.MediumText {
+	FONT-WEIGHT: normal; FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+}
+.NavHeaderText {
+	FONT-WEIGHT: bold; FONT-SIZE: 12pt; COLOR: blue; FONT-FAMILY: Tahoma
+}
+.NavText {
+	FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: white; FONT-FAMILY: Tahoma
+}
+.NavTextYellow {
+	FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: yellow; FONT-FAMILY: Tahoma
+}
+.NavFieldText {
+	FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: #003399; FONT-FAMILY: Tahoma
+}
+.NavLinks {
+	FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: yellow; FONT-FAMILY: Tahoma; TEXT-DECORATION: none
+}
+.NavLinks:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: white; FONT-FAMILY: Tahoma; TEXT-DECORATION: underline
+}
+.SmallText {
+	FONT: bold x-small Arial,Helvetica,Geneva,Swiss,SunSans-Regular,sans-serif
+}
+.color1 {
+	COLOR: white
+}
+.SubTitles {
+	FONT-WEIGHT: bold; FONT-SIZE: 8pt; COLOR: #333366; FONT-FAMILY: Tahoma
+}
+.SubTitleLinks {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: blue; FONT-FAMILY: Arial; TEXT-DECORATION: none
+}
+.SubTitleLinks:hover {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: red; FONT-FAMILY: Arial; TEXT-DECORATION: underline
+}
+#News {
+	BORDER-RIGHT: #34208b 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: #34208b 1px solid; PADDING-LEFT: 3px; BACKGROUND: #f2f1f9; PADDING-BOTTOM: 3px; BORDER-LEFT: #34208b 1px solid; COLOR: #000000; LINE-HEIGHT: normal; PADDING-TOP: 3px; BORDER-BOTTOM: #34208b 1px solid
+}
+#HotelSpecials {
+	BORDER-RIGHT: #34208b 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: #34208b 1px solid; PADDING-LEFT: 3px; BACKGROUND: #ffffce; PADDING-BOTTOM: 3px; BORDER-LEFT: #34208b 1px solid; COLOR: #000000; LINE-HEIGHT: normal; PADDING-TOP: 3px; BORDER-BOTTOM: #34208b 1px solid
+}
+#TitleBox-Enclosed {
+	BORDER-RIGHT: #34208b 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: #34208b 1px solid; PADDING-LEFT: 3px; BACKGROUND: #666699; PADDING-BOTTOM: 3px; BORDER-LEFT: #34208b 1px solid; COLOR: #000000; LINE-HEIGHT: normal; PADDING-TOP: 3px; BORDER-BOTTOM: #34208b 1px solid
+}
+#TitleBox-HalfEnclosed {
+	PADDING-RIGHT: 3px; BORDER-TOP: #34208b 1px solid; DISPLAY: block; PADDING-LEFT: 3px; BACKGROUND: #666699; PADDING-BOTTOM: 3px; BORDER-LEFT: #34208b 1px solid; COLOR: #000000; LINE-HEIGHT: normal; PADDING-TOP: 3px
+}
+#TitleStripe {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; BACKGROUND: #ffffcc; PADDING-BOTTOM: 3px; BORDER-LEFT: #34208b 1px solid; LINE-HEIGHT: normal; PADDING-TOP: 3px
+}
+.box {
+	FLOAT: left; WIDTH: 140px; HEIGHT: 110px
+}
+#boxContent {
+	LEFT: -2px; POSITION: relative; TOP: -2px
+}
+#boxContainer {
+	BACKGROUND: #ccc; MARGIN: 4px; POSITION: relative
+}
+SELECT {
+	FONT-SIZE: 8pt; FONT-FAMILY: Tahoma, Verdana, Arial, Helvetica, sans-serif
+}
+INPUT {
+	FONT-SIZE: 8pt; FONT-FAMILY: Tahoma, Verdana, Arial, Helvetica, sans-serif
+}
+TEXTAREA {
+	FONT-SIZE: 8pt; FONT-FAMILY: Tahoma, Verdana, Arial, Helvetica, sans-serif
+}
+FIELDSET {
+	FONT-SIZE: 9pt; MARGIN-BOTTOM: 5px; FONT-FAMILY: Tahoma, Verdana, Arial, Helvetica, sans-serif
+}
+FIELDSET LEGEND {
+	COLOR: black
+}

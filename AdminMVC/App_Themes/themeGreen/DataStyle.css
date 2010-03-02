@@ -1,0 +1,164 @@
+﻿.DataList
+{
+	line-height: 1.3;
+}
+
+.list_title
+{
+	background-image:url(mainPics/line01.gif); 
+	height:25px;
+	font-family:Tahoma;
+}
+
+.list_head
+{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	line-height: 16px;
+	background-color:#4C773E;
+	color:White;
+}
+.list_head A
+{
+	color: white;
+	text-decoration:underline;
+}
+.list_head A:visited
+{
+	color: white;
+	text-decoration:underline;
+}
+
+.list_item_forsele
+{
+	font-family:verdana,arial,helvetica;
+	background-color:#E4EEE0;
+	cursor:hand;
+}
+.list_item
+{
+	font-family:verdana,arial,helvetica;
+	background-color:#E4EEE0;
+}
+.list_item_alt_forsele
+{
+	font-family:verdana,arial,helvetica;
+	background-color:#C8E0C0;
+	cursor:hand;
+}
+.list_item_alt
+{
+	font-family:verdana,arial,helvetica;
+	background-color:#C8E0C0;
+}
+.list_item_select
+{
+	font-family:verdana,arial,helvetica;
+	background-color:#ffffcc;
+	cursor:hand;
+}
+.list_foot
+{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	line-height: 16px;
+	background-color:#4C773E;
+	color:White;
+}
+
+.detail_view {
+	FONT-SIZE: 12px;
+	border-collapse: collapse;
+}
+.detail_view .header {
+	FONT-WEIGHT: bold; 
+	BACKGROUND-COLOR: #c8e0c0;
+}
+
+.detail_view .prompt .prompt1{
+	COLOR: #333333; 
+	FONT-FAMILY: "Times New Roman", Times, serif;
+}
+.content
+{
+	COLOR: #a52a2a;
+	FONT-FAMILY: "Courier New", Courier, monospace;
+}
+.prompt1
+{
+	color: Gray;
+	FONT-FAMILY: "Times New Roman", Times, serif;
+}
+.detail_view .content {
+	COLOR: #a52a2a; 
+	FONT-FAMILY: "Courier New", Courier, monospace;
+	font-style: normal;
+	font-size: 13px;
+}
+.detail_view a
+{
+	color: blue;
+	text-decoration:none;
+	cursor: hand;
+}
+.detail_view a:hover { color: Red; text-decoration:underline; }
+
+
+.edit_en
+{
+	font-size:8pt;
+	background-color:#f1f1f1;
+}
+
+.edit_cn
+{
+	font-size:8pt;
+	background-color:#d0cadc;
+}
+
+.pager
+{
+	background-color: #E4EEE0;
+	FONT-SIZE: 12px;
+	height: 20px;
+}
+
+
+.pager span
+{
+	color: red;
+	border: solid 1px #4c773e;
+	BACKGROUND-COLOR: #c8e0c0;
+	text-decoration: none;
+	margin-left:1px;
+	padding-left: 4px;
+	padding-right: 4px;
+	font-weight: bold;
+
+}
+.pager a, .pager a:visited
+{
+	font-family:"Courier New", Courier, monospace;
+	padding-left: 4px;
+	padding-right: 4px;
+	border: solid 1px #dedeb8;
+	BACKGROUND-COLOR: #f5fae7;
+	text-decoration: none;
+	margin-left:1px;
+	color: #006633;
+}
+
+.pager a:hover
+{
+	border: solid 1px #769a07;
+	background-color: #eef7d9;
+	text-decoration:none;
+}
+
+.pageSummary
+{
+	height: 28px;
+	font-weight: bold;
+	font-size: 120%;
+	background-color: #c8e0c0;
+}

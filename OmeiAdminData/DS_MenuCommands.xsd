@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_MenuCommands" targetNamespace="http://tempuri.org/DS_MenuCommands.xsd" xmlns:mstns="http://tempuri.org/DS_MenuCommands.xsd" xmlns="http://tempuri.org/DS_MenuCommands.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_MenuCommands" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DS_MenuCommands" msprop:Generator_DataSetName="DS_MenuCommands">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="MenuTbl" msprop:Generator_UserTableName="MenuTbl" msprop:Generator_RowDeletedName="MenuTblRowDeleted" msprop:Generator_RowChangedName="MenuTblRowChanged" msprop:Generator_RowClassName="MenuTblRow" msprop:Generator_RowChangingName="MenuTblRowChanging" msprop:Generator_RowEvArgName="MenuTblRowChangeEvent" msprop:Generator_RowEvHandlerName="MenuTblRowChangeEventHandler" msprop:Generator_TableClassName="MenuTblDataTable" msprop:Generator_TableVarName="tableMenuTbl" msprop:Generator_RowDeletingName="MenuTblRowDeleting" msprop:Generator_TablePropName="MenuTbl">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="menuId" msprop:Generator_UserColumnName="menuId" msprop:Generator_ColumnPropNameInRow="menuId" msprop:Generator_ColumnVarNameInTable="columnmenuId" msprop:Generator_ColumnPropNameInTable="menuIdColumn" type="xs:int" />
+              <xs:element name="pageName" msprop:Generator_UserColumnName="pageName" msprop:Generator_ColumnPropNameInRow="pageName" msprop:Generator_ColumnVarNameInTable="columnpageName" msprop:Generator_ColumnPropNameInTable="pageNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="title" msprop:Generator_UserColumnName="title" msprop:Generator_ColumnPropNameInRow="title" msprop:Generator_ColumnVarNameInTable="columntitle" msprop:Generator_ColumnPropNameInTable="titleColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="parentId" msprop:Generator_UserColumnName="parentId" msprop:Generator_ColumnPropNameInRow="parentId" msprop:Generator_ColumnVarNameInTable="columnparentId" msprop:Generator_ColumnPropNameInTable="parentIdColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="commandName" msprop:Generator_UserColumnName="commandName" msprop:Generator_ColumnPropNameInRow="commandName" msprop:Generator_ColumnVarNameInTable="columncommandName" msprop:Generator_ColumnPropNameInTable="commandNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="navigateUrl" msprop:Generator_UserColumnName="navigateUrl" msprop:Generator_ColumnPropNameInRow="navigateUrl" msprop:Generator_ColumnVarNameInTable="columnnavigateUrl" msprop:Generator_ColumnPropNameInTable="navigateUrlColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="menuOrder" msprop:Generator_UserColumnName="menuOrder" msprop:Generator_ColumnPropNameInRow="menuOrder" msprop:Generator_ColumnVarNameInTable="columnmenuOrder" msprop:Generator_ColumnPropNameInTable="menuOrderColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="roleIds" msprop:Generator_UserColumnName="roleIds" msprop:Generator_ColumnPropNameInRow="roleIds" msprop:Generator_ColumnVarNameInTable="columnroleIds" msprop:Generator_ColumnPropNameInTable="roleIdsColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="needConfirm" msprop:Generator_UserColumnName="needConfirm" msprop:Generator_ColumnPropNameInRow="needConfirm" msprop:Generator_ColumnVarNameInTable="columnneedConfirm" msprop:Generator_ColumnPropNameInTable="needConfirmColumn" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="confirmMessage" msprop:Generator_UserColumnName="confirmMessage" msprop:Generator_ColumnPropNameInRow="confirmMessage" msprop:Generator_ColumnVarNameInTable="columnconfirmMessage" msprop:Generator_ColumnPropNameInTable="confirmMessageColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="confirmMessage_cn" msprop:Generator_UserColumnName="confirmMessage_cn" msprop:Generator_ColumnPropNameInRow="confirmMessage_cn" msprop:Generator_ColumnVarNameInTable="columnconfirmMessage_cn" msprop:Generator_ColumnPropNameInTable="confirmMessage_cnColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="status" msprop:Generator_UserColumnName="status" msprop:Generator_ColumnPropNameInRow="status" msprop:Generator_ColumnVarNameInTable="columnstatus" msprop:Generator_ColumnPropNameInTable="statusColumn" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="title_cn" msprop:Generator_UserColumnName="title_cn" msprop:Generator_ColumnPropNameInRow="title_cn" msprop:Generator_ColumnVarNameInTable="columntitle_cn" msprop:Generator_ColumnPropNameInTable="title_cnColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:MenuTbl" />
+      <xs:field xpath="mstns:menuId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,1935 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B62F7205-0911-4C4F-AFC4-A58098B7CEC5}</ProjectGuid>
+    <ProjectTypeGuids>{603c0e0b-db56-11dc-be95-000d561079b0};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AdminMVC</RootNamespace>
+    <AssemblyName>AdminMVC</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Infragistics2.WebUI.Shared.v7.3, Version=7.3.20073.38, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.WebUI.UltraWebGrid.v7.3, Version=7.3.20073.38, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.WebUI.UltraWebTab.v7.3, Version=7.3.20073.38, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.WebUI.WebCombo.v7.3, Version=7.3.20073.38, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Entity">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Abstractions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft ASP.NET\ASP.NET MVC RC\Assemblies\System.Web.Abstractions.dll</HintPath>
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft ASP.NET\ASP.NET MVC RC\Assemblies\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Routing, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft ASP.NET\ASP.NET MVC RC\Assemblies\System.Web.Routing.dll</HintPath>
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminWeb\AdminService\InvoiceMatchService.asmx.cs">
+      <DependentUpon>InvoiceMatchService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\AdminService\JsonMethods.cs" />
+    <Compile Include="AdminWeb\AdminService\MenuService.asmx.cs">
+      <DependentUpon>MenuService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\AgentTransfor\TransforSummary.aspx.cs">
+      <DependentUpon>TransforSummary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\AgentTransfor\TransforSummary.aspx.designer.cs">
+      <DependentUpon>TransforSummary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\AuthorizationCtl\ActionEditCtl.ascx.cs">
+      <DependentUpon>ActionEditCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\AuthorizationCtl\ActionEditCtl.ascx.designer.cs">
+      <DependentUpon>ActionEditCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\AuthorizationCtl\MenuItemEditCtl.ascx.cs">
+      <DependentUpon>MenuItemEditCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\AuthorizationCtl\MenuItemEditCtl.ascx.designer.cs">
+      <DependentUpon>MenuItemEditCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\Controls\AccessSettor.ascx.cs">
+      <DependentUpon>AccessSettor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\Controls\AccessSettor.ascx.designer.cs">
+      <DependentUpon>AccessSettor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\Controls\BusUsageCtl.ascx.cs">
+      <DependentUpon>BusUsageCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\Controls\BusUsageCtl.ascx.designer.cs">
+      <DependentUpon>BusUsageCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\Controls\CheckBoxListCtl.ascx.cs">
+      <DependentUpon>CheckBoxListCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\Controls\CheckBoxListCtl.ascx.designer.cs">
+      <DependentUpon>CheckBoxListCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\Controls\CountrySelector.ascx.cs">
+      <DependentUpon>CountrySelector.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\Controls\CountrySelector.ascx.designer.cs">
+      <DependentUpon>CountrySelector.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\Controls\DataSelector.ascx.cs">
+      <DependentUpon>DataSelector.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\Controls\DataSelector.ascx.designer.cs">
+      <DependentUpon>DataSelector.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\Controls\DateInputCtl.ascx.cs">
+      <DependentUpon>DateInputCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\Controls\DateInputCtl.ascx.designer.cs">
+      <DependentUpon>DateInputCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\Controls\HotelListCtl.ascx.cs">
+      <DependentUpon>HotelListCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\Controls\HotelListCtl.ascx.designer.cs">
+      <DependentUpon>HotelListCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\Controls\NewCreditCardPaymentCtl.ascx.cs">
+      <DependentUpon>NewCreditCardPaymentCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\Controls\NewCreditCardPaymentCtl.ascx.designer.cs">
+      <DependentUpon>NewCreditCardPaymentCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\Controls\NotesCtl.ascx.cs">
+      <DependentUpon>NotesCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\Controls\NotesCtl.ascx.designer.cs">
+      <DependentUpon>NotesCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\Controls\OmeiStatusSelectorCtl.ascx.cs">
+      <DependentUpon>OmeiStatusSelectorCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\Controls\OmeiStatusSelectorCtl.ascx.designer.cs">
+      <DependentUpon>OmeiStatusSelectorCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\Controls\OmeiTypeSelectorCtl.ascx.cs">
+      <DependentUpon>OmeiTypeSelectorCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\Controls\OmeiTypeSelectorCtl.ascx.designer.cs">
+      <DependentUpon>OmeiTypeSelectorCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\Controls\OmeiTypeSingleSelector.ascx.cs">
+      <DependentUpon>OmeiTypeSingleSelector.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\Controls\OmeiTypeSingleSelector.ascx.designer.cs">
+      <DependentUpon>OmeiTypeSingleSelector.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\Controls\PaymentBriefList.ascx.cs">
+      <DependentUpon>PaymentBriefList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\Controls\PaymentBriefList.ascx.designer.cs">
+      <DependentUpon>PaymentBriefList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\Controls\PubControls\CtlLb_AgentName.ascx.cs">
+      <DependentUpon>CtlLb_AgentName.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\Controls\PubControls\CtlLb_AgentName.ascx.designer.cs">
+      <DependentUpon>CtlLb_AgentName.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\Controls\PubControls\CtlLb_EmployeeName.ascx.cs">
+      <DependentUpon>CtlLb_EmployeeName.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\Controls\PubControls\CtlLb_EmployeeName.ascx.designer.cs">
+      <DependentUpon>CtlLb_EmployeeName.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\Controls\PubControls\CtlLst_AgentOrders.ascx.cs">
+      <DependentUpon>CtlLst_AgentOrders.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\Controls\PubControls\CtlLst_AgentOrders.ascx.designer.cs">
+      <DependentUpon>CtlLst_AgentOrders.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\Controls\StyleSelectorCtl.ascx.cs">
+      <DependentUpon>StyleSelectorCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\Controls\StyleSelectorCtl.ascx.designer.cs">
+      <DependentUpon>StyleSelectorCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\Controls\TypeMultiSelector.ascx.cs">
+      <DependentUpon>TypeMultiSelector.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\Controls\TypeMultiSelector.ascx.designer.cs">
+      <DependentUpon>TypeMultiSelector.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\Controls\TypeSelectorCtl.ascx.cs">
+      <DependentUpon>TypeSelectorCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\Controls\TypeSelectorCtl.ascx.designer.cs">
+      <DependentUpon>TypeSelectorCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\Controls\UploadPicCtl.ascx.cs">
+      <DependentUpon>UploadPicCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\Controls\UploadPicCtl.ascx.designer.cs">
+      <DependentUpon>UploadPicCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\AddEmployee.aspx.cs">
+      <DependentUpon>AddEmployee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\AddEmployee.aspx.designer.cs">
+      <DependentUpon>AddEmployee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\AgentCommission.aspx.cs">
+      <DependentUpon>AgentCommission.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\AgentCommission.aspx.designer.cs">
+      <DependentUpon>AgentCommission.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\AgentDiscount.aspx.cs">
+      <DependentUpon>AgentDiscount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\AgentDiscount.aspx.designer.cs">
+      <DependentUpon>AgentDiscount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\AgentDiscountSave.aspx.cs">
+      <DependentUpon>AgentDiscountSave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\AgentDiscountSave.aspx.designer.cs">
+      <DependentUpon>AgentDiscountSave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\AgentInvoiceMatch.aspx.cs">
+      <DependentUpon>AgentInvoiceMatch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\AgentInvoiceMatch.aspx.designer.cs">
+      <DependentUpon>AgentInvoiceMatch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\AgentInvoices.aspx.cs">
+      <DependentUpon>AgentInvoices.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\AgentInvoices.aspx.designer.cs">
+      <DependentUpon>AgentInvoices.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\AgentInvoiceSum.aspx.cs">
+      <DependentUpon>AgentInvoiceSum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\AgentInvoiceSum.aspx.designer.cs">
+      <DependentUpon>AgentInvoiceSum.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\AgentNewOrders.aspx.cs">
+      <DependentUpon>AgentNewOrders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\AgentNewOrders.aspx.designer.cs">
+      <DependentUpon>AgentNewOrders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\AgentNewRecv.aspx.cs">
+      <DependentUpon>AgentNewRecv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\AgentNewRecv.aspx.designer.cs">
+      <DependentUpon>AgentNewRecv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\AgentOrders.aspx.cs">
+      <DependentUpon>AgentOrders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\AgentOrders.aspx.designer.cs">
+      <DependentUpon>AgentOrders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\AgentPayment.aspx.cs">
+      <DependentUpon>AgentPayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\AgentPayment.aspx.designer.cs">
+      <DependentUpon>AgentPayment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\AgentPaymentHistory.aspx.cs">
+      <DependentUpon>AgentPaymentHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\AgentPaymentHistory.aspx.designer.cs">
+      <DependentUpon>AgentPaymentHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\AgentPaymentItems.aspx.cs">
+      <DependentUpon>AgentPaymentItems.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\AgentPaymentItems.aspx.designer.cs">
+      <DependentUpon>AgentPaymentItems.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\AgentReceivables.aspx.cs">
+      <DependentUpon>AgentReceivables.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\AgentReceivables.aspx.designer.cs">
+      <DependentUpon>AgentReceivables.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\AgentReceiveOrders.aspx.cs">
+      <DependentUpon>AgentReceiveOrders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\AgentReceiveOrders.aspx.designer.cs">
+      <DependentUpon>AgentReceiveOrders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\AgentRecvInvoice.aspx.cs">
+      <DependentUpon>AgentRecvInvoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\AgentRecvInvoice.aspx.designer.cs">
+      <DependentUpon>AgentRecvInvoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\AgentRecvInvoiceList.aspx.cs">
+      <DependentUpon>AgentRecvInvoiceList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\AgentRecvInvoiceList.aspx.designer.cs">
+      <DependentUpon>AgentRecvInvoiceList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\AgentRecvInvoice_prn.aspx.cs">
+      <DependentUpon>AgentRecvInvoice_prn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\AgentRecvInvoice_prn.aspx.designer.cs">
+      <DependentUpon>AgentRecvInvoice_prn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\AgentUnpayReport.aspx.cs">
+      <DependentUpon>AgentUnpayReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\AgentUnpayReport.aspx.designer.cs">
+      <DependentUpon>AgentUnpayReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\AirlineEdit.aspx.cs">
+      <DependentUpon>AirlineEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\AirlineEdit.aspx.designer.cs">
+      <DependentUpon>AirlineEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\AirportEdit.aspx.cs">
+      <DependentUpon>AirportEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\AirportEdit.aspx.designer.cs">
+      <DependentUpon>AirportEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\ApplicationError.aspx.cs">
+      <DependentUpon>ApplicationError.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\ApplicationError.aspx.designer.cs">
+      <DependentUpon>ApplicationError.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\Bookmark.aspx.cs">
+      <DependentUpon>Bookmark.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\Bookmark.aspx.designer.cs">
+      <DependentUpon>Bookmark.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\BusEdit.aspx.cs">
+      <DependentUpon>BusEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\BusEdit.aspx.designer.cs">
+      <DependentUpon>BusEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\BusList.aspx.cs">
+      <DependentUpon>BusList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\BusList.aspx.designer.cs">
+      <DependentUpon>BusList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\BusSeats.aspx.cs">
+      <DependentUpon>BusSeats.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\BusSeats.aspx.designer.cs">
+      <DependentUpon>BusSeats.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\BusSeats_Prn.aspx.cs">
+      <DependentUpon>BusSeats_Prn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\BusSeats_Prn.aspx.designer.cs">
+      <DependentUpon>BusSeats_Prn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\ChangeSignIn.aspx.cs">
+      <DependentUpon>ChangeSignIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\ChangeSignIn.aspx.designer.cs">
+      <DependentUpon>ChangeSignIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\Class1.cs" />
+    <Compile Include="AdminWeb\mng\ClientCallback.aspx.cs">
+      <DependentUpon>ClientCallback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\ClientCallback.aspx.designer.cs">
+      <DependentUpon>ClientCallback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\CommissionList.aspx.cs">
+      <DependentUpon>CommissionList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\CommissionList.aspx.designer.cs">
+      <DependentUpon>CommissionList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\CompanyEdit.aspx.cs">
+      <DependentUpon>CompanyEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\CompanyEdit.aspx.designer.cs">
+      <DependentUpon>CompanyEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\Companys.aspx.cs">
+      <DependentUpon>Companys.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\Companys.aspx.designer.cs">
+      <DependentUpon>Companys.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\CreditCardList.aspx.cs">
+      <DependentUpon>CreditCardList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\CreditCardList.aspx.designer.cs">
+      <DependentUpon>CreditCardList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\CreditCardPayment.aspx.cs">
+      <DependentUpon>CreditCardPayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\CreditCardPayment.aspx.designer.cs">
+      <DependentUpon>CreditCardPayment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\CreditDetail.aspx.cs">
+      <DependentUpon>CreditDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\CreditDetail.aspx.designer.cs">
+      <DependentUpon>CreditDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\CreditVouchers.aspx.cs">
+      <DependentUpon>CreditVouchers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\CreditVouchers.aspx.designer.cs">
+      <DependentUpon>CreditVouchers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\CustomerInfo.aspx.cs">
+      <DependentUpon>CustomerInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\CustomerInfo.aspx.designer.cs">
+      <DependentUpon>CustomerInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\CustomerSelector.aspx.cs">
+      <DependentUpon>CustomerSelector.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\CustomerSelector.aspx.designer.cs">
+      <DependentUpon>CustomerSelector.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\DayBalance.aspx.cs">
+      <DependentUpon>DayBalance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\DayBalance.aspx.designer.cs">
+      <DependentUpon>DayBalance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\DestinationEdit.aspx.cs">
+      <DependentUpon>DestinationEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\DestinationEdit.aspx.designer.cs">
+      <DependentUpon>DestinationEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\DestinationIcon.aspx.cs">
+      <DependentUpon>DestinationIcon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\DestinationIcon.aspx.designer.cs">
+      <DependentUpon>DestinationIcon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\DestinationPics.aspx.cs">
+      <DependentUpon>DestinationPics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\DestinationPics.aspx.designer.cs">
+      <DependentUpon>DestinationPics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\Destinations.aspx.cs">
+      <DependentUpon>Destinations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\Destinations.aspx.designer.cs">
+      <DependentUpon>Destinations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\Drivers.aspx.cs">
+      <DependentUpon>Drivers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\Drivers.aspx.designer.cs">
+      <DependentUpon>Drivers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\EmployeeEdit.aspx.cs">
+      <DependentUpon>EmployeeEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\EmployeeEdit.aspx.designer.cs">
+      <DependentUpon>EmployeeEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\EmployeeList.aspx.cs">
+      <DependentUpon>EmployeeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\EmployeeList.aspx.designer.cs">
+      <DependentUpon>EmployeeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\EmployeeRoleEdit.aspx.cs">
+      <DependentUpon>EmployeeRoleEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\EmployeeRoleEdit.aspx.designer.cs">
+      <DependentUpon>EmployeeRoleEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\EmployeeRoles.aspx.cs">
+      <DependentUpon>EmployeeRoles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\EmployeeRoles.aspx.designer.cs">
+      <DependentUpon>EmployeeRoles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\EmpPositions.aspx.cs">
+      <DependentUpon>EmpPositions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\EmpPositions.aspx.designer.cs">
+      <DependentUpon>EmpPositions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\EmpRoles.aspx.cs">
+      <DependentUpon>EmpRoles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\EmpRoles.aspx.designer.cs">
+      <DependentUpon>EmpRoles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\FlightEdit.aspx.cs">
+      <DependentUpon>FlightEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\FlightEdit.aspx.designer.cs">
+      <DependentUpon>FlightEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\FlightsList.aspx.cs">
+      <DependentUpon>FlightsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\FlightsList.aspx.designer.cs">
+      <DependentUpon>FlightsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\FreeOrderEdit.aspx.cs">
+      <DependentUpon>FreeOrderEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\FreeOrderEdit.aspx.designer.cs">
+      <DependentUpon>FreeOrderEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\FreeOrders.aspx.cs">
+      <DependentUpon>FreeOrders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\FreeOrders.aspx.designer.cs">
+      <DependentUpon>FreeOrders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\FreeScheduleEdit.aspx.cs">
+      <DependentUpon>FreeScheduleEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\FreeScheduleEdit.aspx.designer.cs">
+      <DependentUpon>FreeScheduleEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\FreeSchedules.aspx.cs">
+      <DependentUpon>FreeSchedules.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\FreeSchedules.aspx.designer.cs">
+      <DependentUpon>FreeSchedules.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\HotelEdit.aspx.cs">
+      <DependentUpon>HotelEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\HotelEdit.aspx.designer.cs">
+      <DependentUpon>HotelEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\HotelList.aspx.cs">
+      <DependentUpon>HotelList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\HotelList.aspx.designer.cs">
+      <DependentUpon>HotelList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\IMDetail.aspx.cs">
+      <DependentUpon>IMDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\IMDetail.aspx.designer.cs">
+      <DependentUpon>IMDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\IMList.aspx.cs">
+      <DependentUpon>IMList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\IMList.aspx.designer.cs">
+      <DependentUpon>IMList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\InvoiceMatch.aspx.cs">
+      <DependentUpon>InvoiceMatch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\InvoiceMatch.aspx.designer.cs">
+      <DependentUpon>InvoiceMatch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\LeftMenu.aspx.cs">
+      <DependentUpon>LeftMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\LeftMenu.aspx.designer.cs">
+      <DependentUpon>LeftMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\ListType.aspx.cs">
+      <DependentUpon>ListType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\ListType.aspx.designer.cs">
+      <DependentUpon>ListType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\LookCard.aspx.cs">
+      <DependentUpon>LookCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\LookCard.aspx.designer.cs">
+      <DependentUpon>LookCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\MenuAuth.aspx.cs">
+      <DependentUpon>MenuAuth.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\MenuAuth.aspx.designer.cs">
+      <DependentUpon>MenuAuth.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\MenuEdit.aspx.cs">
+      <DependentUpon>MenuEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\MenuEdit.aspx.designer.cs">
+      <DependentUpon>MenuEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\MyAccount.aspx.cs">
+      <DependentUpon>MyAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\MyAccount.aspx.designer.cs">
+      <DependentUpon>MyAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\MyOrders.aspx.cs">
+      <DependentUpon>MyOrders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\MyOrders.aspx.designer.cs">
+      <DependentUpon>MyOrders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\OpLog.aspx.cs">
+      <DependentUpon>OpLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\OpLog.aspx.designer.cs">
+      <DependentUpon>OpLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\OrderActive.aspx.cs">
+      <DependentUpon>OrderActive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\OrderActive.aspx.designer.cs">
+      <DependentUpon>OrderActive.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\OrderDetail.aspx.cs">
+      <DependentUpon>OrderDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\OrderDetail.aspx.designer.cs">
+      <DependentUpon>OrderDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\OrderEdit.aspx.cs">
+      <DependentUpon>OrderEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\OrderEdit.aspx.designer.cs">
+      <DependentUpon>OrderEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\OrderList.aspx.cs">
+      <DependentUpon>OrderList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\OrderList.aspx.designer.cs">
+      <DependentUpon>OrderList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\OrderPayment.aspx.cs">
+      <DependentUpon>OrderPayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\OrderPayment.aspx.designer.cs">
+      <DependentUpon>OrderPayment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\OrderPrice.aspx.cs">
+      <DependentUpon>OrderPrice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\OrderPrice.aspx.designer.cs">
+      <DependentUpon>OrderPrice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\OrderRecvAgent.aspx.cs">
+      <DependentUpon>OrderRecvAgent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\OrderRecvAgent.aspx.designer.cs">
+      <DependentUpon>OrderRecvAgent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\OrderTransforAgent.aspx.cs">
+      <DependentUpon>OrderTransforAgent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\OrderTransforAgent.aspx.designer.cs">
+      <DependentUpon>OrderTransforAgent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\PageSetup.aspx.cs">
+      <DependentUpon>PageSetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\PageSetup.aspx.designer.cs">
+      <DependentUpon>PageSetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\PrintMaster.master.cs">
+      <DependentUpon>PrintMaster.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\PrintMaster.master.designer.cs">
+      <DependentUpon>PrintMaster.master</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\PrintQTicket.aspx.cs">
+      <DependentUpon>PrintQTicket.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\PrintQTicket.aspx.designer.cs">
+      <DependentUpon>PrintQTicket.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\PrintTicket.aspx.cs">
+      <DependentUpon>PrintTicket.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\PrintTicket.aspx.designer.cs">
+      <DependentUpon>PrintTicket.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\PrintVoucher.aspx.cs">
+      <DependentUpon>PrintVoucher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\PrintVoucher.aspx.designer.cs">
+      <DependentUpon>PrintVoucher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\ProcessError.aspx.cs">
+      <DependentUpon>ProcessError.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\ProcessError.aspx.designer.cs">
+      <DependentUpon>ProcessError.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\Refund.aspx.cs">
+      <DependentUpon>Refund.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\Refund.aspx.designer.cs">
+      <DependentUpon>Refund.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\ReportAgentSummary.aspx.cs">
+      <DependentUpon>ReportAgentSummary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\ReportAgentSummary.aspx.designer.cs">
+      <DependentUpon>ReportAgentSummary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\ReportBusTour.aspx.cs">
+      <DependentUpon>ReportBusTour.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\ReportBusTour.aspx.designer.cs">
+      <DependentUpon>ReportBusTour.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\ReportDaily.aspx.cs">
+      <DependentUpon>ReportDaily.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\ReportDaily.aspx.designer.cs">
+      <DependentUpon>ReportDaily.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\ReportDailyPayment.aspx.cs">
+      <DependentUpon>ReportDailyPayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\ReportDailyPayment.aspx.designer.cs">
+      <DependentUpon>ReportDailyPayment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\ReportEmployeeCommission.aspx.cs">
+      <DependentUpon>ReportEmployeeCommission.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\ReportEmployeeCommission.aspx.designer.cs">
+      <DependentUpon>ReportEmployeeCommission.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\ReportEmployeeCommission1.aspx.cs">
+      <DependentUpon>ReportEmployeeCommission1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\ReportEmployeeCommission1.aspx.designer.cs">
+      <DependentUpon>ReportEmployeeCommission1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\ReportOrders.aspx.cs">
+      <DependentUpon>ReportOrders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\ReportOrders.aspx.designer.cs">
+      <DependentUpon>ReportOrders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\ReportPayment.aspx.cs">
+      <DependentUpon>ReportPayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\ReportPayment.aspx.designer.cs">
+      <DependentUpon>ReportPayment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\ReportPaymentDetail.aspx.cs">
+      <DependentUpon>ReportPaymentDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\ReportPaymentDetail.aspx.designer.cs">
+      <DependentUpon>ReportPaymentDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\ReportSales.aspx.cs">
+      <DependentUpon>ReportSales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\ReportSales.aspx.designer.cs">
+      <DependentUpon>ReportSales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\ReportSalesDetail.aspx.cs">
+      <DependentUpon>ReportSalesDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\ReportSalesDetail.aspx.designer.cs">
+      <DependentUpon>ReportSalesDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\RoleList.aspx.cs">
+      <DependentUpon>RoleList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\RoleList.aspx.designer.cs">
+      <DependentUpon>RoleList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\ScheduleCancel.aspx.cs">
+      <DependentUpon>ScheduleCancel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\ScheduleCancel.aspx.designer.cs">
+      <DependentUpon>ScheduleCancel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\ScheduleEdit.aspx.cs">
+      <DependentUpon>ScheduleEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\ScheduleEdit.aspx.designer.cs">
+      <DependentUpon>ScheduleEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\ScheduleList.aspx.cs">
+      <DependentUpon>ScheduleList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\ScheduleList.aspx.designer.cs">
+      <DependentUpon>ScheduleList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\ScheduleOrders.aspx.cs">
+      <DependentUpon>ScheduleOrders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\ScheduleOrders.aspx.designer.cs">
+      <DependentUpon>ScheduleOrders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\Schedules.aspx.cs">
+      <DependentUpon>Schedules.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\Schedules.aspx.designer.cs">
+      <DependentUpon>Schedules.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\ScheduleSeats.aspx.cs">
+      <DependentUpon>ScheduleSeats.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\ScheduleSeats.aspx.designer.cs">
+      <DependentUpon>ScheduleSeats.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\SearchCustomer.aspx.cs">
+      <DependentUpon>SearchCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\SearchCustomer.aspx.designer.cs">
+      <DependentUpon>SearchCustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\SearchCustomer_pop.aspx.cs">
+      <DependentUpon>SearchCustomer_pop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\SearchCustomer_pop.aspx.designer.cs">
+      <DependentUpon>SearchCustomer_pop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\TicketEdit.aspx.cs">
+      <DependentUpon>TicketEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\TicketEdit.aspx.designer.cs">
+      <DependentUpon>TicketEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\Tools.aspx.cs">
+      <DependentUpon>Tools.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\Tools.aspx.designer.cs">
+      <DependentUpon>Tools.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\Top.aspx.cs">
+      <DependentUpon>Top.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\Top.aspx.designer.cs">
+      <DependentUpon>Top.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\TourDestinations.aspx.cs">
+      <DependentUpon>TourDestinations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\TourDestinations.aspx.designer.cs">
+      <DependentUpon>TourDestinations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\TourDetail.aspx.cs">
+      <DependentUpon>TourDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\TourDetail.aspx.designer.cs">
+      <DependentUpon>TourDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\TourFee.aspx.cs">
+      <DependentUpon>TourFee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\TourFee.aspx.designer.cs">
+      <DependentUpon>TourFee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\TourIcon.aspx.cs">
+      <DependentUpon>TourIcon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\TourIcon.aspx.designer.cs">
+      <DependentUpon>TourIcon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\TourPrice.aspx.cs">
+      <DependentUpon>TourPrice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\TourPrice.aspx.designer.cs">
+      <DependentUpon>TourPrice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\Tours.aspx.cs">
+      <DependentUpon>Tours.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\Tours.aspx.designer.cs">
+      <DependentUpon>Tours.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\TourSchedule.aspx.cs">
+      <DependentUpon>TourSchedule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\TourSchedule.aspx.designer.cs">
+      <DependentUpon>TourSchedule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\UpdateHistory.aspx.cs">
+      <DependentUpon>UpdateHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\UpdateHistory.aspx.designer.cs">
+      <DependentUpon>UpdateHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\UserEditCtl.ascx.cs">
+      <DependentUpon>UserEditCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\UserEditCtl.ascx.designer.cs">
+      <DependentUpon>UserEditCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\UserInfo.aspx.cs">
+      <DependentUpon>UserInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\UserInfo.aspx.designer.cs">
+      <DependentUpon>UserInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\UserInfo_pop.aspx.cs">
+      <DependentUpon>UserInfo_pop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\UserInfo_pop.aspx.designer.cs">
+      <DependentUpon>UserInfo_pop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\VoucherList.aspx.cs">
+      <DependentUpon>VoucherList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\VoucherList.aspx.designer.cs">
+      <DependentUpon>VoucherList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\WebContentEdit.aspx.cs">
+      <DependentUpon>WebContentEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\WebContentEdit.aspx.designer.cs">
+      <DependentUpon>WebContentEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\WebContentList.aspx.cs">
+      <DependentUpon>WebContentList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\WebContentList.aspx.designer.cs">
+      <DependentUpon>WebContentList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\WebData.aspx.cs">
+      <DependentUpon>WebData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\WebData.aspx.designer.cs">
+      <DependentUpon>WebData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\WebOrderPay_Prn.aspx.cs">
+      <DependentUpon>WebOrderPay_Prn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\WebOrderPay_Prn.aspx.designer.cs">
+      <DependentUpon>WebOrderPay_Prn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\WebOrders.aspx.cs">
+      <DependentUpon>WebOrders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\WebOrders.aspx.designer.cs">
+      <DependentUpon>WebOrders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\Welcome.aspx.cs">
+      <DependentUpon>Welcome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\Welcome.aspx.designer.cs">
+      <DependentUpon>Welcome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\WhatsNew.aspx.cs">
+      <DependentUpon>WhatsNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\WhatsNew.aspx.designer.cs">
+      <DependentUpon>WhatsNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\mng\WhatsNewEdit.aspx.cs">
+      <DependentUpon>WhatsNewEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\mng\WhatsNewEdit.aspx.designer.cs">
+      <DependentUpon>WhatsNewEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\Old_App_Code\AdminBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\Old_App_Code\AdminList.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\Old_App_Code\DayNights.cs" />
+    <Compile Include="AdminWeb\Old_App_Code\DBSiteMapProvider.cs" />
+    <Compile Include="AdminWeb\Old_App_Code\GridViewGroup.cs" />
+    <Compile Include="AdminWeb\Old_App_Code\GridViewGroupList.cs" />
+    <Compile Include="AdminWeb\Old_App_Code\GridViewHelper.cs" />
+    <Compile Include="AdminWeb\Old_App_Code\GridViewSummary.cs" />
+    <Compile Include="AdminWeb\Old_App_Code\GridViewSummaryList.cs" />
+    <Compile Include="AdminWeb\Old_App_Code\ImageEdit.cs" />
+    <Compile Include="AdminWeb\Old_App_Code\MasterPageHelper.cs" />
+    <Compile Include="AdminWeb\Old_App_Code\OmeiMail.cs" />
+    <Compile Include="AdminWeb\Old_App_Code\OmeiRoleProvider.cs" />
+    <Compile Include="AdminWeb\Old_App_Code\OmeiStatus.cs" />
+    <Compile Include="AdminWeb\Old_App_Code\PageLogic.cs" />
+    <Compile Include="AdminWeb\Old_App_Code\PageTools.cs" />
+    <Compile Include="AdminWeb\public\AdminContent.master.cs">
+      <DependentUpon>AdminContent.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\public\AdminContent.master.designer.cs">
+      <DependentUpon>AdminContent.master</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\public\AdminContent1.master.cs">
+      <DependentUpon>AdminContent1.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\public\AdminContent1.master.designer.cs">
+      <DependentUpon>AdminContent1.master</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\public\AdminContent2.master.cs">
+      <DependentUpon>AdminContent2.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\public\AdminContent2.master.designer.cs">
+      <DependentUpon>AdminContent2.master</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\public\AdminPopup.master.cs">
+      <DependentUpon>AdminPopup.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\public\AdminPopup.master.designer.cs">
+      <DependentUpon>AdminPopup.master</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\TestUI\TestDateInputor.aspx.cs">
+      <DependentUpon>TestDateInputor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\TestUI\TestDateInputor.aspx.designer.cs">
+      <DependentUpon>TestDateInputor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\TestUI\TestDriverSelector.aspx.cs">
+      <DependentUpon>TestDriverSelector.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\TestUI\TestDriverSelector.aspx.designer.cs">
+      <DependentUpon>TestDriverSelector.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\TestUI\TestHotelSelector.aspx.cs">
+      <DependentUpon>TestHotelSelector.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\TestUI\TestHotelSelector.aspx.designer.cs">
+      <DependentUpon>TestHotelSelector.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\TestUI\TestMenuTree.aspx.cs">
+      <DependentUpon>TestMenuTree.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\TestUI\TestMenuTree.aspx.designer.cs">
+      <DependentUpon>TestMenuTree.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\WebParts\AgentInfoCtl.ascx.cs">
+      <DependentUpon>AgentInfoCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\WebParts\AgentInfoCtl.ascx.designer.cs">
+      <DependentUpon>AgentInfoCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\WebParts\AgentTitleCtl.ascx.cs">
+      <DependentUpon>AgentTitleCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\WebParts\AgentTitleCtl.ascx.designer.cs">
+      <DependentUpon>AgentTitleCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\WebParts\BusSeatCtl.ascx.cs">
+      <DependentUpon>BusSeatCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\WebParts\BusSeatCtl.ascx.designer.cs">
+      <DependentUpon>BusSeatCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\WebParts\CreditCardInfoCtl.ascx.cs">
+      <DependentUpon>CreditCardInfoCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\WebParts\CreditCardInfoCtl.ascx.designer.cs">
+      <DependentUpon>CreditCardInfoCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\WebParts\CreditCardPaymentCtl.ascx.cs">
+      <DependentUpon>CreditCardPaymentCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\WebParts\CreditCardPaymentCtl.ascx.designer.cs">
+      <DependentUpon>CreditCardPaymentCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\WebParts\OplogList.ascx.cs">
+      <DependentUpon>OplogList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\WebParts\OplogList.ascx.designer.cs">
+      <DependentUpon>OplogList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\WebParts\OrderInfoCtl.ascx.cs">
+      <DependentUpon>OrderInfoCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\WebParts\OrderInfoCtl.ascx.designer.cs">
+      <DependentUpon>OrderInfoCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\WebParts\PaymentCtl.ascx.cs">
+      <DependentUpon>PaymentCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\WebParts\PaymentCtl.ascx.designer.cs">
+      <DependentUpon>PaymentCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\WebParts\PaymentListCtl.ascx.cs">
+      <DependentUpon>PaymentListCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\WebParts\PaymentListCtl.ascx.designer.cs">
+      <DependentUpon>PaymentListCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\WebParts\PaymentOpCtl.ascx.cs">
+      <DependentUpon>PaymentOpCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\WebParts\PaymentOpCtl.ascx.designer.cs">
+      <DependentUpon>PaymentOpCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\WebParts\ScheduleBaseInfo.ascx.cs">
+      <DependentUpon>ScheduleBaseInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\WebParts\ScheduleBaseInfo.ascx.designer.cs">
+      <DependentUpon>ScheduleBaseInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\WebParts\ScheduleBriefCtl.ascx.cs">
+      <DependentUpon>ScheduleBriefCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\WebParts\ScheduleBriefCtl.ascx.designer.cs">
+      <DependentUpon>ScheduleBriefCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\WebParts\ScheduleHotelCtl.ascx.cs">
+      <DependentUpon>ScheduleHotelCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\WebParts\ScheduleHotelCtl.ascx.designer.cs">
+      <DependentUpon>ScheduleHotelCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\WebParts\TourFeeCtl.ascx.cs">
+      <DependentUpon>TourFeeCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\WebParts\TourFeeCtl.ascx.designer.cs">
+      <DependentUpon>TourFeeCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\WebParts\TourNameCtl.ascx.cs">
+      <DependentUpon>TourNameCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\WebParts\TourNameCtl.ascx.designer.cs">
+      <DependentUpon>TourNameCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWeb\WebParts\TypeRefCtl.ascx.cs">
+      <DependentUpon>TypeRefCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminWeb\WebParts\TypeRefCtl.ascx.designer.cs">
+      <DependentUpon>TypeRefCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\DestinationController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MenuController.cs" />
+    <Compile Include="Controllers\OmeiControllerBase.cs" />
+    <Compile Include="Controllers\OmeiDocsController.cs" />
+    <Compile Include="Controllers\OmeiDropdownListController.cs" />
+    <Compile Include="Controllers\StringResult.cs" />
+    <Compile Include="Controllers\UploadFilesResult.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\MenuHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.3.2-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui-1.7.custom.min.js" />
+    <Content Include="Scripts\jquery.calculation.min.js" />
+    <Content Include="Scripts\jquery.field.min.js" />
+    <Content Include="Scripts\jquery.galleriffic.min.js" />
+    <Content Include="Scripts\jquery-1.3.2.js" />
+    <Content Include="Scripts\themes\greens\images\ui-bg_flat_0_baceba_40x100.png" />
+    <Content Include="Scripts\themes\greens\images\ui-bg_flat_0_d5e6d1_40x100.png" />
+    <Content Include="Scripts\themes\greens\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="Scripts\themes\greens\images\ui-bg_glass_75_f2f5d0_1x400.png" />
+    <Content Include="Scripts\themes\greens\images\ui-bg_glass_85_ddf8d3_1x400.png" />
+    <Content Include="Scripts\themes\greens\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Scripts\themes\greens\images\ui-bg_gloss-wave_55_70cc5c_500x100.png" />
+    <Content Include="Scripts\themes\greens\images\ui-bg_inset-hard_70_d1fbbb_1x100.png" />
+    <Content Include="Scripts\themes\greens\images\ui-bg_inset-hard_70_e8ffdb_1x100.png" />
+    <Content Include="Scripts\themes\greens\images\ui-icons_273f2d_256x240.png" />
+    <Content Include="Scripts\themes\greens\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Scripts\themes\greens\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Scripts\themes\greens\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Scripts\themes\greens\images\ui-icons_e5b30b_256x240.png" />
+    <Content Include="Scripts\themes\greens\images\ui-icons_f98e01_256x240.png" />
+    <Content Include="Scripts\themes\greens\images\ui-icons_f98f10_256x240.png" />
+    <Content Include="Scripts\themes\greens\jquery-ui-1.7.custom.css" />
+    <Content Include="Scripts\themes\redmond\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Scripts\themes\redmond\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="Scripts\themes\redmond\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="Scripts\themes\redmond\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Scripts\themes\redmond\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Scripts\themes\redmond\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="Scripts\themes\redmond\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="Scripts\themes\redmond\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Scripts\themes\redmond\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="Scripts\themes\redmond\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Scripts\themes\redmond\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="Scripts\themes\redmond\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="Scripts\themes\redmond\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Scripts\themes\redmond\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Scripts\themes\redmond\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="Scripts\themes\redmond\jquery-ui-1.7.custom.css" />
+    <Content Include="Views\Destination\Create.ascx" />
+    <Content Include="Views\Destination\Index.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Views\Shared\Error.aspx" />
+    <Content Include="Views\Shared\LogOnUserControl.ascx" />
+    <Content Include="Views\Shared\Site.Master" />
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AdminBll\AdminBll.csproj">
+      <Project>{09373B5D-8EC3-4751-9939-3F18FC327030}</Project>
+      <Name>AdminBll</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DLL\DLL.csproj">
+      <Project>{0C05B43E-A045-4C31-A897-06F37A4FB9D3}</Project>
+      <Name>DLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OmeiAdminData\OmeiAdminData.csproj">
+      <Project>{C2ECFF56-D8B9-477B-93D9-AC353B810F67}</Project>
+      <Name>OmeiAdminData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OmeiDataObj\OmeiDataObj.csproj">
+      <Project>{A090A655-D3DB-4C7B-BF37-1F11FFD4D78F}</Project>
+      <Name>OmeiDataObj</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OmeiEDM\OmeiEDM.csproj">
+      <Project>{B97FBF1D-568A-46DE-8C52-1E000533220D}</Project>
+      <Name>OmeiEDM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OmeiModel\OmeiModel.csproj">
+      <Project>{27BF33F1-02EB-49E0-91C3-D62F2D025493}</Project>
+      <Name>OmeiModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminWeb\AdminService\InvoiceMatchService.asmx" />
+    <Content Include="AdminWeb\AdminService\MenuService.asmx" />
+    <Content Include="AdminWeb\AgentTransfor\TransforSummary.aspx" />
+    <Content Include="App_Themes\AdminThemes\DataStyle.css" />
+    <Content Include="App_Themes\AdminThemes\Main.css" />
+    <Content Include="App_Themes\AdminThemes\res\background.png" />
+    <Content Include="App_Themes\AdminThemes\toolbox.css" />
+    <Content Include="App_Themes\themeGreen\canceled.jpg" />
+    <Content Include="App_Themes\themeGreen\DataStyle.css" />
+    <Content Include="App_Themes\themeGreen\DataStyle_prn.css" />
+    <Content Include="App_Themes\themeGreen\main.css" />
+    <Content Include="App_Themes\themeGreen\main_prn.css" />
+    <Content Include="App_Themes\themeGreen\res\background.png" />
+    <Content Include="App_Themes\themeGreen\res\error.jpg" />
+    <Content Include="App_Themes\themeGreen\res\help.gif" />
+    <Content Include="App_Themes\themeGreen\res\ok.gif" />
+    <Content Include="App_Themes\themeGreen\toolbox.css" />
+    <Content Include="App_Themes\themePrint\DataStyle.css" />
+    <Content Include="App_Themes\themePrint\main.css" />
+    <Content Include="App_Themes\themePrint\toolbox.css" />
+    <Content Include="AdminWeb\AuthorizationCtl\ActionEditCtl.ascx" />
+    <Content Include="AdminWeb\AuthorizationCtl\MenuItemEditCtl.ascx" />
+    <Content Include="AdminWeb\CommonError.html" />
+    <Content Include="AdminWeb\Controls\AccessSettor.ascx" />
+    <Content Include="AdminWeb\Controls\BusUsageCtl.ascx" />
+    <Content Include="AdminWeb\Controls\CheckBoxListCtl.ascx" />
+    <Content Include="AdminWeb\Controls\CountrySelector.ascx" />
+    <Content Include="AdminWeb\Controls\DataSelector.ascx" />
+    <Content Include="AdminWeb\Controls\DateInputCtl.ascx" />
+    <Content Include="AdminWeb\Controls\HotelListCtl.ascx" />
+    <Content Include="AdminWeb\Controls\MyControl.ascx" />
+    <Content Include="AdminWeb\Controls\NewCreditCardPaymentCtl.ascx" />
+    <Content Include="AdminWeb\Controls\NotesCtl.ascx" />
+    <Content Include="AdminWeb\Controls\OmeiStatusSelectorCtl.ascx" />
+    <Content Include="AdminWeb\Controls\OmeiTypeSelectorCtl.ascx" />
+    <Content Include="AdminWeb\Controls\OmeiTypeSingleSelector.ascx" />
+    <Content Include="AdminWeb\Controls\PaymentBriefList.ascx" />
+    <Content Include="AdminWeb\Controls\PicSelectorCtl.ascx" />
+    <Content Include="AdminWeb\Controls\PubControls\CtlLb_AgentName.ascx" />
+    <Content Include="AdminWeb\Controls\PubControls\CtlLb_EmployeeName.ascx" />
+    <Content Include="AdminWeb\Controls\PubControls\CtlLst_AgentOrders.ascx" />
+    <Content Include="AdminWeb\Controls\StyleSelectorCtl.ascx" />
+    <Content Include="AdminWeb\Controls\TypeMultiSelector.ascx" />
+    <Content Include="AdminWeb\Controls\TypeSelectorCtl.ascx" />
+    <Content Include="AdminWeb\Controls\UploadPicCtl.ascx" />
+    <Content Include="AdminWeb\mng\Login.aspx" />
+    <Content Include="AdminWeb\dwindow\css\floating-window.css" />
+    <Content Include="AdminWeb\dwindow\externalfile.html" />
+    <Content Include="AdminWeb\dwindow\floating_window.html" />
+    <Content Include="AdminWeb\dwindow\images\bottom_bg.gif" />
+    <Content Include="AdminWeb\dwindow\images\bottom_center.gif" />
+    <Content Include="AdminWeb\dwindow\images\bottom_left.gif" />
+    <Content Include="AdminWeb\dwindow\images\bottom_right.gif" />
+    <Content Include="AdminWeb\dwindow\images\close.gif" />
+    <Content Include="AdminWeb\dwindow\images\maximize.gif" />
+    <Content Include="AdminWeb\dwindow\images\middle_left.gif" />
+    <Content Include="AdminWeb\dwindow\images\middle_right.gif" />
+    <Content Include="AdminWeb\dwindow\images\minimize.gif" />
+    <Content Include="AdminWeb\dwindow\images\top_center.gif" />
+    <Content Include="AdminWeb\dwindow\images\top_left.gif" />
+    <Content Include="AdminWeb\dwindow\images\top_right.gif" />
+    <Content Include="AdminWeb\dwindow\js\ajax.js" />
+    <Content Include="AdminWeb\dwindow\js\floating-window.js" />
+    <Content Include="AdminWeb\dwindow\my_window.html" />
+    <Content Include="AdminWeb\help\agent_01.png" />
+    <Content Include="AdminWeb\help\Help_Agent.htm" />
+    <Content Include="AdminWeb\Images\AdminScript.js" />
+    <Content Include="AdminWeb\Images\arrow01_red.gif" />
+    <Content Include="AdminWeb\Images\bookmark.css" />
+    <Content Include="AdminWeb\Images\Calendar\bugtest-hidden-selects.html" />
+    <Content Include="AdminWeb\Images\Calendar\calendar-blue.css" />
+    <Content Include="AdminWeb\Images\Calendar\calendar-blue2.css" />
+    <Content Include="AdminWeb\Images\Calendar\calendar-brown.css" />
+    <Content Include="AdminWeb\Images\Calendar\calendar-green.css" />
+    <Content Include="AdminWeb\Images\Calendar\calendar-setup.js" />
+    <Content Include="AdminWeb\Images\Calendar\calendar-setup_stripped.js" />
+    <Content Include="AdminWeb\Images\Calendar\calendar-system.css" />
+    <Content Include="AdminWeb\Images\Calendar\calendar-tas.css" />
+    <Content Include="AdminWeb\Images\Calendar\calendar-win2k-1.css" />
+    <Content Include="AdminWeb\Images\Calendar\calendar-win2k-2.css" />
+    <Content Include="AdminWeb\Images\Calendar\calendar-win2k-cold-1.css" />
+    <Content Include="AdminWeb\Images\Calendar\calendar-win2k-cold-2.css" />
+    <Content Include="AdminWeb\Images\Calendar\calendar.js" />
+    <Content Include="AdminWeb\Images\Calendar\calendar_stripped.js" />
+    <Content Include="AdminWeb\Images\Calendar\img.gif" />
+    <Content Include="AdminWeb\Images\Calendar\lang\calendar-af.js" />
+    <Content Include="AdminWeb\Images\Calendar\lang\calendar-al.js" />
+    <Content Include="AdminWeb\Images\Calendar\lang\calendar-bg.js" />
+    <Content Include="AdminWeb\Images\Calendar\lang\calendar-big5-utf8.js" />
+    <Content Include="AdminWeb\Images\Calendar\lang\calendar-big5.js" />
+    <Content Include="AdminWeb\Images\Calendar\lang\calendar-br.js" />
+    <Content Include="AdminWeb\Images\Calendar\lang\calendar-ca.js" />
+    <Content Include="AdminWeb\Images\Calendar\lang\calendar-cs-utf8.js" />
+    <Content Include="AdminWeb\Images\Calendar\lang\calendar-cs-win.js" />
+    <Content Include="AdminWeb\Images\Calendar\lang\calendar-da.js" />
+    <Content Include="AdminWeb\Images\Calendar\lang\calendar-de.js" />
+    <Content Include="AdminWeb\Images\Calendar\lang\calendar-du.js" />
+    <Content Include="AdminWeb\Images\Calendar\lang\calendar-el.js" />
+    <Content Include="AdminWeb\Images\Calendar\lang\calendar-en.js" />
+    <Content Include="AdminWeb\Images\Calendar\lang\calendar-es.js" />
+    <Content Include="AdminWeb\Images\Calendar\lang\calendar-fi.js" />
+    <Content Include="AdminWeb\Images\Calendar\lang\calendar-fr.js" />
+    <Content Include="AdminWeb\Images\Calendar\lang\calendar-he-utf8.js" />
+    <Content Include="AdminWeb\Images\Calendar\lang\calendar-hr-utf8.js" />
+    <Content Include="AdminWeb\Images\Calendar\lang\calendar-hr.js" />
+    <Content Include="AdminWeb\Images\Calendar\lang\calendar-hu.js" />
+    <Content Include="AdminWeb\Images\Calendar\lang\calendar-it.js" />
+    <Content Include="AdminWeb\Images\Calendar\lang\calendar-jp.js" />
+    <Content Include="AdminWeb\Images\Calendar\lang\calendar-ko-utf8.js" />
+    <Content Include="AdminWeb\Images\Calendar\lang\calendar-ko.js" />
+    <Content Include="AdminWeb\Images\Calendar\lang\calendar-lt-utf8.js" />
+    <Content Include="AdminWeb\Images\Calendar\lang\calendar-lt.js" />
+    <Content Include="AdminWeb\Images\Calendar\lang\calendar-lv.js" />
+    <Content Include="AdminWeb\Images\Calendar\lang\calendar-nl.js" />
+    <Content Include="AdminWeb\Images\Calendar\lang\calendar-no.js" />
+    <Content Include="AdminWeb\Images\Calendar\lang\calendar-pl-utf8.js" />
+    <Content Include="AdminWeb\Images\Calendar\lang\calendar-pl.js" />
+    <Content Include="AdminWeb\Images\Calendar\lang\calendar-pt.js" />
+    <Content Include="AdminWeb\Images\Calendar\lang\calendar-ro.js" />
+    <Content Include="AdminWeb\Images\Calendar\lang\calendar-ru.js" />
+    <Content Include="AdminWeb\Images\Calendar\lang\calendar-ru_win_.js" />
+    <Content Include="AdminWeb\Images\Calendar\lang\calendar-si.js" />
+    <Content Include="AdminWeb\Images\Calendar\lang\calendar-sk.js" />
+    <Content Include="AdminWeb\Images\Calendar\lang\calendar-sp.js" />
+    <Content Include="AdminWeb\Images\Calendar\lang\calendar-sv.js" />
+    <Content Include="AdminWeb\Images\Calendar\lang\calendar-tr.js" />
+    <Content Include="AdminWeb\Images\Calendar\lang\calendar-zh.js" />
+    <Content Include="AdminWeb\Images\Calendar\lang\cn_utf8.js" />
+    <Content Include="AdminWeb\Images\Calendar\menuarrow2.gif" />
+    <Content Include="AdminWeb\Images\Calendar\skins\aqua\active-bg.gif" />
+    <Content Include="AdminWeb\Images\Calendar\skins\aqua\dark-bg.gif" />
+    <Content Include="AdminWeb\Images\Calendar\skins\aqua\hover-bg.gif" />
+    <Content Include="AdminWeb\Images\Calendar\skins\aqua\menuarrow.gif" />
+    <Content Include="AdminWeb\Images\Calendar\skins\aqua\normal-bg.gif" />
+    <Content Include="AdminWeb\Images\Calendar\skins\aqua\rowhover-bg.gif" />
+    <Content Include="AdminWeb\Images\Calendar\skins\aqua\status-bg.gif" />
+    <Content Include="AdminWeb\Images\Calendar\skins\aqua\theme.css" />
+    <Content Include="AdminWeb\Images\Calendar\skins\aqua\title-bg.gif" />
+    <Content Include="AdminWeb\Images\Calendar\skins\aqua\today-bg.gif" />
+    <Content Include="AdminWeb\Images\close.gif" />
+    <Content Include="AdminWeb\Images\dialog_utf8.js" />
+    <Content Include="AdminWeb\Images\floating_window_resize.gif" />
+    <Content Include="AdminWeb\Images\floating_window_with_tabs.css" />
+    <Content Include="AdminWeb\Images\floating_window_with_tabs.js" />
+    <Content Include="AdminWeb\Images\jquery-vsdoc.js" />
+    <Content Include="AdminWeb\Images\jquery.js" />
+    <Content Include="AdminWeb\Images\leftMenu.css" />
+    <Content Include="AdminWeb\Images\mainPics\bullet.gif" />
+    <Content Include="AdminWeb\Images\mainPics\ca2.gif" />
+    <Content Include="AdminWeb\Images\mainPics\checkmrk.gif" />
+    <Content Include="AdminWeb\Images\mainPics\conner01.gif" />
+    <Content Include="AdminWeb\Images\mainPics\indicator.gif" />
+    <Content Include="AdminWeb\Images\mainPics\line01.gif" />
+    <Content Include="AdminWeb\Images\mainPics\rolledge.gif" />
+    <Content Include="AdminWeb\Images\mainPics\spacer.gif" />
+    <Content Include="AdminWeb\Images\mainPics\ta.css" />
+    <Content Include="AdminWeb\Images\mainPics\us2.gif" />
+    <Content Include="AdminWeb\Images\mainPics\WebCmd.gif" />
+    <Content Include="AdminWeb\Images\mainPics\WebPage.gif" />
+    <Content Include="AdminWeb\Images\mainPics\WebTit.gif" />
+    <Content Include="AdminWeb\Images\master\bg_express_purple.gif" />
+    <Content Include="AdminWeb\Images\master\bg_express_purple1.gif" />
+    <Content Include="AdminWeb\Images\master\border_white_grape_b.gif" />
+    <Content Include="AdminWeb\Images\master\border_white_grape_bl.gif" />
+    <Content Include="AdminWeb\Images\master\border_white_grape_br.gif" />
+    <Content Include="AdminWeb\Images\master\border_white_grape_l.gif" />
+    <Content Include="AdminWeb\Images\master\border_white_grape_r.gif" />
+    <Content Include="AdminWeb\Images\master\border_white_grape_t.gif" />
+    <Content Include="AdminWeb\Images\master\border_white_grape_tl.gif" />
+    <Content Include="AdminWeb\Images\master\border_white_grape_tr.gif" />
+    <Content Include="AdminWeb\Images\master\clear.gif" />
+    <Content Include="AdminWeb\Images\master\error.gif" />
+    <Content Include="AdminWeb\Images\master\hero_webdev_bg.gif" />
+    <Content Include="AdminWeb\Images\master\hero_webdev_bg1.gif" />
+    <Content Include="AdminWeb\Images\master\hero_webdev_bg2.gif" />
+    <Content Include="AdminWeb\Images\master\master.css" />
+    <Content Include="AdminWeb\Images\master\white.gif" />
+    <Content Include="AdminWeb\Images\menu.js" />
+    <Content Include="AdminWeb\Images\PasswordStrength.js" />
+    <Content Include="AdminWeb\Images\res\arrow01.gif" />
+    <Content Include="AdminWeb\Images\res\background.png" />
+    <Content Include="AdminWeb\Images\res\background1.png" />
+    <Content Include="AdminWeb\Images\res\backhead.gif" />
+    <Content Include="AdminWeb\Images\res\backhead1.gif" />
+    <Content Include="AdminWeb\Images\res\blog.gif" />
+    <Content Include="AdminWeb\Images\res\calendar.gif" />
+    <Content Include="AdminWeb\Images\res\Dialog\3.gif" />
+    <Content Include="AdminWeb\Images\res\Dialog\dialogClose0.gif" />
+    <Content Include="AdminWeb\Images\res\Dialog\dialogCloseF.gif" />
+    <Content Include="AdminWeb\Images\res\Dialog\smb_btn_bg.gif" />
+    <Content Include="AdminWeb\Images\res\go.gif" />
+    <Content Include="AdminWeb\Images\res\headerback.png" />
+    <Content Include="AdminWeb\Images\res\hidetoc1.gif" />
+    <Content Include="AdminWeb\Images\res\home.gif" />
+    <Content Include="AdminWeb\Images\res\mail.gif" />
+    <Content Include="AdminWeb\Images\res\members.gif" />
+    <Content Include="AdminWeb\Images\res\OmeiLogo.jpg" />
+    <Content Include="AdminWeb\Images\res\search.gif" />
+    <Content Include="AdminWeb\Images\res\showtoc.gif" />
+    <Content Include="AdminWeb\Images\res\sortAscending.gif" />
+    <Content Include="AdminWeb\Images\res\sortDescending.gif" />
+    <Content Include="AdminWeb\Images\res\spacer.gif" />
+    <Content Include="AdminWeb\Images\res\synctoc1.gif" />
+    <Content Include="AdminWeb\Images\res\tab_left.gif" />
+    <Content Include="AdminWeb\Images\res\tab_left_on.gif" />
+    <Content Include="AdminWeb\Images\res\tab_right.gif" />
+    <Content Include="AdminWeb\Images\res\tab_right_on.gif" />
+    <Content Include="AdminWeb\Images\res\WebCmd.gif" />
+    <Content Include="AdminWeb\Images\select_arrow.gif" />
+    <Content Include="AdminWeb\Images\select_arrow_down.gif" />
+    <Content Include="AdminWeb\Images\select_arrow_over.gif" />
+    <Content Include="AdminWeb\Images\skin2_tab_left_active.gif" />
+    <Content Include="AdminWeb\Images\skin2_tab_left_inactive.gif" />
+    <Content Include="AdminWeb\Images\skin2_tab_right_active.gif" />
+    <Content Include="AdminWeb\Images\skin2_tab_right_inactive.gif" />
+    <Content Include="AdminWeb\Images\tab.css" />
+    <Content Include="AdminWeb\Images\tab_center_active.gif" />
+    <Content Include="AdminWeb\Images\tab_left_active.gif" />
+    <Content Include="AdminWeb\Images\tab_left_inactive.gif" />
+    <Content Include="AdminWeb\Images\tab_right_active.gif" />
+    <Content Include="AdminWeb\Images\tab_right_inactive.gif" />
+    <Content Include="AdminWeb\Images\ticket.css" />
+    <Content Include="AdminWeb\Images\ticket_prn.css" />
+    <Content Include="AdminWeb\mng\AddEmployee.aspx" />
+    <Content Include="AdminWeb\mng\AgentCommission.aspx" />
+    <Content Include="AdminWeb\mng\AgentDiscount.aspx" />
+    <Content Include="AdminWeb\mng\AgentDiscountSave.aspx" />
+    <Content Include="AdminWeb\mng\AgentInvoiceMatch.aspx" />
+    <Content Include="AdminWeb\mng\AgentInvoices.aspx" />
+    <Content Include="AdminWeb\mng\AgentInvoiceSum.aspx" />
+    <Content Include="AdminWeb\mng\AgentNewOrders.aspx" />
+    <Content Include="AdminWeb\mng\AgentNewRecv.aspx" />
+    <Content Include="AdminWeb\mng\AgentOrders.aspx" />
+    <Content Include="AdminWeb\mng\AgentPayment.aspx" />
+    <Content Include="AdminWeb\mng\AgentPaymentHistory.aspx" />
+    <Content Include="AdminWeb\mng\AgentPaymentItems.aspx" />
+    <Content Include="AdminWeb\mng\AgentReceivables.aspx" />
+    <Content Include="AdminWeb\mng\AgentReceiveOrders.aspx" />
+    <Content Include="AdminWeb\mng\AgentRecvInvoice.aspx" />
+    <Content Include="AdminWeb\mng\AgentRecvInvoiceList.aspx" />
+    <Content Include="AdminWeb\mng\AgentRecvInvoice_prn.aspx" />
+    <Content Include="AdminWeb\mng\AgentUnpayReport.aspx" />
+    <Content Include="AdminWeb\mng\AirlineEdit.aspx" />
+    <Content Include="AdminWeb\mng\AirportEdit.aspx" />
+    <Content Include="AdminWeb\mng\ApplicationError.aspx" />
+    <Content Include="AdminWeb\mng\Blank.aspx" />
+    <Content Include="AdminWeb\mng\Bookmark.aspx" />
+    <Content Include="AdminWeb\mng\BusEdit.aspx" />
+    <Content Include="AdminWeb\mng\BusList.aspx" />
+    <Content Include="AdminWeb\mng\BusSeats.aspx" />
+    <Content Include="AdminWeb\mng\BusSeats_Prn.aspx" />
+    <Content Include="AdminWeb\mng\ChangePassword.aspx" />
+    <Content Include="AdminWeb\mng\ChangeSignIn.aspx" />
+    <Content Include="AdminWeb\mng\ClientCallback.aspx" />
+    <Content Include="AdminWeb\mng\CommissionList.aspx" />
+    <Content Include="AdminWeb\mng\CompanyEdit.aspx" />
+    <Content Include="AdminWeb\mng\Companys.aspx" />
+    <Content Include="AdminWeb\mng\CreditCardList.aspx" />
+    <Content Include="AdminWeb\mng\CreditCardPayment.aspx" />
+    <Content Include="AdminWeb\mng\CreditDetail.aspx" />
+    <Content Include="AdminWeb\mng\CreditVouchers.aspx" />
+    <Content Include="AdminWeb\mng\CustomerInfo.aspx" />
+    <Content Include="AdminWeb\mng\CustomerSelector.aspx" />
+    <Content Include="AdminWeb\mng\DayBalance.aspx" />
+    <Content Include="AdminWeb\mng\DestinationEdit.aspx" />
+    <Content Include="AdminWeb\mng\DestinationIcon.aspx" />
+    <Content Include="AdminWeb\mng\DestinationPics.aspx" />
+    <Content Include="AdminWeb\mng\DestinationPicUpload.aspx" />
+    <Content Include="AdminWeb\mng\Destinations.aspx" />
+    <Content Include="AdminWeb\mng\Drivers.aspx" />
+    <Content Include="AdminWeb\mng\EmployeeEdit.aspx" />
+    <Content Include="AdminWeb\mng\EmployeeList.aspx" />
+    <Content Include="AdminWeb\mng\EmployeeRoleEdit.aspx" />
+    <Content Include="AdminWeb\mng\EmployeeRoles.aspx" />
+    <Content Include="AdminWeb\mng\EmpPositions.aspx" />
+    <Content Include="AdminWeb\mng\EmpRoles.aspx" />
+    <Content Include="AdminWeb\mng\FlightEdit.aspx" />
+    <Content Include="AdminWeb\mng\FlightsList.aspx" />
+    <Content Include="AdminWeb\mng\floating_window_with_tabs.html" />
+    <Content Include="AdminWeb\mng\FreeOrderEdit.aspx" />
+    <Content Include="AdminWeb\mng\FreeOrders.aspx" />
+    <Content Include="AdminWeb\mng\FreeScheduleEdit.aspx" />
+    <Content Include="AdminWeb\mng\FreeSchedules.aspx" />
+    <Content Include="AdminWeb\mng\HotelEdit.aspx" />
+    <Content Include="AdminWeb\mng\HotelList.aspx" />
+    <Content Include="AdminWeb\mng\HTMLPage1.htm" />
+    <Content Include="AdminWeb\mng\IMDetail.aspx" />
+    <Content Include="AdminWeb\mng\IMList.aspx" />
+    <Content Include="AdminWeb\mng\InvoiceMatch.aspx" />
+    <Content Include="AdminWeb\mng\LeftMenu.aspx" />
+    <Content Include="AdminWeb\mng\ListType.aspx" />
+    <Content Include="AdminWeb\mng\LookCard.aspx" />
+    <Content Include="AdminWeb\mng\main.html" />
+    <Content Include="AdminWeb\mng\MenuAuth.aspx" />
+    <Content Include="AdminWeb\mng\MenuEdit.aspx" />
+    <Content Include="AdminWeb\mng\MyAccount.aspx" />
+    <Content Include="AdminWeb\mng\MyOrders.aspx" />
+    <Content Include="AdminWeb\mng\OpLog.aspx" />
+    <Content Include="AdminWeb\mng\OrderActive.aspx" />
+    <Content Include="AdminWeb\mng\OrderDetail.aspx" />
+    <Content Include="AdminWeb\mng\OrderEdit.aspx" />
+    <Content Include="AdminWeb\mng\OrderList.aspx" />
+    <Content Include="AdminWeb\mng\OrderPayment.aspx" />
+    <Content Include="AdminWeb\mng\OrderPrice.aspx" />
+    <Content Include="AdminWeb\mng\OrderRecvAgent.aspx" />
+    <Content Include="AdminWeb\mng\OrderTransforAgent.aspx" />
+    <Content Include="AdminWeb\mng\PageSetup.aspx" />
+    <Content Include="AdminWeb\mng\PasswordHelp.html" />
+    <Content Include="AdminWeb\mng\PostFormAction.aspx" />
+    <Content Include="AdminWeb\mng\PrintQTicket.aspx" />
+    <Content Include="AdminWeb\mng\PrintTicket.aspx" />
+    <Content Include="AdminWeb\mng\PrintVoucher.aspx" />
+    <Content Include="AdminWeb\mng\ProcessError.aspx" />
+    <Content Include="AdminWeb\mng\Refund.aspx" />
+    <Content Include="AdminWeb\mng\ReportAgentSummary.aspx" />
+    <Content Include="AdminWeb\mng\ReportBusTour.aspx" />
+    <Content Include="AdminWeb\mng\ReportDaily.aspx" />
+    <Content Include="AdminWeb\mng\ReportDailyPayment.aspx" />
+    <Content Include="AdminWeb\mng\ReportEmployeeCommission.aspx" />
+    <Content Include="AdminWeb\mng\ReportEmployeeCommission1.aspx" />
+    <Content Include="AdminWeb\mng\ReportOrders.aspx" />
+    <Content Include="AdminWeb\mng\ReportPayment.aspx" />
+    <Content Include="AdminWeb\mng\ReportPaymentDetail.aspx" />
+    <Content Include="AdminWeb\mng\ReportSales.aspx" />
+    <Content Include="AdminWeb\mng\ReportSalesDetail.aspx" />
+    <Content Include="AdminWeb\mng\RoleList.aspx" />
+    <Content Include="AdminWeb\mng\ScheduleCancel.aspx" />
+    <Content Include="AdminWeb\mng\ScheduleEdit.aspx" />
+    <Content Include="AdminWeb\mng\ScheduleList.aspx" />
+    <Content Include="AdminWeb\mng\ScheduleOrders.aspx" />
+    <Content Include="AdminWeb\mng\Schedules.aspx" />
+    <Content Include="AdminWeb\mng\ScheduleSeats.aspx" />
+    <Content Include="AdminWeb\mng\SearchCustomer.aspx" />
+    <Content Include="AdminWeb\mng\SearchCustomer_pop.aspx" />
+    <Content Include="AdminWeb\mng\TicketEdit.aspx" />
+    <Content Include="AdminWeb\mng\Tools.aspx" />
+    <Content Include="AdminWeb\mng\Top.aspx" />
+    <Content Include="AdminWeb\mng\TourDestinations.aspx" />
+    <Content Include="AdminWeb\mng\TourDetail.aspx" />
+    <Content Include="AdminWeb\mng\TourFee.aspx" />
+    <Content Include="AdminWeb\mng\TourIcon.aspx" />
+    <Content Include="AdminWeb\mng\TourPicUpload.aspx" />
+    <Content Include="AdminWeb\mng\TourPrice.aspx" />
+    <Content Include="AdminWeb\mng\Tours.aspx" />
+    <Content Include="AdminWeb\mng\TourSchedule.aspx" />
+    <Content Include="AdminWeb\mng\UpdateHistory.aspx" />
+    <Content Include="AdminWeb\mng\UserEditCtl.ascx" />
+    <Content Include="AdminWeb\mng\UserInfo.aspx" />
+    <Content Include="AdminWeb\mng\UserInfo_pop.aspx" />
+    <Content Include="AdminWeb\mng\VoucherList.aspx" />
+    <Content Include="AdminWeb\mng\WebContentEdit.aspx" />
+    <Content Include="AdminWeb\mng\WebContentList.aspx" />
+    <Content Include="AdminWeb\mng\WebData.aspx" />
+    <Content Include="AdminWeb\mng\WebForm1.aspx" />
+    <Content Include="AdminWeb\mng\WebForm2.aspx" />
+    <Content Include="AdminWeb\mng\WebOrderPay_Prn.aspx" />
+    <Content Include="AdminWeb\mng\WebOrders.aspx" />
+    <Content Include="AdminWeb\mng\Welcome.aspx" />
+    <Content Include="AdminWeb\mng\WhatsNew.aspx" />
+    <Content Include="AdminWeb\mng\WhatsNewEdit.aspx" />
+    <Content Include="AdminWeb\obj\Debug\AdminWeb.csproj.FileListAbsolute.txt" />
+    <Content Include="AdminWeb\obj\Debug\AdminWeb.dll" />
+    <Content Include="AdminWeb\obj\Debug\AdminWeb.pdb" />
+    <Content Include="AdminWeb\superfish-1.4.8\changelog.txt" />
+    <Content Include="AdminWeb\superfish-1.4.8\css\superfish-navbar.css" />
+    <Content Include="AdminWeb\superfish-1.4.8\css\superfish-vertical.css" />
+    <Content Include="AdminWeb\superfish-1.4.8\css\superfish.css" />
+    <Content Include="AdminWeb\superfish-1.4.8\example.html" />
+    <Content Include="AdminWeb\superfish-1.4.8\images\arrows-ffffff.png" />
+    <Content Include="AdminWeb\superfish-1.4.8\images\shadow.png" />
+    <Content Include="AdminWeb\superfish-1.4.8\js\hoverIntent.js" />
+    <Content Include="AdminWeb\superfish-1.4.8\js\jquery-1.2.6.min.js" />
+    <Content Include="AdminWeb\superfish-1.4.8\js\jquery.bgiframe.min.js" />
+    <Content Include="AdminWeb\superfish-1.4.8\js\superfish.js" />
+    <Content Include="AdminWeb\superfish-1.4.8\js\supersubs.js" />
+    <Content Include="AdminWeb\TestUI\TestDateInputor.aspx" />
+    <Content Include="AdminWeb\TestUI\TestDriverSelector.aspx" />
+    <Content Include="AdminWeb\TestUI\TestHotelSelector.aspx" />
+    <Content Include="AdminWeb\TestUI\TestMenuTree.aspx" />
+    <Content Include="AdminWeb\WebParts\AgentInfoCtl.ascx" />
+    <Content Include="AdminWeb\WebParts\AgentTitleCtl.ascx" />
+    <Content Include="AdminWeb\WebParts\BusSeatCtl.ascx" />
+    <Content Include="AdminWeb\WebParts\CreditCardInfoCtl.ascx" />
+    <Content Include="AdminWeb\WebParts\CreditCardPaymentCtl.ascx" />
+    <Content Include="AdminWeb\WebParts\OplogList.ascx" />
+    <Content Include="AdminWeb\WebParts\OrderInfoCtl.ascx" />
+    <Content Include="AdminWeb\WebParts\PaymentCtl.ascx" />
+    <Content Include="AdminWeb\WebParts\PaymentListCtl.ascx" />
+    <Content Include="AdminWeb\WebParts\PaymentOpCtl.ascx" />
+    <Content Include="AdminWeb\WebParts\ScheduleBaseInfo.ascx" />
+    <Content Include="AdminWeb\WebParts\ScheduleBriefCtl.ascx" />
+    <Content Include="AdminWeb\WebParts\ScheduleHotelCtl.ascx" />
+    <Content Include="AdminWeb\WebParts\TourFeeCtl.ascx" />
+    <Content Include="AdminWeb\WebParts\TourNameCtl.ascx" />
+    <Content Include="AdminWeb\WebParts\TypeRefCtl.ascx" />
+    <Content Include="Content\Site\images\background.png" />
+    <Content Include="Content\Site\images\OmeiLogo.jpg" />
+    <Content Include="Content\Site\Site.css" />
+    <Content Include="Scripts\jquery.form.js" />
+    <Content Include="Scripts\superfish-1.4.8\changelog.txt" />
+    <Content Include="Scripts\superfish-1.4.8\css\superfish-navbar.css" />
+    <Content Include="Scripts\superfish-1.4.8\css\superfish-vertical.css" />
+    <Content Include="Scripts\superfish-1.4.8\css\superfish.css" />
+    <Content Include="Scripts\superfish-1.4.8\css\superfish_org.css" />
+    <Content Include="Scripts\superfish-1.4.8\example.html" />
+    <Content Include="Scripts\superfish-1.4.8\images\arrows-ffffff.png" />
+    <Content Include="Scripts\superfish-1.4.8\images\shadow.png" />
+    <Content Include="Scripts\superfish-1.4.8\js\hoverIntent.js" />
+    <Content Include="Scripts\superfish-1.4.8\js\jquery-1.2.6.min.js" />
+    <Content Include="Scripts\superfish-1.4.8\js\jquery.bgiframe.min.js" />
+    <Content Include="Scripts\superfish-1.4.8\js\superfish.js" />
+    <Content Include="Scripts\superfish-1.4.8\js\supersubs.js" />
+    <Content Include="Scripts\jquery-ui-1.7.custom.min-vsdoc.js" />
+    <Content Include="Scripts\uploadify\browse-files.png" />
+    <Content Include="Scripts\uploadify\cancel.png" />
+    <Content Include="Scripts\uploadify\jquery.uploadify.js" />
+    <Content Include="Scripts\uploadify\uploader.swf" />
+    <Content Include="Scripts\uploadify\uploadify.css" />
+    <Content Include="Scripts\uploadify\jquery.uploadify-vsdoc.js" />
+    <Content Include="Upload.aspx" />
+    <Content Include="Views\Destination\Details.aspx" />
+    <Content Include="Views\Destination\Edit.aspx" />
+    <Content Include="Views\Home\UploadFiles.aspx" />
+    <Content Include="Views\Menu\MainMenu.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\AdminThemes\Default.skin" />
+    <Content Include="App_Themes\themeGreen\Default.skin" />
+    <Content Include="App_Themes\themePrint\Default.skin" />
+    <None Include="AdminWeb\Images\Calendar\calendar.php" />
+    <None Include="AdminWeb\Images\Calendar\ChangeLog" />
+    <None Include="AdminWeb\Images\Calendar\test.php" />
+    <Content Include="AdminWeb\mng\PrintMaster.master" />
+    <None Include="AdminWeb\obj\Debug\ResolveAssemblyReference.cache" />
+    <Content Include="AdminWeb\public\AdminContent.master" />
+    <Content Include="AdminWeb\public\AdminContent1.master" />
+    <Content Include="AdminWeb\public\AdminContent2.master" />
+    <Content Include="AdminWeb\public\AdminPopup.master" />
+    <None Include="AdminWeb\superfish-1.4.8\.DS_Store" />
+    <None Include="AdminWeb\superfish-1.4.8\css\.DS_Store" />
+    <None Include="AdminWeb\superfish-1.4.8\images\.DS_Store" />
+    <Content Include="AdminWeb\Web.config" />
+    <Content Include="Scripts\NicEdit\nicEdit.js" />
+    <Content Include="Scripts\NicEdit\nicEditorIcons.gif" />
+    <Content Include="Views\OmeiDocs\Create.aspx" />
+    <Content Include="Views\OmeiDocs\Edit.aspx" />
+    <Content Include="Views\OmeiDocs\Index.aspx" />
+    <Content Include="Views\OmeiDropdownList\Index.aspx" />
+    <None Include="Scripts\superfish-1.4.8\.DS_Store" />
+    <None Include="Scripts\superfish-1.4.8\css\.DS_Store" />
+    <None Include="Scripts\superfish-1.4.8\images\.DS_Store" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AdminWeb\obj\Debug\TempPE\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target> -->
+  <Target Name="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)\..\$(ProjectName)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>5092</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

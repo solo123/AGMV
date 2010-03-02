@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_Notes" targetNamespace="http://tempuri.org/DS_Notes.xsd" xmlns:mstns="http://tempuri.org/DS_Notes.xsd" xmlns="http://tempuri.org/DS_Notes.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_Notes" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DS_Notes" msprop:Generator_DataSetName="DS_Notes">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="NotesTbl" msprop:Generator_UserTableName="NotesTbl" msprop:Generator_RowDeletedName="NotesTblRowDeleted" msprop:Generator_RowChangedName="NotesTblRowChanged" msprop:Generator_RowClassName="NotesTblRow" msprop:Generator_RowChangingName="NotesTblRowChanging" msprop:Generator_RowEvArgName="NotesTblRowChangeEvent" msprop:Generator_RowEvHandlerName="NotesTblRowChangeEventHandler" msprop:Generator_TableClassName="NotesTblDataTable" msprop:Generator_TableVarName="tableNotesTbl" msprop:Generator_RowDeletingName="NotesTblRowDeleting" msprop:Generator_TablePropName="NotesTbl">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="notesId" msprop:Generator_UserColumnName="notesId" msprop:Generator_ColumnVarNameInTable="columnnotesId" msprop:Generator_ColumnPropNameInRow="notesId" msprop:Generator_ColumnPropNameInTable="notesIdColumn" type="xs:int" />
+              <xs:element name="notes" msprop:Generator_UserColumnName="notes" msprop:Generator_ColumnVarNameInTable="columnnotes" msprop:Generator_ColumnPropNameInRow="notes" msprop:Generator_ColumnPropNameInTable="notesColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="notesDate" msprop:Generator_UserColumnName="notesDate" msprop:Generator_ColumnVarNameInTable="columnnotesDate" msprop:Generator_ColumnPropNameInRow="notesDate" msprop:Generator_ColumnPropNameInTable="notesDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="userId" msprop:Generator_UserColumnName="userId" msprop:Generator_ColumnVarNameInTable="columnuserId" msprop:Generator_ColumnPropNameInRow="userId" msprop:Generator_ColumnPropNameInTable="userIdColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="username" msprop:Generator_UserColumnName="username" msprop:Generator_ColumnVarNameInTable="columnusername" msprop:Generator_ColumnPropNameInRow="username" msprop:Generator_ColumnPropNameInTable="usernameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="status" msprop:Generator_UserColumnName="status" msprop:Generator_ColumnVarNameInTable="columnstatus" msprop:Generator_ColumnPropNameInRow="status" msprop:Generator_ColumnPropNameInTable="statusColumn" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:NotesTbl" />
+      <xs:field xpath="mstns:notesId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

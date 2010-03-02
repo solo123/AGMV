@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_Country" targetNamespace="http://tempuri.org/DS_Country.xsd" xmlns:mstns="http://tempuri.org/DS_Country.xsd" xmlns="http://tempuri.org/DS_Country.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="OmeiTravelConnectionString" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="OmeiTravelConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.com.Omei.DLL.Properties.Settings.GlobalReference.Default.OmeiTravelConnectionString" Provider="System.Data.SqlClient">
+          </Connection>
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CountryTableAdapter" GeneratorDataComponentClassName="CountryTableAdapter" Name="Country" UserDataComponentName="CountryTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="OmeiTravelConnectionString (Settings)" DbObjectName="OmeiTravel.dbo.Country" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="GetData">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>select code, [name] as countryName, name_cn as countryName_cn
+from country 
+order by code</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="code" DataSetColumn="code" />
+              <Mapping SourceColumn="countryName" DataSetColumn="countryName" />
+              <Mapping SourceColumn="countryName_cn" DataSetColumn="countryName_cn" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_Country" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DS_Country" msprop:Generator_DataSetName="DS_Country">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Country" msprop:Generator_UserTableName="Country" msprop:Generator_RowDeletedName="CountryRowDeleted" msprop:Generator_RowChangedName="CountryRowChanged" msprop:Generator_RowClassName="CountryRow" msprop:Generator_RowChangingName="CountryRowChanging" msprop:Generator_RowEvArgName="CountryRowChangeEvent" msprop:Generator_RowEvHandlerName="CountryRowChangeEventHandler" msprop:Generator_TableClassName="CountryDataTable" msprop:Generator_TableVarName="tableCountry" msprop:Generator_RowDeletingName="CountryRowDeleting" msprop:Generator_TablePropName="Country">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="code" msprop:Generator_UserColumnName="code" msprop:Generator_ColumnVarNameInTable="columncode" msprop:Generator_ColumnPropNameInRow="code" msprop:Generator_ColumnPropNameInTable="codeColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="countryName" msdata:ReadOnly="true" msprop:Generator_UserColumnName="countryName" msprop:Generator_ColumnVarNameInTable="columncountryName" msprop:Generator_ColumnPropNameInRow="countryName" msprop:Generator_ColumnPropNameInTable="countryNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="251" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="countryName_cn" msdata:ReadOnly="true" msprop:Generator_UserColumnName="countryName_cn" msprop:Generator_ColumnVarNameInTable="columncountryName_cn" msprop:Generator_ColumnPropNameInRow="countryName_cn" msprop:Generator_ColumnPropNameInTable="countryName_cnColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="252" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Country" />
+      <xs:field xpath="mstns:code" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

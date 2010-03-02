@@ -1,0 +1,570 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{00E942AF-FBAD-4E84-BAE8-C755A2395DA6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>com.Omei.DLL</RootNamespace>
+    <AssemblyName>OmeiDLL</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DS_Agent.cs">
+      <DependentUpon>DS_Agent.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_Agent.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Agent.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_AgentInvoice.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_AgentInvoice.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_AgentPayment.cs">
+      <DependentUpon>DS_AgentPayment.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_AgentPayment.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_AgentPayment.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Airline.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Airline.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Authorization.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Authorization.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_BusUsage.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_BusUsage.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Commission.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Commission.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Companys.cs">
+      <DependentUpon>DS_Companys.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_Companys.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Companys.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Country.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Country.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_CreditCards.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_CreditCards.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Destinations.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Destinations.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Employee.cs">
+      <DependentUpon>DS_Employee.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_Employee.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Employee.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Flight.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Flight.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Hotels.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Hotels.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Log.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Log.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Menu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Menu.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Notes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Notes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Orders.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Orders.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_PhotoList.cs">
+      <DependentUpon>DS_PhotoList.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_PhotoList.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_PhotoList.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Schedules.cs">
+      <DependentUpon>DS_Schedules.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_Schedules.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Schedules.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Seats.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Seats.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_TourDayDest.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_TourDayDest.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_TourFee.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_TourFee.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Tours.cs">
+      <DependentUpon>DS_Tours.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_Tours.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Tours.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_TypeRef.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_TypeRef.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_UserInfo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_UserInfo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Vehicles.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Vehicles.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_WhatsNew.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_WhatsNew.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="DS_Agent.xsc">
+      <DependentUpon>DS_Agent.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Agent.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Agent.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Agent.xss">
+      <DependentUpon>DS_Agent.xsd</DependentUpon>
+    </None>
+    <None Include="DS_AgentInvoice.xsc">
+      <DependentUpon>DS_AgentInvoice.xsd</DependentUpon>
+    </None>
+    <None Include="DS_AgentInvoice.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_AgentInvoice.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_AgentInvoice.xss">
+      <DependentUpon>DS_AgentInvoice.xsd</DependentUpon>
+    </None>
+    <None Include="DS_AgentPayment.xsc">
+      <DependentUpon>DS_AgentPayment.xsd</DependentUpon>
+    </None>
+    <None Include="DS_AgentPayment.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_AgentPayment.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_AgentPayment.xss">
+      <DependentUpon>DS_AgentPayment.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Airline.xsc">
+      <DependentUpon>DS_Airline.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Airline.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Airline.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Airline.xss">
+      <DependentUpon>DS_Airline.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Authorization.xsc">
+      <DependentUpon>DS_Authorization.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Authorization.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Authorization.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Authorization.xss">
+      <DependentUpon>DS_Authorization.xsd</DependentUpon>
+    </None>
+    <None Include="DS_BusUsage.xsc">
+      <DependentUpon>DS_BusUsage.xsd</DependentUpon>
+    </None>
+    <None Include="DS_BusUsage.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_BusUsage.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_BusUsage.xss">
+      <DependentUpon>DS_BusUsage.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Commission.xsc">
+      <DependentUpon>DS_Commission.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Commission.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Commission.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Commission.xss">
+      <DependentUpon>DS_Commission.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Companys.xsc">
+      <DependentUpon>DS_Companys.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Companys.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Companys.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Companys.xss">
+      <DependentUpon>DS_Companys.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Country.xsc">
+      <DependentUpon>DS_Country.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Country.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Country.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Country.xss">
+      <DependentUpon>DS_Country.xsd</DependentUpon>
+    </None>
+    <None Include="DS_CreditCards.xsc">
+      <DependentUpon>DS_CreditCards.xsd</DependentUpon>
+    </None>
+    <None Include="DS_CreditCards.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_CreditCards.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_CreditCards.xss">
+      <DependentUpon>DS_CreditCards.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Destinations.xsc">
+      <DependentUpon>DS_Destinations.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Destinations.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Destinations.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_Destinations.xss">
+      <DependentUpon>DS_Destinations.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Employee.xsc">
+      <DependentUpon>DS_Employee.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Employee.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Employee.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Employee.xss">
+      <DependentUpon>DS_Employee.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Flight.xsc">
+      <DependentUpon>DS_Flight.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Flight.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Flight.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Flight.xss">
+      <DependentUpon>DS_Flight.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Hotels.xsc">
+      <DependentUpon>DS_Hotels.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Hotels.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Hotels.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Hotels.xss">
+      <DependentUpon>DS_Hotels.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Log.xsc">
+      <DependentUpon>DS_Log.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Log.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Log.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Log.xss">
+      <DependentUpon>DS_Log.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Menu.xsc">
+      <DependentUpon>DS_Menu.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Menu.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Menu.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Menu.xss">
+      <DependentUpon>DS_Menu.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Notes.xsc">
+      <DependentUpon>DS_Notes.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Notes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Notes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Notes.xss">
+      <DependentUpon>DS_Notes.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Orders.xsc">
+      <DependentUpon>DS_Orders.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Orders.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Orders.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Orders.xss">
+      <DependentUpon>DS_Orders.xsd</DependentUpon>
+    </None>
+    <None Include="DS_PhotoList.xsc">
+      <DependentUpon>DS_PhotoList.xsd</DependentUpon>
+    </None>
+    <None Include="DS_PhotoList.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_PhotoList.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_PhotoList.xss">
+      <DependentUpon>DS_PhotoList.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Schedules.xsc">
+      <DependentUpon>DS_Schedules.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Schedules.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Schedules.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Schedules.xss">
+      <DependentUpon>DS_Schedules.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Seats.xsc">
+      <DependentUpon>DS_Seats.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Seats.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Seats.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Seats.xss">
+      <DependentUpon>DS_Seats.xsd</DependentUpon>
+    </None>
+    <None Include="DS_TourDayDest.xsc">
+      <DependentUpon>DS_TourDayDest.xsd</DependentUpon>
+    </None>
+    <None Include="DS_TourDayDest.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DS_TourDayDest.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_TourDayDest.xss">
+      <DependentUpon>DS_TourDayDest.xsd</DependentUpon>
+    </None>
+    <None Include="DS_TourFee.xsc">
+      <DependentUpon>DS_TourFee.xsd</DependentUpon>
+    </None>
+    <None Include="DS_TourFee.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_TourFee.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_TourFee.xss">
+      <DependentUpon>DS_TourFee.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Tours.xsc">
+      <DependentUpon>DS_Tours.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Tours.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Tours.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Tours.xss">
+      <DependentUpon>DS_Tours.xsd</DependentUpon>
+    </None>
+    <None Include="DS_TypeRef.xsc">
+      <DependentUpon>DS_TypeRef.xsd</DependentUpon>
+    </None>
+    <None Include="DS_TypeRef.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_TypeRef.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_TypeRef.xss">
+      <DependentUpon>DS_TypeRef.xsd</DependentUpon>
+    </None>
+    <None Include="DS_UserInfo.xsc">
+      <DependentUpon>DS_UserInfo.xsd</DependentUpon>
+    </None>
+    <None Include="DS_UserInfo.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_UserInfo.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_UserInfo.xss">
+      <DependentUpon>DS_UserInfo.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Vehicles.xsc">
+      <DependentUpon>DS_Vehicles.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Vehicles.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Vehicles.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_Vehicles.xss">
+      <DependentUpon>DS_Vehicles.xsd</DependentUpon>
+    </None>
+    <None Include="DS_WhatsNew.xsc">
+      <DependentUpon>DS_WhatsNew.xsd</DependentUpon>
+    </None>
+    <None Include="DS_WhatsNew.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_WhatsNew.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_WhatsNew.xss">
+      <DependentUpon>DS_WhatsNew.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

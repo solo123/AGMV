@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_MenuData" targetNamespace="http://tempuri.org/DS_MenuData.xsd" xmlns:mstns="http://tempuri.org/DS_MenuData.xsd" xmlns="http://tempuri.org/DS_MenuData.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_MenuData" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DS_MenuData" msprop:Generator_DataSetName="DS_MenuData">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="menuTbl" msprop:Generator_UserTableName="menuTbl" msprop:Generator_RowDeletedName="menuTblRowDeleted" msprop:Generator_TableClassName="menuTblDataTable" msprop:Generator_RowChangedName="menuTblRowChanged" msprop:Generator_RowClassName="menuTblRow" msprop:Generator_RowChangingName="menuTblRowChanging" msprop:Generator_RowEvArgName="menuTblRowChangeEvent" msprop:Generator_RowEvHandlerName="menuTblRowChangeEventHandler" msprop:Generator_TablePropName="menuTbl" msprop:Generator_TableVarName="tablemenuTbl" msprop:Generator_RowDeletingName="menuTblRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="menuTitle" msprop:Generator_UserColumnName="menuTitle" msprop:Generator_ColumnPropNameInRow="menuTitle" msprop:Generator_ColumnVarNameInTable="columnmenuTitle" msprop:Generator_ColumnPropNameInTable="menuTitleColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="leftmenuUrl" msprop:Generator_UserColumnName="leftmenuUrl" msprop:Generator_ColumnPropNameInRow="leftmenuUrl" msprop:Generator_ColumnVarNameInTable="columnleftmenuUrl" msprop:Generator_ColumnPropNameInTable="leftmenuUrlColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="contentUrl" msprop:Generator_UserColumnName="contentUrl" msprop:Generator_ColumnPropNameInRow="contentUrl" msprop:Generator_ColumnVarNameInTable="columncontentUrl" msprop:Generator_ColumnPropNameInTable="contentUrlColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

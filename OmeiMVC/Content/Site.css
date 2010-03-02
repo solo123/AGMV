@@ -1,0 +1,77 @@
+﻿body{margin:0;}
+
+#page {margin-top:0; margin-left:auto;margin-right:auto; padding:0;width:758px;}
+#main {	line-height:1.63;font-family:Arial,Verdana,Helvetica,sans-serif; font-size:0.8em;}
+#navigate_tips{ text-align:right;}
+#navigate_tips img {border:0;}
+.main_lightBlue {background-color:#F4F8FB; padding:8px;}
+.main_lightGreen {background-color:#E4EEE0; padding:8px;}
+
+#destination_list { background-color: #E4EEE0; padding:8px; line-height:2;}
+#destination_list div { width:180px; float:left; padding-left:4px; overflow:hidden;}
+
+#destination_list:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+/* Hides from IE-mac \*/
+* html .destination_list {height: 1%;}
+/* End hide from IE-mac */
+
+#destination_list a {color:#003300;text-decoration:underline;padding-top:10px; padding-bottom:10px;}
+#destination_list a:visited {text-decoration:none;}
+#destination_list a:hover {color:Red;text-decoration:underline;background-color:lightYellow;}
+#destination_list a:active {color:Red;}
+
+#navigate{height:18px;padding:4px;background-color:#ccc;}
+#main_navigate_menu {margin:0; padding:0;list-style-type:none;}
+#main_navigate_menu li {display:inline; margin:0; padding:0;float:left;}
+#main_navigate_menu li a {display:block;position:relative;margin-left:4px; margin-right:4px;color:#515180;padding:2px;
+font-family:Arial,Verdana,Helvetica,sans-serif;
+font-size:14px;
+font-weight:bold;
+text-decoration:none;}
+#main_navigate_menu li a:hover {background-color:#C0C0FF;text-decoration:underline;}
+#main_navigate_menu li a.selected {background-color:#990000; color:White;text-decoration:underline;}
+
+.mainmenu_actived{background-color:#990000;}
+.mainmenu_actived a {color:White!important;text-decoration:underline!important;}
+.mainmenu_actived a:hover {background-color:#990000!important;}
+
+
+#navigate_bar {height:16px;background-color:#E1E1E1; font-size: 12px;padding:4px;}
+
+.omei_promotion {padding-left: 50px; color: Red; font-weight: bold; font-size: 14px; margin-bottom: 0px;}
+
+#footer_address {line-height:17px;font-size:11px;color:#666;}
+#footer_address .prompt {font-weight:bold; width:200px; text-align:right;float:left;}
+#footer_address .content {}
+#footer_address img {border:none;}
+#footer_address a {color:#666;}
+#footer_address a:hover {color:Red; background-color:lightYellow;}
+
+.copyright{height:15px; background-color:#CCCCCC;
+font-family:Arial,Verdana,Helvetica,sans-serif;
+font-size:10px;text-align:center;margin-bottom:10px;}
+.copyright a {color:Black;}
+
+
+/* destination_detail */
+#destination_detail{margin-top:8px;}
+#destination_detail .head {height:35px;position:relative;clear:both;}
+#destination_detail .head h2{float:left;position:relative;margin:0 10px 0 0;padding:0;}
+#destination_detail .head div {padding-top:6px;font-size:90%; font-style:italic;}
+#destination_detail img {float:left; padding:2px; background-color:White; border:solid 1px #bac1a3; margin:10px;}
+
+#relate_tours {float:right; border: solid 1px #bac1a3; background-color:lightYellow; padding:8px; font-size:90%; }
+#relate_tours h2{margin:0; padding:0; font-size:1em; width: 350px;}
+#relate_tours a:visited {text-decoration:none;}
+#relate_tours a:hover {color:Red;text-decoration:underline;}
+
+
+/* -- Tab Line Style -- */
+.tab-pass {	BORDER-RIGHT: darkgreen 1px solid; BORDER-TOP: darkgreen 1px solid; BORDER-LEFT: darkgreen 1px solid; BORDER-BOTTOM: darkgreen 0px solid; BACKGROUND-COLOR: #f7e4b2;FONT-SIZE: 13px;FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif;}
+.box-no-top {BORDER-RIGHT: darkgreen 1px solid; BORDER-TOP: darkgreen 0px solid; BORDER-LEFT: darkgreen 1px solid; BORDER-BOTTOM: darkgreen 1px solid;}
+.tab-white {BORDER-RIGHT: darkgreen 1px solid; BORDER-TOP: darkgreen 1px solid; BORDER-LEFT: darkgreen 1px solid; BORDER-BOTTOM: darkgreen 1px solid;FONT-SIZE: 13px;FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif;}
+.tab-white a{color:darkblue;}
+.tab-white a:visited {color:darkblue;}
+.tab-bottom {BORDER-RIGHT: darkgreen 0px solid; BORDER-TOP: darkgreen 0px solid; BORDER-LEFT: darkgreen 0px solid; BORDER-BOTTOM: darkgreen 1px solid;}
+.tab-HeaderName {BORDER-RIGHT: darkgreen 0px solid; BORDER-TOP: darkgreen 0px solid; FONT-WEIGHT: bold; FONT-SIZE: 18px; BORDER-LEFT: darkgreen 0px solid; COLOR: #7e0048; BORDER-BOTTOM: darkgreen 1px solid; FONT-FAMILY: Arial, Helvetica, sans-serif;}
+.tab-row-alt {background-color:#c8e0c0;}

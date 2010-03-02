@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_Flight" targetNamespace="http://tempuri.org/DS_Flight.xsd" xmlns:mstns="http://tempuri.org/DS_Flight.xsd" xmlns="http://tempuri.org/DS_Flight.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="OmeiTravelConnectionString" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="OmeiTravelConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.com.Omei.DLL.Properties.Settings.GlobalReference.Default.OmeiTravelConnectionString" Provider="System.Data.SqlClient">
+          </Connection>
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="FlightDetailTableAdapter" GeneratorDataComponentClassName="FlightDetailTableAdapter" Name="FlightDetail" UserDataComponentName="FlightDetailTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="OmeiTravelConnectionString (Settings)" DbObjectName="OmeiTravel.dbo.Flights" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="GetData">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT flightId, airportFrom, airportTo, airline, flight, roundTrip, nonStop, priceAdult, 
+      priceChild, notes, status
+FROM Flights</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="flightId" DataSetColumn="flightId" />
+              <Mapping SourceColumn="airportFrom" DataSetColumn="airportFrom" />
+              <Mapping SourceColumn="airportTo" DataSetColumn="airportTo" />
+              <Mapping SourceColumn="airline" DataSetColumn="airline" />
+              <Mapping SourceColumn="flight" DataSetColumn="flight" />
+              <Mapping SourceColumn="roundTrip" DataSetColumn="roundTrip" />
+              <Mapping SourceColumn="nonStop" DataSetColumn="nonStop" />
+              <Mapping SourceColumn="priceAdult" DataSetColumn="priceAdult" />
+              <Mapping SourceColumn="priceChild" DataSetColumn="priceChild" />
+              <Mapping SourceColumn="notes" DataSetColumn="notes" />
+              <Mapping SourceColumn="status" DataSetColumn="status" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AirportCodeTableAdapter" GeneratorDataComponentClassName="AirportCodeTableAdapter" Name="AirportCode" UserDataComponentName="AirportCodeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="OmeiTravelConnectionString (Settings)" DbObjectName="OmeiTravel.dbo.airportCode" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="GetData">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT airportID, airportCode, name, name_cn, country
+FROM airportCode</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="airportID" DataSetColumn="airportID" />
+              <Mapping SourceColumn="airportCode" DataSetColumn="airportCode" />
+              <Mapping SourceColumn="name" DataSetColumn="name" />
+              <Mapping SourceColumn="name_cn" DataSetColumn="name_cn" />
+              <Mapping SourceColumn="country" DataSetColumn="country" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_Flight" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DS_Flight" msprop:Generator_DataSetName="DS_Flight">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="FlightDetail" msprop:Generator_UserTableName="FlightDetail" msprop:Generator_RowDeletedName="FlightDetailRowDeleted" msprop:Generator_RowChangedName="FlightDetailRowChanged" msprop:Generator_RowClassName="FlightDetailRow" msprop:Generator_RowChangingName="FlightDetailRowChanging" msprop:Generator_RowEvArgName="FlightDetailRowChangeEvent" msprop:Generator_RowEvHandlerName="FlightDetailRowChangeEventHandler" msprop:Generator_TableClassName="FlightDetailDataTable" msprop:Generator_TableVarName="tableFlightDetail" msprop:Generator_RowDeletingName="FlightDetailRowDeleting" msprop:Generator_TablePropName="FlightDetail">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="flightId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="flightId" msprop:Generator_ColumnPropNameInRow="flightId" msprop:Generator_ColumnVarNameInTable="columnflightId" msprop:Generator_ColumnPropNameInTable="flightIdColumn" type="xs:int" />
+              <xs:element name="airportFrom" msprop:Generator_UserColumnName="airportFrom" msprop:Generator_ColumnPropNameInRow="airportFrom" msprop:Generator_ColumnVarNameInTable="columnairportFrom" msprop:Generator_ColumnPropNameInTable="airportFromColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="airportTo" msprop:Generator_UserColumnName="airportTo" msprop:Generator_ColumnPropNameInRow="airportTo" msprop:Generator_ColumnVarNameInTable="columnairportTo" msprop:Generator_ColumnPropNameInTable="airportToColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="airline" msprop:Generator_UserColumnName="airline" msprop:Generator_ColumnPropNameInRow="airline" msprop:Generator_ColumnVarNameInTable="columnairline" msprop:Generator_ColumnPropNameInTable="airlineColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="flight" msprop:Generator_UserColumnName="flight" msprop:Generator_ColumnPropNameInRow="flight" msprop:Generator_ColumnVarNameInTable="columnflight" msprop:Generator_ColumnPropNameInTable="flightColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="roundTrip" msprop:Generator_UserColumnName="roundTrip" msprop:Generator_ColumnPropNameInRow="roundTrip" msprop:Generator_ColumnVarNameInTable="columnroundTrip" msprop:Generator_ColumnPropNameInTable="roundTripColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="nonStop" msprop:Generator_UserColumnName="nonStop" msprop:Generator_ColumnPropNameInRow="nonStop" msprop:Generator_ColumnVarNameInTable="columnnonStop" msprop:Generator_ColumnPropNameInTable="nonStopColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="priceAdult" msprop:Generator_UserColumnName="priceAdult" msprop:Generator_ColumnPropNameInRow="priceAdult" msprop:Generator_ColumnVarNameInTable="columnpriceAdult" msprop:Generator_ColumnPropNameInTable="priceAdultColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="priceChild" msprop:Generator_UserColumnName="priceChild" msprop:Generator_ColumnPropNameInRow="priceChild" msprop:Generator_ColumnVarNameInTable="columnpriceChild" msprop:Generator_ColumnPropNameInTable="priceChildColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="notes" msprop:Generator_UserColumnName="notes" msprop:Generator_ColumnPropNameInRow="notes" msprop:Generator_ColumnVarNameInTable="columnnotes" msprop:Generator_ColumnPropNameInTable="notesColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="status" msprop:Generator_UserColumnName="status" msprop:Generator_ColumnPropNameInRow="status" msprop:Generator_ColumnVarNameInTable="columnstatus" msprop:Generator_ColumnPropNameInTable="statusColumn" type="xs:unsignedByte" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AirportCode" msprop:Generator_UserTableName="AirportCode" msprop:Generator_RowDeletedName="AirportCodeRowDeleted" msprop:Generator_RowChangedName="AirportCodeRowChanged" msprop:Generator_RowClassName="AirportCodeRow" msprop:Generator_RowChangingName="AirportCodeRowChanging" msprop:Generator_RowEvArgName="AirportCodeRowChangeEvent" msprop:Generator_RowEvHandlerName="AirportCodeRowChangeEventHandler" msprop:Generator_TableClassName="AirportCodeDataTable" msprop:Generator_TableVarName="tableAirportCode" msprop:Generator_RowDeletingName="AirportCodeRowDeleting" msprop:Generator_TablePropName="AirportCode">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="airportID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="airportID" msprop:Generator_ColumnPropNameInRow="airportID" msprop:Generator_ColumnVarNameInTable="columnairportID" msprop:Generator_ColumnPropNameInTable="airportIDColumn" type="xs:int" />
+              <xs:element name="airportCode" msprop:Generator_UserColumnName="airportCode" msprop:Generator_ColumnPropNameInRow="airportCode" msprop:Generator_ColumnVarNameInTable="columnairportCode" msprop:Generator_ColumnPropNameInTable="airportCodeColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="name" msprop:Generator_UserColumnName="name" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInTable="nameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="name_cn" msprop:Generator_UserColumnName="name_cn" msprop:Generator_ColumnPropNameInRow="name_cn" msprop:Generator_ColumnVarNameInTable="columnname_cn" msprop:Generator_ColumnPropNameInTable="name_cnColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="country" msprop:Generator_UserColumnName="country" msprop:Generator_ColumnPropNameInRow="country" msprop:Generator_ColumnVarNameInTable="columncountry" msprop:Generator_ColumnPropNameInTable="countryColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:FlightDetail" />
+      <xs:field xpath="mstns:flightId" />
+    </xs:unique>
+    <xs:unique name="AirportCode_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:AirportCode" />
+      <xs:field xpath="mstns:airportID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

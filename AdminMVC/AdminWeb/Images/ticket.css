@@ -1,0 +1,27 @@
+.diagramExp {
+	font-family: Webdings;
+	font-size: 12px;
+	border: thin none darkGreen;
+}
+
+.seat_available, .seat_hold, .seat_sold, .seat_fullpay
+{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:10px;
+}
+
+.seat_available{
+	background-color:#339966;
+}
+
+.seat_hold{
+	background-color:#ffff80;
+}
+
+.seat_sold{
+	background-color:#ff99cc;
+}
+
+.seat_fullpay{
+	background-color:#ffcc99;
+}

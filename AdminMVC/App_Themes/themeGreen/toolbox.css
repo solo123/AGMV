@@ -1,0 +1,104 @@
+div.toolbox 
+{
+	margin-bottom: 4px;
+	margin-top: 4px;
+	padding: 4px;
+	background: #c8e0c0;
+	border:solid 1px #4c773e;
+	text-align: left;
+}
+
+.listButtons {clear:both;}
+.listButtons ul {
+	margin: 0px;
+	padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    white-space: nowrap;
+}
+.listButtons li {
+    list-style-type: none;
+    display: inline;
+    font-size: 13px;
+    float:left;
+    margin: 2px;
+    padding:4px;
+}
+
+.listButtons li a 
+{
+	padding: 2px 4px 2px 4px;
+	background: buttonface;
+    text-decoration: none;
+	border-Left : 1px solid buttonhighlight;
+	border-Right : 1px solid buttonshadow;
+	border-Top   : 1px solid buttonhighlight;
+	border-Bottom : 1px solid buttonshadow;
+	color: black;
+
+}
+.listButtons li input
+{
+	padding: 0px;
+}
+.listButtons li a:link {
+}
+
+.listButtons li a:visited {
+}
+
+.listButtons li a:hover {
+	border-Left   : 1px solid buttonshadow;
+	border-Right  : 1px solid buttonhighlight;
+	border-Top    : 1px solid buttonshadow;
+	border-Bottom : 1px solid buttonhighlight;
+}
+
+.listButtons li a:active {
+	blr:expression(this.onFocus=this.blur());
+}
+.listButtons li a.style_disabled{ border: 1px solid buttonshadow; filter:alpha(opacity=50); -moz-opacity:0.5; opacity:0.5;  }
+
+.notes 
+{
+	font-size: 80%;
+	padding: 4px;
+	margin: 2px;
+	color:#4c773e;
+	FLOAT: right;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+}
+.notes A, .notes a:visited, .notes a:link {
+	color: #4c773e;
+	text-decoration: none;
+}
+.notes A:hover {
+	color: blue;
+	text-decoration: underline;
+}
+.notes a:active {
+	blr:expression(this.onFocus=this.blur());
+}
+
+DIV.statusDiv_0, DIV.statusDiv_1, DIV.statusDiv_2,
+DIV.statusDiv_7, DIV.statusDiv_8  
+{
+	PADDING:4px 4px 4px 4px;
+}
+DIV.statusDiv_0 {
+	BACKGROUND-COLOR: #E4EEE0;
+	border: solid 1px #C8E0C0;
+}
+DIV.statusDiv_1 {
+	BACKGROUND-COLOR: #E4EEE0;
+	border: solid 1px #C8E0C0;
+}
+DIV.statusDiv_2 {
+	BACKGROUND-COLOR: #E4EEE0;
+	border: solid 1px #C8E0C0;
+}
+DIV.statusDiv_7 {
+	background-color: lightRed;
+}
+DIV.statusDiv_8 {
+	BACKGROUND-COLOR: #C8E0C0
+}

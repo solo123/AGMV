@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+<HEAD>
+	<TITLE>Floating window with tabs</TITLE>
+	<STYLE TYPE="text/css">
+	body{
+		font-family: Trebuchet MS, Lucida Sans Unicode, Arial, sans-serif;
+		width:100%;
+		height:100%;
+		margin:0px;
+		padding:0px;
+		overflow:hidden;
+	}
+	a{
+		color:red;
+	}
+	img{
+		border:0px;
+	}
+	</STYLE>	
+	<link rel="stylesheet" href="images/floating_window_with_tabs.css" media="screen">
+	<script type="text/javascript">
+	var floating_window_skin = 1;
+	</script>	
+	<script type="text/javascript" src="images/floating_window_with_tabs.js"></script>
+</HEAD>
+<BODY>
+<a href="/index.html"><img src="http://www.dhtmlgoodies.com/images/heading3.gif"></a>
+
+<div id="debug"></div>
+<div id="window1">
+	<div class="floatingWindowContent">
+	This is a window where I have disabled the scrollbar at the right. If you try to resize it, you will see that some of this text will be hidden
+	below the bottom edge of the window.<br><br>
+	I have sent removed the close button from the window.
+	</div>
+	<div class="floatingWindowContent">
+	This script is based on simple ordinary div tags. This makes it very easy to set up. Put in your HTML content and call a javascript function to initialize the window.	
+	</div>
+	<div class="floatingWindowContent">
+	Content 3	
+	</div>
+</div>
+
+<div id="window2">
+	<div class="floatingWindowContent">
+	This script has been tested in IE, Firefox and Opera. Unfortunately, Opera doesn't support overflow in the same extent as 
+	IE and firefox, so there you will find both a horizontal and vertical scrollbar. I found that to be better than no scrollbars at all.
+	</div>
+	<div class="floatingWindowContent">
+	This is the content of another tab.
+	</div>
+	<div class="floatingWindowContent">
+	You can use CSS to modify the appearance of the content. This is done by applying CSS rules to the class "floatingWindowContent". example:
+	.dhtmlgoodies_floatingWindow .floatingWindowContent{color:red; }	
+	</div>
+</div>
+
+<div id="window3">
+	<div class="floatingWindowContent">
+	Cookies are used to remember<br>
+	* Position of windows<br>
+	* Size of windows<br>
+	* Active tab<br>
+	* Stack order of windows<br>
+	</div>
+	<div class="floatingWindowContent">
+	This is the first version of this window script. I will appreciate tip from you of new scripts and widgets, or perhaps improvement of this script. Send an
+	email to <a href="mailto:post@dhtmlgoodies.com">post@dhtmlgoodies.com</a>	
+	</div>
+</div>
+<div id="window4">
+	<div class="floatingWindowContent">
+	This is a window where I have specified that I want no tabs and no resize.	
+	</div>
+</div>
+
+<script type="text/javascript">
+// Arguments to function :
+// 1. ID of window
+// 2. array of tab names
+// 3. Initial window height
+// 4. Initial window width
+// 5. left position(could be overriden by cookies)
+// 6. top position(could be overridden by cookies)
+// 7. No scrollbars
+// 8. No resize handle
+// 0. No status bar
+// 10. No close button
+// 11. No minimize button
+
+// windowID,tabs,windowHeight,windowWidth,leftPos,topPos,noScrollbars,noResize,noStatusBar,noCloseButton,noMinimizeButton
+
+
+initFloatingWindowWithTabs('window1',Array('Info','More info','The end'),200,200,50,50,true,false,false,true);
+initFloatingWindowWithTabs('window2',Array('Browsers','Tab 2','Tab 3'),false,150,250,150);
+initFloatingWindowWithTabs('window3',Array('Messages','History'),false,150,300,250,false,false,false,false,false);
+initFloatingWindowWithTabs('window4',false,false,200,500,100,true,true,true,true);
+</script>
+</BODY>
+</HTML>

@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_Agent" targetNamespace="http://tempuri.org/DS_Agent.xsd" xmlns:mstns="http://tempuri.org/DS_Agent.xsd" xmlns="http://tempuri.org/DS_Agent.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="OmeiTravelConnectionString" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="OmeiTravelConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.com.Omei.DLL.Properties.Settings.GlobalReference.Default.OmeiTravelConnectionString" Provider="System.Data.SqlClient">
+          </Connection>
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="NewOrdersTableAdapter" GeneratorDataComponentClassName="NewOrdersTableAdapter" Name="NewOrders" UserDataComponentName="NewOrdersTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="OmeiTravelConnectionString (Settings)" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="False" GeneratorGetMethodName="GetNewOrders" GetMethodModifier="Public" GetMethodName="GetNewOrders" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetNewOrders" UserSourceName="GetNewOrders">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>select o.agentID, c.companyName, c.companyName_cn, 
+	o.orderID, 
+	o.scheduleID, s.subtitle, t.tourName, t.tourName_cn, t.TourDay, s.startDate,
+	o.firstName, o.lastName,
+	numberAdult, numberChild, numberFree, 
+	o.priceAdult, o.priceChild, 
+	fare, miscCharge, actualAmount, o.status
+from orders as o
+	left join company as c on o.agentID=c.companyID
+	left join busSchedule as s on o.scheduleID=s.scheduleID
+	left join tours as t on s.tourID=t.tourID
+where agentID&gt;0 and toAgent=0 and o.status&lt;&gt;7 and o.actualAmount&gt;0
+order by o.status desc, o.orderID desc
+</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="orderID" DataSetColumn="orderID" />
+              <Mapping SourceColumn="scheduleID" DataSetColumn="scheduleID" />
+              <Mapping SourceColumn="firstName" DataSetColumn="firstName" />
+              <Mapping SourceColumn="lastName" DataSetColumn="lastName" />
+              <Mapping SourceColumn="agentID" DataSetColumn="agentID" />
+              <Mapping SourceColumn="numberAdult" DataSetColumn="numberAdult" />
+              <Mapping SourceColumn="numberChild" DataSetColumn="numberChild" />
+              <Mapping SourceColumn="numberFree" DataSetColumn="numberFree" />
+              <Mapping SourceColumn="priceAdult" DataSetColumn="priceAdult" />
+              <Mapping SourceColumn="priceChild" DataSetColumn="priceChild" />
+              <Mapping SourceColumn="fare" DataSetColumn="fare" />
+              <Mapping SourceColumn="miscCharge" DataSetColumn="miscCharge" />
+              <Mapping SourceColumn="actualAmount" DataSetColumn="actualAmount" />
+              <Mapping SourceColumn="companyName" DataSetColumn="companyName" />
+              <Mapping SourceColumn="companyName_cn" DataSetColumn="companyName_cn" />
+              <Mapping SourceColumn="subtitle" DataSetColumn="subtitle" />
+              <Mapping SourceColumn="tourName" DataSetColumn="tourName" />
+              <Mapping SourceColumn="tourName_cn" DataSetColumn="tourName_cn" />
+              <Mapping SourceColumn="status" DataSetColumn="status" />
+              <Mapping SourceColumn="TourDay" DataSetColumn="TourDay" />
+              <Mapping SourceColumn="startDate" DataSetColumn="startDate" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AgentReceivablesTableAdapter" GeneratorDataComponentClassName="AgentReceivablesTableAdapter" Name="AgentReceivables" UserDataComponentName="AgentReceivablesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="OmeiTravelConnectionString (Settings)" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="False" GeneratorGetMethodName="GetAllAgentReceivables" GetMethodModifier="Public" GetMethodName="GetAllAgentReceivables" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetAllAgentReceivables" UserSourceName="GetAllAgentReceivables">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT a.invoiceID, a.orderID, o.firstName+'.'+o.lastName as username,
+ a.agentID, a.agentReceivable, a.additionalDiscount, a.agentPaid, 
+a.agentReceivable-a.additionalDiscount-agentPaid as balance,
+a.orderClosedDate, a.reportDate,
+      c.companyName, c.companyName_cn, a.status
+FROM AgentOrders AS a LEFT OUTER JOIN
+      Company AS c ON a.agentID = c.companyId
+left join orders as o on a.orderID=o.orderID</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="orderID" DataSetColumn="orderID" />
+              <Mapping SourceColumn="agentID" DataSetColumn="agentID" />
+              <Mapping SourceColumn="agentReceivable" DataSetColumn="agentReceivable" />
+              <Mapping SourceColumn="agentPaid" DataSetColumn="agentPaid" />
+              <Mapping SourceColumn="orderClosedDate" DataSetColumn="orderClosedDate" />
+              <Mapping SourceColumn="companyName" DataSetColumn="companyName" />
+              <Mapping SourceColumn="companyName_cn" DataSetColumn="companyName_cn" />
+              <Mapping SourceColumn="username" DataSetColumn="username" />
+              <Mapping SourceColumn="status" DataSetColumn="status" />
+              <Mapping SourceColumn="additionalDiscount" DataSetColumn="additionalDiscount" />
+              <Mapping SourceColumn="reportDate" DataSetColumn="reportDate" />
+              <Mapping SourceColumn="invoiceID" DataSetColumn="invoiceID" />
+              <Mapping SourceColumn="balance" DataSetColumn="balance" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AgentBillsTableAdapter" GeneratorDataComponentClassName="AgentBillsTableAdapter" Name="AgentBills" UserDataComponentName="AgentBillsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="OmeiTravelConnectionString (Settings)" DbObjectName="OmeiTravel.dbo.AgentOrders" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="False" GeneratorGetMethodName="GetAgentBills" GetMethodModifier="Public" GetMethodName="GetAgentBills" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetAgentBills" UserSourceName="GetAgentBills">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>select reportDate, count(*) as orderCount, sum(agentReceivable) as agentReceivable, sum(agentPaid) as agentPaid
+from agentOrders
+where agentID=@agentID and status&gt;1
+group by reportDate</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="True" AutogeneratedName="agentID" ColumnName="agentID" DataSourceName="OmeiTravel.dbo.AgentOrders" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@agentID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="agentID" SourceColumnNullMapping="False" SourceVersion="Current">
+                      </Parameter>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="reportDate" DataSetColumn="reportDate" />
+              <Mapping SourceColumn="orderCount" DataSetColumn="orderCount" />
+              <Mapping SourceColumn="agentReceivable" DataSetColumn="agentReceivable" />
+              <Mapping SourceColumn="agentPaid" DataSetColumn="agentPaid" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AgentTotalTableAdapter" GeneratorDataComponentClassName="AgentTotalTableAdapter" Name="AgentTotal" UserDataComponentName="AgentTotalTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="OmeiTravelConnectionString (Settings)" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="False" GeneratorGetMethodName="GetAgentTotal" GetMethodModifier="Public" GetMethodName="GetAgentTotal" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetAgentTotal" UserSourceName="GetAgentTotal">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>select agentID, agentReceivable, additionalDiscount, agentPaid, companyName, companyName_cn
+from (
+	select 
+		agentID, 
+		sum(agentReceivable) as agentReceivable, 
+		sum(additionalDiscount) as additionalDiscount, 
+		sum(agentPaid) as agentPaid 
+	from agentOrders as a
+	where status&lt;7
+	group by agentID
+) as a
+	left join company as c on a.agentID=c.companyId
+where a.agentReceivable&gt;0</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="agentID" DataSetColumn="agentID" />
+              <Mapping SourceColumn="agentReceivable" DataSetColumn="agentReceivable" />
+              <Mapping SourceColumn="additionalDiscount" DataSetColumn="additionalDiscount" />
+              <Mapping SourceColumn="agentPaid" DataSetColumn="agentPaid" />
+              <Mapping SourceColumn="companyName" DataSetColumn="companyName" />
+              <Mapping SourceColumn="companyName_cn" DataSetColumn="companyName_cn" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_Agent" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DS_Agent" msprop:Generator_DataSetName="DS_Agent">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="NewOrders" msprop:Generator_UserTableName="NewOrders" msprop:Generator_RowDeletedName="NewOrdersRowDeleted" msprop:Generator_RowChangedName="NewOrdersRowChanged" msprop:Generator_RowClassName="NewOrdersRow" msprop:Generator_RowChangingName="NewOrdersRowChanging" msprop:Generator_RowEvArgName="NewOrdersRowChangeEvent" msprop:Generator_RowEvHandlerName="NewOrdersRowChangeEventHandler" msprop:Generator_TableClassName="NewOrdersDataTable" msprop:Generator_TableVarName="tableNewOrders" msprop:Generator_RowDeletingName="NewOrdersRowDeleting" msprop:Generator_TablePropName="NewOrders">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="orderID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="orderID" msprop:Generator_ColumnPropNameInRow="orderID" msprop:Generator_ColumnVarNameInTable="columnorderID" msprop:Generator_ColumnPropNameInTable="orderIDColumn" type="xs:int" />
+              <xs:element name="scheduleID" msprop:Generator_UserColumnName="scheduleID" msprop:Generator_ColumnPropNameInRow="scheduleID" msprop:Generator_ColumnVarNameInTable="columnscheduleID" msprop:Generator_ColumnPropNameInTable="scheduleIDColumn" type="xs:int" />
+              <xs:element name="firstName" msprop:Generator_UserColumnName="firstName" msprop:Generator_ColumnPropNameInRow="firstName" msprop:Generator_ColumnVarNameInTable="columnfirstName" msprop:Generator_ColumnPropNameInTable="firstNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="lastName" msprop:Generator_UserColumnName="lastName" msprop:Generator_ColumnPropNameInRow="lastName" msprop:Generator_ColumnVarNameInTable="columnlastName" msprop:Generator_ColumnPropNameInTable="lastNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="agentID" msprop:Generator_UserColumnName="agentID" msprop:Generator_ColumnPropNameInRow="agentID" msprop:Generator_ColumnVarNameInTable="columnagentID" msprop:Generator_ColumnPropNameInTable="agentIDColumn" type="xs:int" />
+              <xs:element name="numberAdult" msprop:Generator_UserColumnName="numberAdult" msprop:Generator_ColumnPropNameInRow="numberAdult" msprop:Generator_ColumnVarNameInTable="columnnumberAdult" msprop:Generator_ColumnPropNameInTable="numberAdultColumn" type="xs:int" />
+              <xs:element name="numberChild" msprop:Generator_UserColumnName="numberChild" msprop:Generator_ColumnPropNameInRow="numberChild" msprop:Generator_ColumnVarNameInTable="columnnumberChild" msprop:Generator_ColumnPropNameInTable="numberChildColumn" type="xs:int" />
+              <xs:element name="numberFree" msprop:Generator_UserColumnName="numberFree" msprop:Generator_ColumnPropNameInRow="numberFree" msprop:Generator_ColumnVarNameInTable="columnnumberFree" msprop:Generator_ColumnPropNameInTable="numberFreeColumn" type="xs:int" />
+              <xs:element name="priceAdult" msprop:Generator_UserColumnName="priceAdult" msprop:Generator_ColumnPropNameInRow="priceAdult" msprop:Generator_ColumnVarNameInTable="columnpriceAdult" msprop:Generator_ColumnPropNameInTable="priceAdultColumn" type="xs:decimal" />
+              <xs:element name="priceChild" msprop:Generator_UserColumnName="priceChild" msprop:Generator_ColumnPropNameInRow="priceChild" msprop:Generator_ColumnVarNameInTable="columnpriceChild" msprop:Generator_ColumnPropNameInTable="priceChildColumn" type="xs:decimal" />
+              <xs:element name="fare" msprop:Generator_UserColumnName="fare" msprop:Generator_ColumnPropNameInRow="fare" msprop:Generator_ColumnVarNameInTable="columnfare" msprop:Generator_ColumnPropNameInTable="fareColumn" type="xs:decimal" />
+              <xs:element name="miscCharge" msprop:Generator_UserColumnName="miscCharge" msprop:Generator_ColumnPropNameInRow="miscCharge" msprop:Generator_ColumnVarNameInTable="columnmiscCharge" msprop:Generator_ColumnPropNameInTable="miscChargeColumn" type="xs:decimal" />
+              <xs:element name="actualAmount" msprop:Generator_UserColumnName="actualAmount" msprop:Generator_ColumnPropNameInRow="actualAmount" msprop:Generator_ColumnVarNameInTable="columnactualAmount" msprop:Generator_ColumnPropNameInTable="actualAmountColumn" type="xs:decimal" />
+              <xs:element name="companyName" msprop:Generator_UserColumnName="companyName" msprop:Generator_ColumnVarNameInTable="columncompanyName" msprop:Generator_ColumnPropNameInRow="companyName" msprop:Generator_ColumnPropNameInTable="companyNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="companyName_cn" msprop:Generator_UserColumnName="companyName_cn" msprop:Generator_ColumnVarNameInTable="columncompanyName_cn" msprop:Generator_ColumnPropNameInRow="companyName_cn" msprop:Generator_ColumnPropNameInTable="companyName_cnColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="subtitle" msprop:Generator_UserColumnName="subtitle" msprop:Generator_ColumnVarNameInTable="columnsubtitle" msprop:Generator_ColumnPropNameInRow="subtitle" msprop:Generator_ColumnPropNameInTable="subtitleColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tourName" msprop:Generator_UserColumnName="tourName" msprop:Generator_ColumnVarNameInTable="columntourName" msprop:Generator_ColumnPropNameInRow="tourName" msprop:Generator_ColumnPropNameInTable="tourNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tourName_cn" msprop:Generator_UserColumnName="tourName_cn" msprop:Generator_ColumnVarNameInTable="columntourName_cn" msprop:Generator_ColumnPropNameInRow="tourName_cn" msprop:Generator_ColumnPropNameInTable="tourName_cnColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="status" msprop:Generator_UserColumnName="status" msprop:Generator_ColumnPropNameInRow="status" msprop:Generator_ColumnVarNameInTable="columnstatus" msprop:Generator_ColumnPropNameInTable="statusColumn" type="xs:unsignedByte" />
+              <xs:element name="TourDay" msprop:Generator_UserColumnName="TourDay" msprop:Generator_ColumnVarNameInTable="columnTourDay" msprop:Generator_ColumnPropNameInRow="TourDay" msprop:Generator_ColumnPropNameInTable="TourDayColumn" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="startDate" msprop:Generator_UserColumnName="startDate" msprop:Generator_ColumnPropNameInRow="startDate" msprop:Generator_ColumnVarNameInTable="columnstartDate" msprop:Generator_ColumnPropNameInTable="startDateColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AgentReceivables" msprop:Generator_UserTableName="AgentReceivables" msprop:Generator_RowDeletedName="AgentReceivablesRowDeleted" msprop:Generator_RowChangedName="AgentReceivablesRowChanged" msprop:Generator_RowClassName="AgentReceivablesRow" msprop:Generator_RowChangingName="AgentReceivablesRowChanging" msprop:Generator_RowEvArgName="AgentReceivablesRowChangeEvent" msprop:Generator_RowEvHandlerName="AgentReceivablesRowChangeEventHandler" msprop:Generator_TableClassName="AgentReceivablesDataTable" msprop:Generator_TableVarName="tableAgentReceivables" msprop:Generator_RowDeletingName="AgentReceivablesRowDeleting" msprop:Generator_TablePropName="AgentReceivables">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="orderID" msprop:Generator_UserColumnName="orderID" msprop:Generator_ColumnPropNameInRow="orderID" msprop:Generator_ColumnVarNameInTable="columnorderID" msprop:Generator_ColumnPropNameInTable="orderIDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="agentID" msprop:Generator_UserColumnName="agentID" msprop:Generator_ColumnPropNameInRow="agentID" msprop:Generator_ColumnVarNameInTable="columnagentID" msprop:Generator_ColumnPropNameInTable="agentIDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="agentReceivable" msprop:Generator_UserColumnName="agentReceivable" msprop:Generator_ColumnPropNameInRow="agentReceivable" msprop:Generator_ColumnVarNameInTable="columnagentReceivable" msprop:Generator_ColumnPropNameInTable="agentReceivableColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="agentPaid" msprop:Generator_UserColumnName="agentPaid" msprop:Generator_ColumnPropNameInRow="agentPaid" msprop:Generator_ColumnVarNameInTable="columnagentPaid" msprop:Generator_ColumnPropNameInTable="agentPaidColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="orderClosedDate" msprop:Generator_UserColumnName="orderClosedDate" msprop:Generator_ColumnPropNameInRow="orderClosedDate" msprop:Generator_ColumnVarNameInTable="columnorderClosedDate" msprop:Generator_ColumnPropNameInTable="orderClosedDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="companyName" msprop:Generator_UserColumnName="companyName" msprop:Generator_ColumnPropNameInRow="companyName" msprop:Generator_ColumnVarNameInTable="columncompanyName" msprop:Generator_ColumnPropNameInTable="companyNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="companyName_cn" msprop:Generator_UserColumnName="companyName_cn" msprop:Generator_ColumnPropNameInRow="companyName_cn" msprop:Generator_ColumnVarNameInTable="columncompanyName_cn" msprop:Generator_ColumnPropNameInTable="companyName_cnColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="username" msdata:ReadOnly="true" msprop:Generator_UserColumnName="username" msprop:Generator_ColumnPropNameInRow="username" msprop:Generator_ColumnVarNameInTable="columnusername" msprop:Generator_ColumnPropNameInTable="usernameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="101" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="status" msprop:Generator_UserColumnName="status" msprop:Generator_ColumnVarNameInTable="columnstatus" msprop:Generator_ColumnPropNameInRow="status" msprop:Generator_ColumnPropNameInTable="statusColumn" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="additionalDiscount" msprop:Generator_UserColumnName="additionalDiscount" msprop:Generator_ColumnPropNameInRow="additionalDiscount" msprop:Generator_ColumnVarNameInTable="columnadditionalDiscount" msprop:Generator_ColumnPropNameInTable="additionalDiscountColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="reportDate" msprop:Generator_UserColumnName="reportDate" msprop:Generator_ColumnVarNameInTable="columnreportDate" msprop:Generator_ColumnPropNameInRow="reportDate" msprop:Generator_ColumnPropNameInTable="reportDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="invoiceID" msprop:Generator_UserColumnName="invoiceID" msprop:Generator_ColumnVarNameInTable="columninvoiceID" msprop:Generator_ColumnPropNameInRow="invoiceID" msprop:Generator_ColumnPropNameInTable="invoiceIDColumn" type="xs:int" />
+              <xs:element name="balance" msdata:ReadOnly="true" msprop:Generator_UserColumnName="balance" msprop:Generator_ColumnPropNameInRow="balance" msprop:Generator_ColumnVarNameInTable="columnbalance" msprop:Generator_ColumnPropNameInTable="balanceColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AgentBills" msprop:Generator_UserTableName="AgentBills" msprop:Generator_RowDeletedName="AgentBillsRowDeleted" msprop:Generator_RowChangedName="AgentBillsRowChanged" msprop:Generator_RowClassName="AgentBillsRow" msprop:Generator_RowChangingName="AgentBillsRowChanging" msprop:Generator_RowEvArgName="AgentBillsRowChangeEvent" msprop:Generator_RowEvHandlerName="AgentBillsRowChangeEventHandler" msprop:Generator_TableClassName="AgentBillsDataTable" msprop:Generator_TableVarName="tableAgentBills" msprop:Generator_RowDeletingName="AgentBillsRowDeleting" msprop:Generator_TablePropName="AgentBills">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="reportDate" msprop:Generator_UserColumnName="reportDate" msprop:Generator_ColumnPropNameInRow="reportDate" msprop:Generator_ColumnVarNameInTable="columnreportDate" msprop:Generator_ColumnPropNameInTable="reportDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="orderCount" msdata:ReadOnly="true" msprop:Generator_UserColumnName="orderCount" msprop:Generator_ColumnPropNameInRow="orderCount" msprop:Generator_ColumnVarNameInTable="columnorderCount" msprop:Generator_ColumnPropNameInTable="orderCountColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="agentReceivable" msdata:ReadOnly="true" msprop:Generator_UserColumnName="agentReceivable" msprop:Generator_ColumnPropNameInRow="agentReceivable" msprop:Generator_ColumnVarNameInTable="columnagentReceivable" msprop:Generator_ColumnPropNameInTable="agentReceivableColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="agentPaid" msdata:ReadOnly="true" msprop:Generator_UserColumnName="agentPaid" msprop:Generator_ColumnPropNameInRow="agentPaid" msprop:Generator_ColumnVarNameInTable="columnagentPaid" msprop:Generator_ColumnPropNameInTable="agentPaidColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AgentTotal" msprop:Generator_UserTableName="AgentTotal" msprop:Generator_RowDeletedName="AgentTotalRowDeleted" msprop:Generator_RowChangedName="AgentTotalRowChanged" msprop:Generator_RowClassName="AgentTotalRow" msprop:Generator_RowChangingName="AgentTotalRowChanging" msprop:Generator_RowEvArgName="AgentTotalRowChangeEvent" msprop:Generator_RowEvHandlerName="AgentTotalRowChangeEventHandler" msprop:Generator_TableClassName="AgentTotalDataTable" msprop:Generator_TableVarName="tableAgentTotal" msprop:Generator_RowDeletingName="AgentTotalRowDeleting" msprop:Generator_TablePropName="AgentTotal">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="agentID" msprop:Generator_UserColumnName="agentID" msprop:Generator_ColumnPropNameInRow="agentID" msprop:Generator_ColumnVarNameInTable="columnagentID" msprop:Generator_ColumnPropNameInTable="agentIDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="agentReceivable" msdata:ReadOnly="true" msprop:Generator_UserColumnName="agentReceivable" msprop:Generator_ColumnPropNameInRow="agentReceivable" msprop:Generator_ColumnVarNameInTable="columnagentReceivable" msprop:Generator_ColumnPropNameInTable="agentReceivableColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="additionalDiscount" msdata:ReadOnly="true" msprop:Generator_UserColumnName="additionalDiscount" msprop:Generator_ColumnPropNameInRow="additionalDiscount" msprop:Generator_ColumnVarNameInTable="columnadditionalDiscount" msprop:Generator_ColumnPropNameInTable="additionalDiscountColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="agentPaid" msdata:ReadOnly="true" msprop:Generator_UserColumnName="agentPaid" msprop:Generator_ColumnPropNameInRow="agentPaid" msprop:Generator_ColumnVarNameInTable="columnagentPaid" msprop:Generator_ColumnPropNameInTable="agentPaidColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="companyName" msprop:Generator_UserColumnName="companyName" msprop:Generator_ColumnPropNameInRow="companyName" msprop:Generator_ColumnVarNameInTable="columncompanyName" msprop:Generator_ColumnPropNameInTable="companyNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="companyName_cn" msprop:Generator_UserColumnName="companyName_cn" msprop:Generator_ColumnPropNameInRow="companyName_cn" msprop:Generator_ColumnVarNameInTable="columncompanyName_cn" msprop:Generator_ColumnPropNameInTable="companyName_cnColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:NewOrders" />
+      <xs:field xpath="mstns:orderID" />
+    </xs:unique>
+    <xs:unique name="AgentReceivables_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:AgentReceivables" />
+      <xs:field xpath="mstns:orderID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

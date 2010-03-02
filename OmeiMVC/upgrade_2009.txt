@@ -1,0 +1,11 @@
+﻿
+2009.08.05
+已将基本页面结果换成MVC框架，尚待制作的列表如下：
+
+1）tour -> tour detail, tour schedule
+2）零散页面：
+(1)Destination: related tours, Photo gallary
+
+3）订单处理；
+4）term and conditions；
+5）双语版本；

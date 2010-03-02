@@ -1,0 +1,73 @@
+div.toolbox {
+	padding: 2px; 
+	font: menu;
+    height: 25px;
+    width: 100%;
+	border-bottom: 1px solid darkgreen;
+}
+div.toolbox ul {
+    margin: 0px;
+    padding: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 30px;
+    white-space: nowrap;
+}
+div.toolbox li {
+    list-style-type: none;
+    display: inline;
+    font-size: 13px;
+}
+
+div.toolbox li a 
+{
+	background: buttonface;
+    padding: 2px 4px 2px 4px;
+    margin: 2px 4px 2px 4px;
+    text-decoration: none;
+	border-Left : 1px solid buttonhighlight;
+	border-Right : 1px solid buttonshadow;
+	border-Top   : 1px solid buttonhighlight;
+	border-Bottom : 1px solid buttonshadow;
+	color: black;
+
+}
+div.toolbox li a:link {
+}
+
+div.toolbox li a:visited {
+}
+
+div.toolbox li a:hover {
+	border-Left   : 1px solid buttonshadow;
+	border-Right  : 1px solid buttonhighlight;
+	border-Top    : 1px solid buttonshadow;
+	border-Bottom : 1px solid buttonhighlight;
+}
+
+div.toolbox li a:active {
+	blr:expression(this.onFocus=this.blur());
+}
+
+DIV.statusDiv_0, DIV.statusDiv_1, DIV.statusDiv_2,
+DIV.statusDiv_7, DIV.statusDiv_8  
+{
+	PADDING:4px 4px 4px 4px;
+}
+DIV.statusDiv_0 {
+	BACKGROUND-COLOR: #E4EEE0;
+	border: solid 1px #C8E0C0;
+}
+DIV.statusDiv_1 {
+	BACKGROUND-COLOR: #E4EEE0;
+	border: solid 1px #C8E0C0;
+}
+DIV.statusDiv_2 {
+	BACKGROUND-COLOR: #E4EEE0;
+	border: solid 1px #C8E0C0;
+}
+DIV.statusDiv_7 {
+	background-color: lightRed;
+}
+DIV.statusDiv_8 {
+	BACKGROUND-COLOR: #C8E0C0
+}

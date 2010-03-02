@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>歐美旅遊-錯誤信息</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+body 
+{
+	font-size:12px;
+	margin: 10px 10px 5px 10px;
+    background: #e4eee0;
+}
+.head01
+{
+	FONT-WEIGHT: bold; FONT-SIZE: 16px; COLOR: #003300; FONT-FAMILY: Arial, Verdana, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+/* shadow  */
+.shadowbox{
+	background-color: #ccc;
+	position: absolute; 
+	top: 45%;
+	left: 50%;
+	width: 400px;
+	height: 150px;
+	margin-top: -75px;
+	margin-left: -200px;
+}
+.shadowContent{
+	background-color: #e4eee0;
+	border: solid 1px #4c773e;
+	width:100%;
+	height:100%;
+	position: relative;
+	left:-6px;
+	top:-6px;
+}
+</style>    
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="shadowbox">
+        <div class="shadowContent">
+            <table cellpadding="4" cellspacing="2" width="100%">
+                        <tr>
+                            <td style="height: 150px; width: 110px;">
+                                <img hspace="10" src="Images/master/error.gif" vspace="10" /></td>
+                            <td valign="top"><br />
+                                <span class="head01">對不起，</span>
+                                您登錄已過期或沒有此訪問權限，請用正確的用戶名/密碼登錄。<br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                
+                                <input id="btnBack" type="button" value="返囬上页" onclick="history.back()" />
+                                <input id="Button1" type="button" value="重新登录" onclick="location='Default.aspx'" />
+                                
+                                </td>
+                        </tr>
+                    </table>        
+        </div>
+    </div>
+    </form>
+</body>
+</html>

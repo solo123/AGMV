@@ -1,0 +1,347 @@
+﻿/*
+	basic color:
+
+	#e4eee0, #c8e0c0, #4c773e,
+	light      mid     dark
+	
+
+*/
+
+BODY {
+	FONT-SIZE:small; 
+	FONT-FAMILY: Arial, Helvetica, sans-serif; 
+	BACKGROUND: url(res/background.png);
+	text-align: center;
+}
+BODY.popup {
+	FONT-SIZE:small; 
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	background: none;
+	background-color: #e4eee0;
+	text-align: center;
+	padding:10px;
+}
+
+H1 
+{
+	border: dotted 1px #9ccf00;
+	padding: 3px 5px 3px 5px;
+	BACKGROUND: #eef5fe; 
+	COLOR: #20375f; 
+	FONT: 14px Verdana;
+	font-weight: bold;	
+	COLOR: #ba0001; 
+	TEXT-ALIGN: left;
+}
+H2 
+{
+	PADDING-RIGHT: 3px; PADDING-LEFT: 5px; FONT-WEIGHT: bold; FONT-SIZE: 13px; PADDING-BOTTOM: 3px; MARGIN: 0px; COLOR: #ba0001; PADDING-TOP: 3px; BORDER-BOTTOM: silver 1px solid; TEXT-ALIGN: left
+}
+
+P {
+	MARGIN: 5px 5px 15px
+}
+HR {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+
+table.DataTable { 
+	table-layout: fixed;
+	word-wrap: break-word;
+}
+
+.head01
+{
+	font-family:Arial;
+	font-size:18pt;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+.head02
+{
+	font-family:Arial;
+	font-size:13pt;
+	font-weight:bold;
+}
+
+/* Page Style */
+
+.popupPage 
+{
+	clear: both;
+	min-width: 400px;
+	MARGIN: 0px; 
+	padding: 0px;
+	text-align:left;
+}
+
+.header 
+{
+}
+.subHeader 
+{
+	BACKGROUND: #c8e0c0; 
+	text-align:left;
+	FONT: bold 12px Verdana;
+}
+
+.footer {
+	BACKGROUND: #4c773e;
+	TEXT-ALIGN: center;
+	color: white;
+	font-size: 80%;
+	height: 22px;
+}
+.footer a
+{
+	color: white;
+}
+
+.QuickGo
+{
+	font-size: 80%;
+	clear: both;
+	text-align:right;
+	height: 22px;
+	padding: 4px;
+}
+
+
+
+.NavBar 
+{
+	BACKGROUND: #c8e0c0; 
+	text-align:left;
+	FONT: bold 12px Verdana;
+	padding:2px 5px 2px 5px;
+	height:20px;
+}
+
+.NavBar A, .NavBar A:visited 
+{
+	COLOR: #2961bd; 
+	FONT-FAMILY: Verdana; 
+	TEXT-DECORATION: underline
+}
+
+.NavBar A:hover {
+	COLOR: red
+}
+
+.LoginUserDiv {
+	FONT-SIZE: 80%; FLOAT: right; FONT-STYLE: normal! important; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+
+.ContentBody
+{
+}
+
+.SideBar {
+	FLOAT: left;
+	width: 150px;
+	text-align: left;
+	padding: 10px 10px 10px 10px;
+}
+.SidebarHighlight 
+{
+	border: solid 1px #6699cc;
+	MARGIN: 10px 0px; 
+}
+.SideBar H2.Hightlight {
+	BACKGROUND-COLOR: #eef5fe;
+	font-size: 100%;
+	font-weight: bold;
+	color: #284e98;
+	text-align: left;
+}
+
+.SubMenu {
+	width: 100%;
+}
+.SubMenu UL {
+	border: solid 1px #6699cc;
+	padding: 0px;
+	margin: 0px;
+	FONT-WEIGHT: bold; 
+	BACKGROUND: #f9f9f9; 
+	WIDTH: 100%;
+	TEXT-ALIGN: left;
+	
+	FONT-SIZE: 100%; 
+	COLOR: #000099; 
+	FONT-FAMILY: Arial	
+
+}
+.SubMenu A, .SubMenu A:visited {
+	DISPLAY: block; 
+	width: 140px;
+	PADDING-LEFT: 10px; 
+	COLOR: #2961bd; 
+	BORDER-BOTTOM: #c6d8d8 1px solid; 
+	TEXT-ALIGN: left; 
+	TEXT-DECORATION: none;
+}
+.SubMenu A:hover {
+	BACKGROUND: #f1f5f5; 
+	COLOR: red;
+}
+.SubMenu A.selected {
+	
+}
+.SubMenu LI {
+	LINE-HEIGHT: 22px; 
+}
+
+.SidebarCustomerHighlight {
+	BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; MARGIN: 10px 0px; BORDER-LEFT: black 1px solid; BORDER-BOTTOM: black 1px solid
+}
+
+
+.ContentDiv 
+{
+	padding: 10px;
+	TEXT-ALIGN: left;
+}
+
+.SearchDiv 
+{
+	margin-bottom: 4px;
+	padding: 4px 4px 4px 4px;
+	background: #F1F5F5;
+	border:1px solid #C6D8D8;
+	text-align: left;
+}
+
+.FormDiv 
+{
+	margin-bottom: 4px;
+	padding: 4px 4px 4px 4px;
+	background: lightYellow;
+	border:1px solid #FFCC99;
+	text-align: left;
+}
+.FormDiv h2{
+	font-size: 26px;
+	color:black;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	border: none;
+	text-align: center;
+}
+.FormDiv h3{
+	font-size: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #BA0001;
+	font-style: italic;
+}
+
+.GenericContent
+{
+}
+
+.ContentBox
+{
+	border: solid 1px #4c773e;
+}
+
+.PaymentDiv
+{
+	background-color:LightBlue;
+}
+
+.error
+{
+	color: Red;
+}
+.error_message
+{
+	background:#FFF4EE url(res/error.jpg) no-repeat scroll 8px 50%;
+	border:2px solid #FF6633;
+	padding:8px 8px 8px 40px;
+	line-height: 40px;
+}
+.ok_message
+{
+	background:#E4EEE0 url(res/ok.gif) no-repeat scroll 8px 50%;
+	border:2px solid green;
+	line-height:40px;
+	padding:8px 8px 8px 40px;
+}
+
+.textBlock
+{
+	word-break: break-all;
+}
+/* others */
+.ClickLabel
+{
+	cursor:hand;
+	color:darkGreen;
+}
+
+.StrongNumber
+{
+	color:DarkSlateGray;
+	font-size:14pt;
+	font-weight:bold;
+}
+.StrongNumber1
+{
+	color:DarkSlateGray;
+	font-size:12pt;
+	font-weight:bold;
+}
+
+.TourName
+{
+	font-family:Arial;
+	font-size:11pt;
+	font-weight:bold;
+	color: darkGreen;
+}
+
+/* shadow  */
+.shadowbox{
+	background-color: #ccc;
+	position: absolute; 
+	top: 45%;
+	left: 50%;
+	width: 450px;
+	height: 300px;
+	margin-top: -150px;
+	margin-left: -225px;
+}
+.shadowContent{
+	background-color: #e4eee0;
+	border: solid 1px #4c773e;
+	width:100%;
+	height:100%;
+	position: relative;
+	left:-6px;
+	top:-6px;
+}
+
+.grayText
+{
+	color:Gray;
+}
+
+.compacText {font-family: "Times New Roman", Times, serif}
+
+.prompt_div { background-color:#C8E0C0;border:3px solid #4C773E;padding: 4px; }
+
+/* Schedule style */
+.schedule_info {  color:White; height:80px; border-bottom:solid 1px darkgreen;}
+.schedule_info .schedule_orderid { float:left; width: 140px; height:80px; background-color:darkGreen; text-align:center; }
+.schedule_title {  text-align:center;height:80px;font-size:18px; color:darkgreen;}
+
+.help {background:transparent url(res/help.gif) no-repeat scroll left 50%;float:right;height:24px;padding:6px 0px 0px 33px;width:50px;text-decoration:none;color:blue;}
+.help:hover {background-color:lightYellow; color:Red;}
+
+.canceled {background: transparent url(canceled.jpg);}
+
+
+#main_container{ visibility:hidden;}
+.clear{	clear: both;overflow: hidden;height: 0}    
+.loading {color:darkRed;background-color:lightYellow; text-decoration: blink; font-weight:bold; }
+	 

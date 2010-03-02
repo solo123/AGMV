@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_Commission" targetNamespace="http://tempuri.org/DS_Commission.xsd" xmlns:mstns="http://tempuri.org/DS_Commission.xsd" xmlns="http://tempuri.org/DS_Commission.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_Commission" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DS_Commission" msprop:Generator_DataSetName="DS_Commission">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="commission" msprop:Generator_UserTableName="commission" msprop:Generator_RowDeletedName="commissionRowDeleted" msprop:Generator_RowChangedName="commissionRowChanged" msprop:Generator_RowClassName="commissionRow" msprop:Generator_RowChangingName="commissionRowChanging" msprop:Generator_RowEvArgName="commissionRowChangeEvent" msprop:Generator_RowEvHandlerName="commissionRowChangeEventHandler" msprop:Generator_TableClassName="commissionDataTable" msprop:Generator_TableVarName="tablecommission" msprop:Generator_RowDeletingName="commissionRowDeleting" msprop:Generator_TablePropName="commission">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_UserColumnName="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" type="xs:int" />
+              <xs:element name="amountFrom" msprop:Generator_UserColumnName="amountFrom" msprop:Generator_ColumnVarNameInTable="columnamountFrom" msprop:Generator_ColumnPropNameInRow="amountFrom" msprop:Generator_ColumnPropNameInTable="amountFromColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="amountTo" msprop:Generator_UserColumnName="amountTo" msprop:Generator_ColumnVarNameInTable="columnamountTo" msprop:Generator_ColumnPropNameInRow="amountTo" msprop:Generator_ColumnPropNameInTable="amountToColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="commissionRate" msprop:Generator_UserColumnName="commissionRate" msprop:Generator_ColumnVarNameInTable="columncommissionRate" msprop:Generator_ColumnPropNameInRow="commissionRate" msprop:Generator_ColumnPropNameInTable="commissionRateColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="createDate" msprop:Generator_UserColumnName="createDate" msprop:Generator_ColumnVarNameInTable="columncreateDate" msprop:Generator_ColumnPropNameInRow="createDate" msprop:Generator_ColumnPropNameInTable="createDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="lastUpdate" msprop:Generator_UserColumnName="lastUpdate" msprop:Generator_ColumnVarNameInTable="columnlastUpdate" msprop:Generator_ColumnPropNameInRow="lastUpdate" msprop:Generator_ColumnPropNameInTable="lastUpdateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="employeeID" msprop:Generator_UserColumnName="employeeID" msprop:Generator_ColumnVarNameInTable="columnemployeeID" msprop:Generator_ColumnPropNameInRow="employeeID" msprop:Generator_ColumnPropNameInTable="employeeIDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="employee" msprop:Generator_UserColumnName="employee" msprop:Generator_ColumnVarNameInTable="columnemployee" msprop:Generator_ColumnPropNameInRow="employee" msprop:Generator_ColumnPropNameInTable="employeeColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="description" msprop:Generator_UserColumnName="description" msprop:Generator_ColumnPropNameInRow="description" msprop:Generator_ColumnVarNameInTable="columndescription" msprop:Generator_ColumnPropNameInTable="descriptionColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:commission" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

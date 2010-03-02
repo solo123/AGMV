@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_BusUsage" targetNamespace="http://tempuri.org/DS_BusUsage.xsd" xmlns:mstns="http://tempuri.org/DS_BusUsage.xsd" xmlns="http://tempuri.org/DS_BusUsage.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="OmeiTravelConnectionString" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="OmeiTravelConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.com.Omei.DLL.Properties.Settings.GlobalReference.Default.OmeiTravelConnectionString" Provider="System.Data.SqlClient">
+          </Connection>
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="BusUsageTableAdapter" GeneratorDataComponentClassName="BusUsageTableAdapter" Name="BusUsage" UserDataComponentName="BusUsageTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="OmeiTravelConnectionString (Settings)" DbObjectName="OmeiTravel.dbo.vehicleusage" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT usageId, vehicleId, startDate, endDate
+FROM vehicleusage</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="usageId" DataSetColumn="usageId" />
+              <Mapping SourceColumn="vehicleId" DataSetColumn="vehicleId" />
+              <Mapping SourceColumn="startDate" DataSetColumn="startDate" />
+              <Mapping SourceColumn="endDate" DataSetColumn="endDate" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_BusUsage" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DS_BusUsage" msprop:Generator_DataSetName="DS_BusUsage">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BusUsage" msprop:Generator_UserTableName="BusUsage" msprop:Generator_RowDeletedName="BusUsageRowDeleted" msprop:Generator_TableClassName="BusUsageDataTable" msprop:Generator_RowChangedName="BusUsageRowChanged" msprop:Generator_RowClassName="BusUsageRow" msprop:Generator_RowChangingName="BusUsageRowChanging" msprop:Generator_RowEvArgName="BusUsageRowChangeEvent" msprop:Generator_RowEvHandlerName="BusUsageRowChangeEventHandler" msprop:Generator_TablePropName="BusUsage" msprop:Generator_TableVarName="tableBusUsage" msprop:Generator_RowDeletingName="BusUsageRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="usageId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="usageId" msprop:Generator_ColumnPropNameInRow="usageId" msprop:Generator_ColumnVarNameInTable="columnusageId" msprop:Generator_ColumnPropNameInTable="usageIdColumn" type="xs:int" />
+              <xs:element name="vehicleId" msprop:Generator_UserColumnName="vehicleId" msprop:Generator_ColumnPropNameInRow="vehicleId" msprop:Generator_ColumnVarNameInTable="columnvehicleId" msprop:Generator_ColumnPropNameInTable="vehicleIdColumn" type="xs:int" />
+              <xs:element name="startDate" msprop:Generator_UserColumnName="startDate" msprop:Generator_ColumnPropNameInRow="startDate" msprop:Generator_ColumnVarNameInTable="columnstartDate" msprop:Generator_ColumnPropNameInTable="startDateColumn" type="xs:dateTime" />
+              <xs:element name="endDate" msprop:Generator_UserColumnName="endDate" msprop:Generator_ColumnPropNameInRow="endDate" msprop:Generator_ColumnVarNameInTable="columnendDate" msprop:Generator_ColumnPropNameInTable="endDateColumn" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:BusUsage" />
+      <xs:field xpath="mstns:usageId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

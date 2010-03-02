@@ -1,0 +1,29 @@
+﻿/* Site Styles */
+body{background: transparent url(images/background.png) repeat scroll 0 0;font-size:1em;}
+#site_main{margin:8px;background-color:#e4eee0;border:solid 1px #4C773E;}
+	#site_head{height:45px;border-bottom:solid 4px #4C773E;padding-top:4px;}
+		#site_logo{width:170px;float:left;}
+		#site_menu{}
+	#site_nav{background-color:#C8E0C0;padding:2px;}
+	#site_body{padding:8px;}
+	#site_footer{background-color:#4C773E;color:white;font-size:80%;text-align:center;padding:2px;vertical-align:bottom;font-size:80%;}
+		#site_footer a, #site_footer a:visited {color:White;}
+
+/* menu */
+#site_menu {font-size: 0.75em; margin-top:8px; }
+
+/* text */
+.text1 {line-height:1.62;}
+.title1 { margin:0; padding:0; font-size:120%; font-weight:bold;}
+.subtitle1 {font-size: 90%; font-weight:bold; margin-left:16px; border-bottom:solid 1px darkGreen;}
+img.title_pic1 { margin: 8px 12px 4px 2px; border:solid 1px #ccc; padding:2px; float:left;}
+
+.detail_table { border-collapse:collapse;}
+.detail_table .head{ font-family:Verdana, Arial, Helvetica, sans-serif;	font-weight:bold;background-color:#4C773E;color:White;}
+.detail_table .item {font-family:verdana,arial,helvetica;background-color:#E4EEE0;}
+.detail_table .alt{	font-family:verdana,arial,helvetica;background-color:#C8E0C0;}
+
+.zebra_table {font-family:verdana,arial,helvetica;border-collapse:collapse;}
+.zebra_table thead th {font-weight:bold;background-color:#4C773E;color:White;cursor:default;}
+.zebra_table .alt {background-color:#C8E0C0;}
+.zebra_table .over{background-color:#ffffcc; cursor:pointer;}

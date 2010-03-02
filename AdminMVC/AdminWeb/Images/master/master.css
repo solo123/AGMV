@@ -1,0 +1,147 @@
+body{
+	font-size: 13px;
+	margin: 0 0 0 0;
+}
+
+.copyright
+{
+	font-size: 70%;
+	color:black;
+	font-family:verdana,arial,helvetica;
+}
+
+.gt0 {
+	color: white;
+	BORDER-RIGHT: #3568cc 1px solid; 
+	PADDING-RIGHT: 4px; 
+	BORDER-TOP: #3568cc 1px solid; 
+	PADDING-LEFT: 4px; 
+	FONT-SIZE: 100%; 
+	PADDING-BOTTOM: 2px; 
+	BORDER-LEFT: #3568cc 1px solid; 
+	PADDING-TOP: 0px; 
+	BORDER-BOTTOM: #3568cc 1px solid
+}
+.gt1 {
+	color: white;
+	BORDER-RIGHT: #adc9ff 1px solid; 
+	PADDING-RIGHT: 4px; 
+	BORDER-TOP: #adc9ff 1px solid; 
+	PADDING-LEFT: 4px; 
+	FONT-SIZE: 100%; 
+	BACKGROUND: #5781d5; 
+	PADDING-BOTTOM: 2px; 
+	BORDER-LEFT: #adc9ff 1px solid; 
+	PADDING-TOP: 0px; 
+	BORDER-BOTTOM: #adc9ff 1px solid
+}
+.gtsep {
+	PADDING-RIGHT: 1px; PADDING-LEFT: 1px; PADDING-BOTTOM: 2px; FONT: 65% Verdana; COLOR: #adc9ff; PADDING-TOP: 0px
+}
+
+.lt0 {
+	BORDER-RIGHT: #f1f1f1 1px solid; 
+	BORDER-TOP: #f1f1f1 1px solid; 
+	BACKGROUND: #f1f1f1; 
+	BORDER-LEFT: #f1f1f1 1px solid; 
+	BORDER-BOTTOM: #f1f1f1 1px solid;
+	padding:1px 8px 0px 8px;
+}
+.lt1 {
+	BORDER-RIGHT: #999 1px solid; 
+	BORDER-TOP: #999 1px solid; 
+	BACKGROUND: #ccc; 
+	BORDER-LEFT: #999 1px solid; 
+	BORDER-BOTTOM: #999 1px solid;
+	padding:1px 8px 0px 8px;
+}
+.ltsep {
+	PADDING-TOP: 1px;
+	PADDING-RIGHT: 1px; 
+	PADDING-LEFT: 1px; 
+	PADDING-BOTTOM: 0px; 
+	FONT: 70% Verdana; 
+	COLOR: #a9a9a9; 
+}
+
+
+#msviGlobalToolbar {
+	PADDING-LEFT: 1px;
+	color: white;
+}
+#msviGlobalToolbar A {
+	FONT: 65% Verdana; COLOR: #ffffff; TEXT-DECORATION: none
+}
+
+#msviLocalToolbar {
+	PADDING-RIGHT: 0px; BORDER-TOP: #999 1px solid; PADDING-LEFT: 0px; FONT-SIZE: 100%; BACKGROUND: #f1f1f1; PADDING-BOTTOM: 1px; PADDING-TOP: 2px; BORDER-BOTTOM: #999 1px solid
+}
+#msviHomePageLink {
+	PADDING-LEFT: 2px; WIDTH: 127px;
+}
+
+
+TD.show {
+	VERTICAL-ALIGN: top
+}
+TR.show {
+	VERTICAL-ALIGN: top
+}
+TABLE.show {
+	MARGIN-BOTTOM: 6px; VERTICAL-ALIGN: top
+}
+TABLE.show TD {
+	FONT-SIZE: 100%! important
+}
+TD.white_grape_tl {
+	FILTER: alpha(opacity=70); BACKGROUND-IMAGE: url(border_white_grape_tl.gif); WIDTH: 10px; BACKGROUND-REPEAT: no-repeat; HEIGHT: 10px; moz-opacity: .70; opacity: .70
+}
+TD.white_grape_tr {
+	FILTER: alpha(opacity=70); BACKGROUND-IMAGE: url(border_white_grape_tr.gif); WIDTH: 10px; BACKGROUND-REPEAT: no-repeat; HEIGHT: 10px; moz-opacity: .70; opacity: .70
+}
+TD.white_grape_bl {
+	FILTER: alpha(opacity=70); BACKGROUND-IMAGE: url(border_white_grape_bl.gif); WIDTH: 10px; BACKGROUND-REPEAT: no-repeat; HEIGHT: 10px; moz-opacity: .70; opacity: .70
+}
+TD.white_grape_br {
+	FILTER: alpha(opacity=70); BACKGROUND-IMAGE: url(border_white_grape_br.gif); WIDTH: 10px; BACKGROUND-REPEAT: no-repeat; HEIGHT: 10px; moz-opacity: .70; opacity: .70
+}
+TD.white_grape_t {
+	FILTER: alpha(opacity=70); BACKGROUND-IMAGE: url(border_white_grape_t.gif); BACKGROUND-REPEAT: repeat; moz-opacity: .70; opacity: .70
+}
+TD.white_grape_r {
+	FILTER: alpha(opacity=70); BACKGROUND-IMAGE: url(border_white_grape_r.gif); BACKGROUND-REPEAT: repeat; moz-opacity: .70; opacity: .70
+}
+TD.white_grape_b {
+	FILTER: alpha(opacity=70); BACKGROUND-IMAGE: url(border_white_grape_b.gif); BACKGROUND-REPEAT: repeat; moz-opacity: .70; opacity: .70
+}
+TD.white_grape_l {
+	FILTER: alpha(opacity=70); BACKGROUND-IMAGE: url(border_white_grape_l.gif); BACKGROUND-REPEAT: repeat; moz-opacity: .70; opacity: .70
+}
+TD.grape_tl {
+	FILTER: alpha(opacity=60); BACKGROUND-IMAGE: url(../border_grape_tl.gif); WIDTH: 10px; BACKGROUND-REPEAT: no-repeat; HEIGHT: 10px; moz-opacity: .60; opacity: .60
+}
+TD.grape_tr {
+	FILTER: alpha(opacity=60); BACKGROUND-IMAGE: url(../border_grape_tr.gif); WIDTH: 10px; BACKGROUND-REPEAT: no-repeat; HEIGHT: 10px; moz-opacity: .60; opacity: .60
+}
+TD.grape_bl {
+	FILTER: alpha(opacity=60); BACKGROUND-IMAGE: url(../border_grape_bl.gif); WIDTH: 10px; BACKGROUND-REPEAT: no-repeat; HEIGHT: 10px; moz-opacity: .60; opacity: .60
+}
+TD.grape_br {
+	FILTER: alpha(opacity=60); BACKGROUND-IMAGE: url(../border_grape_br.gif); WIDTH: 10px; BACKGROUND-REPEAT: no-repeat; HEIGHT: 10px; moz-opacity: .60; opacity: .60
+}
+TD.grape_t {
+	FILTER: alpha(opacity=60); BACKGROUND-IMAGE: url(../border_grape_t.gif); BACKGROUND-REPEAT: repeat; moz-opacity: .60; opacity: .60
+}
+TD.grape_r {
+	FILTER: alpha(opacity=60); BACKGROUND-IMAGE: url(../border_grape_r.gif); BACKGROUND-REPEAT: repeat; moz-opacity: .60; opacity: .60
+}
+TD.grape_b {
+	FILTER: alpha(opacity=60); BACKGROUND-IMAGE: url(../border_grape_b.gif); BACKGROUND-REPEAT: repeat; moz-opacity: .60; opacity: .60
+}
+TD.grape_l {
+	FILTER: alpha(opacity=60); BACKGROUND-IMAGE: url(../border_grape_l.gif); BACKGROUND-REPEAT: repeat; moz-opacity: .60; opacity: .60
+}
+
+.content_box_white_grape {
+	PADDING-RIGHT: 6px; PADDING-LEFT: 6px; FILTER: alpha(opacity=70); BACKGROUND-IMAGE: url(white.gif); PADDING-BOTTOM: 6px; PADDING-TOP: 6px; BACKGROUND-REPEAT: repeat
+}

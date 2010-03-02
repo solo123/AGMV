@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_Log" targetNamespace="http://tempuri.org/DS_Log.xsd" xmlns:mstns="http://tempuri.org/DS_Log.xsd" xmlns="http://tempuri.org/DS_Log.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="OmeiTravelConnectionString" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="OmeiTravelConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.com.Omei.DLL.Properties.Settings.GlobalReference.Default.OmeiTravelConnectionString" Provider="System.Data.SqlClient">
+          </Connection>
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="OpLogTableAdapter" GeneratorDataComponentClassName="OpLogTableAdapter" Name="OpLog" UserDataComponentName="OpLogTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="OmeiTravelConnectionString (Settings)" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="GetData">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT l.logID, l.employeeID, e.nickname as employeeName, l.description, l.opType, l.opDate, l.relateID
+FROM OmeiLog.dbo.OpLog as l
+left join employeeInfo as e on l.employeeID=e.employeeID</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="logID" DataSetColumn="logID" />
+              <Mapping SourceColumn="employeeID" DataSetColumn="employeeID" />
+              <Mapping SourceColumn="description" DataSetColumn="description" />
+              <Mapping SourceColumn="opType" DataSetColumn="opType" />
+              <Mapping SourceColumn="opDate" DataSetColumn="opDate" />
+              <Mapping SourceColumn="employeeName" DataSetColumn="employeeName" />
+              <Mapping SourceColumn="relateID" DataSetColumn="relateID" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_Log" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DS_Log" msprop:Generator_DataSetName="DS_Log">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="OpLog" msprop:Generator_UserTableName="OpLog" msprop:Generator_RowDeletedName="OpLogRowDeleted" msprop:Generator_RowChangedName="OpLogRowChanged" msprop:Generator_RowClassName="OpLogRow" msprop:Generator_RowChangingName="OpLogRowChanging" msprop:Generator_RowEvArgName="OpLogRowChangeEvent" msprop:Generator_RowEvHandlerName="OpLogRowChangeEventHandler" msprop:Generator_TableClassName="OpLogDataTable" msprop:Generator_TableVarName="tableOpLog" msprop:Generator_RowDeletingName="OpLogRowDeleting" msprop:Generator_TablePropName="OpLog">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="logID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="logID" msprop:Generator_ColumnPropNameInRow="logID" msprop:Generator_ColumnVarNameInTable="columnlogID" msprop:Generator_ColumnPropNameInTable="logIDColumn" type="xs:int" />
+              <xs:element name="employeeID" msprop:Generator_UserColumnName="employeeID" msprop:Generator_ColumnPropNameInRow="employeeID" msprop:Generator_ColumnVarNameInTable="columnemployeeID" msprop:Generator_ColumnPropNameInTable="employeeIDColumn" type="xs:int" />
+              <xs:element name="description" msprop:Generator_UserColumnName="description" msprop:Generator_ColumnPropNameInRow="description" msprop:Generator_ColumnVarNameInTable="columndescription" msprop:Generator_ColumnPropNameInTable="descriptionColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="opType" msprop:Generator_UserColumnName="opType" msprop:Generator_ColumnPropNameInRow="opType" msprop:Generator_ColumnVarNameInTable="columnopType" msprop:Generator_ColumnPropNameInTable="opTypeColumn" type="xs:unsignedByte" />
+              <xs:element name="opDate" msprop:Generator_UserColumnName="opDate" msprop:Generator_ColumnPropNameInRow="opDate" msprop:Generator_ColumnVarNameInTable="columnopDate" msprop:Generator_ColumnPropNameInTable="opDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="employeeName" msprop:Generator_UserColumnName="employeeName" msprop:Generator_ColumnVarNameInTable="columnemployeeName" msprop:Generator_ColumnPropNameInRow="employeeName" msprop:Generator_ColumnPropNameInTable="employeeNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="relateID" msprop:Generator_UserColumnName="relateID" msprop:Generator_ColumnPropNameInRow="relateID" msprop:Generator_ColumnVarNameInTable="columnrelateID" msprop:Generator_ColumnPropNameInTable="relateIDColumn" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:OpLog" />
+      <xs:field xpath="mstns:logID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

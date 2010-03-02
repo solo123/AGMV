@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Help: Agent Receive - O'Mei</title>
+<style type="text/css">
+body {background-color:#e4eee0;font-size:14px;line-height:1.62; width:700px;}
+</style>
+</head>
+<body>
+    <h1>
+        Help: Agent Receive</h1>
+    <p>
+        <img src="../help/agent_01.png" />&nbsp;</p>
+    <p>
+        如圖所示，<br />
+        <ul>
+            <li>Amount顯示訂單金額即此訂單實際金額；</li>
+            <li>Commission顯示此訂單給Agent的折扣，最初是在修改訂單的Agent Receive時，按照該Agent享有的折扣率計算出來的，可點擊按鈕“Edit
+        Commission”修改實際折扣數值；</li>
+            <li>Net Total列顯示agent應付金額；Paid列顯示Agent已支付的金額，包括通過Agent Payment進行支付和顧客直接在O'Mei支付的金額；</li>
+            <li>Balance列顯示與該Agent的應收付金額。</li>
+        </ul>
+        </p>
+    <p>
+        注*1：此處Balance金額為負數，表示O'Mei應向該Agent支付29.75元。原因是：此訂單金額為175元，Agent Commission為29.75元，而Paid字段顯示該Agent已經向O'Mei支付175元（或是顧客自行在O'Mei支付），所以O'Mei欠該Agent
+        29.75元。</p>
+    <p>
+        若將此訂單的Commission修改為0，即此單并不給Agent提取Commission，修改后Balance值將等于0，即已平賬。</p>
+
+</body>
+</html>
